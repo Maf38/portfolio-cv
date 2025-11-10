@@ -1,0 +1,48 @@
+// App container with spotlight effect
+.app-container {
+  min-height: 100vh;
+  background: rgb(15, 23, 42); // slate-900 (dark blue background like brittanychiang.com)
+  color: rgb(226, 232, 240); // slate-200 (light text)
+}
+
+.main-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+// Spotlight overlay utilities
+.pointer-events-none {
+  pointer-events: none;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.inset-0 {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.z-30 {
+  z-index: 30;
+}
+
+.transition {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.duration-300 {
+  transition-duration: 300ms;
+}
+
+// Responsive: only show spotlight on large screens
+@media (max-width: 1024px) {
+  .lg\\:absolute {
+    position: absolute;
+  }
+}

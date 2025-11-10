@@ -1,0 +1,149 @@
+// Header styling inspired by brittanychiang.com
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(15, 23, 42, 0.8); // slate-900 with opacity
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.1); // subtle border
+}
+
+.header-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// Logo
+.logo {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: rgb(226, 232, 240); // slate-200
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: rgb(100, 116, 139); // slate-500
+  }
+}
+
+.logo-text {
+  display: inline-block;
+}
+
+// Desktop Navigation
+.desktop-nav {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: block;
+  }
+}
+
+.nav-list {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  margin: 0;
+}
+
+.nav-link {
+  color: rgb(148, 163, 184); // slate-400
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  position: relative;
+
+  &:hover {
+    color: rgb(226, 232, 240); // slate-200
+  }
+
+  &.active {
+    color: rgb(94, 234, 212); // teal-300 (accent color)
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -0.5rem;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: rgb(94, 234, 212); // teal-300
+    }
+  }
+}
+
+// Mobile Menu Button
+.mobile-menu-btn {
+  display: block;
+  background: none;
+  border: none;
+  color: rgb(226, 232, 240); // slate-200
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: color 0.3s ease;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+
+  &:hover {
+    color: rgb(148, 163, 184); // slate-400
+  }
+}
+
+.menu-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+// Mobile Navigation
+.mobile-nav {
+  padding: 1rem 1.5rem 1.5rem;
+  background: rgba(15, 23, 42, 0.95); // slate-900
+  border-top: 1px solid rgba(148, 163, 184, 0.1);
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.mobile-nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.mobile-nav-item {
+  margin: 0;
+}
+
+.mobile-nav-link {
+  display: block;
+  color: rgb(148, 163, 184); // slate-400
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.75rem 0;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: rgb(226, 232, 240); // slate-200
+  }
+
+  &.active {
+    color: rgb(94, 234, 212); // teal-300
+  }
+}

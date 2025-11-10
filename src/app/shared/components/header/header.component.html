@@ -1,0 +1,84 @@
+<header class="header">
+  <div class="header-container">
+    <!-- Logo / Name -->
+    <a routerLink="/" class="logo" (click)="closeMenu()">
+      <span class="logo-text">Mafal Gaimard</span>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <ul class="nav-list">
+        @for (item of navItems; track item.path) {
+          <li class="nav-item">
+            <a [routerLink]="item.path" routerLinkActive="active" class="nav-link">
+              {{ item.label }}
+            </a>
+          </li>
+        }
+      </ul>
+    </nav>
+
+    <!-- Mobile Menu Button -->
+    <button
+      class="mobile-menu-btn"
+      (click)="toggleMenu()"
+      [attr.aria-expanded]="isMenuOpen()"
+      aria-label="Toggle navigation menu"
+      type="button"
+    >
+      @if (isMenuOpen()) {
+        <!-- Close icon -->
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          class="menu-icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      } @else {
+        <!-- Hamburger icon -->
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          class="menu-icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+        </svg>
+      }
+    </button>
+  </div>
+
+  <!-- Mobile Navigation -->
+  @if (isMenuOpen()) {
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <ul class="mobile-nav-list">
+        @for (item of navItems; track item.path) {
+          <li class="mobile-nav-item">
+            <a
+              [routerLink]="item.path"
+              routerLinkActive="active"
+              class="mobile-nav-link"
+              (click)="closeMenu()"
+            >
+              {{ item.label }}
+            </a>
+          </li>
+        }
+      </ul>
+    </nav>
+  }
+</header>

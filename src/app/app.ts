@@ -1,12 +1,40 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, HostListener, PLATFORM_ID, inject } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import { HeaderComponent } from './shared/components/header/header.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, HeaderComponent],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
 export class App {
-  protected readonly title = signal('portfolio-cv');
+  private readonly platformId = inject(PLATFORM_ID);
+  private readonly isBrowser = isPlatformBrowser(this.platformId);
+
+  // Spotlight effect background (halo lumineux qui suit la souris)
+  protected readonly spotlightBackground = signal('transparent');
+
+  @HostListener('document:mousemove', ['$event'])
+  onMouseMove(event: MouseEvent): void {
+    // Ne pas activer le spotlight sur mobile pour économiser la batterie
+    if (!this.isBrowser || window.innerWidth < 1024) {
+      return;
+    }
+
+    // Utiliser requestAnimationFrame pour optimiser les performances
+    requestAnimationFrame(() => {
+      const x = event.clientX;
+      const y = event.clientY;
+
+      // Gradient radial de 600px qui suit la souris
+      // Couleur: bleu rgba(29, 78, 216, 0.15) comme brittanychiang.com
+      this.spotlightBackground.set(`radial-gradient(
+        600px circle at ${x}px ${y}px,
+        rgba(29, 78, 216, 0.15),
+        transparent 80%
+      )`);
+    });
+  }
 }
