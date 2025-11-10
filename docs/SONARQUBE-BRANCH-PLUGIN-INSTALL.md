@@ -6,7 +6,7 @@
 
 ## 🎯 Prérequis
 
-- SonarQube 10.8+ ou 2025.1+ (vous avez 25.11.0 ✅)
+- SonarQube 10.8+ ou 2028.1+ (vous avez 25.11.0 ✅)
 - Accès administrateur au serveur SonarQube
 - SonarQube installé sur serveur (pas Docker dans ce cas)
 

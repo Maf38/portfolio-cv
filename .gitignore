@@ -56,3 +56,9 @@ cv-history/
 
 # MCP Configuration (contains JIRA token)
 .mcp.json
+
+# Playwright MCP generated files
+.playwright-mcp/
+
+# Design reference images
+docs/design-reference/
