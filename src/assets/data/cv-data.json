@@ -82,13 +82,7 @@
         "IIS",
         "Windows Server"
       ],
-      "tags": [
-        "TMA",
-        ".NET",
-        "SQL Server",
-        "Modernisation",
-        "Qualité"
-      ]
+      "tags": ["TMA", ".NET", "SQL Server", "Modernisation", "Qualité"]
     },
     {
       "id": "exp-2",
@@ -126,13 +120,7 @@
         "SharePoint",
         "Control-M"
       ],
-      "tags": [
-        "Backend",
-        "Java",
-        "ETL",
-        "Performance",
-        "DevOps"
-      ]
+      "tags": ["Backend", "Java", "ETL", "Performance", "DevOps"]
     },
     {
       "id": "exp-3",
@@ -170,12 +158,7 @@
         "Informatica",
         "Control-M"
       ],
-      "tags": [
-        "PL/SQL",
-        "Automation",
-        "Oracle",
-        "Industrial Data"
-      ]
+      "tags": ["PL/SQL", "Automation", "Oracle", "Industrial Data"]
     },
     {
       "id": "exp-4",
@@ -214,12 +197,7 @@
         "WPF",
         "EDF Virtual API"
       ],
-      "tags": [
-        "Testing",
-        "Performance",
-        "Industrial SI",
-        "Migration"
-      ]
+      "tags": ["Testing", "Performance", "Industrial SI", "Migration"]
     },
     {
       "id": "exp-5",
@@ -259,13 +237,7 @@
         "Jenkins",
         "Selenium"
       ],
-      "tags": [
-        "POC",
-        "MES",
-        "Angular",
-        "React",
-        "CI/CD"
-      ]
+      "tags": ["POC", "MES", "Angular", "React", "CI/CD"]
     },
     {
       "id": "exp-6",
@@ -302,12 +274,7 @@
         "Bootstrap",
         "Exchange Server"
       ],
-      "tags": [
-        "SaaS",
-        "Azure",
-        "Cloud",
-        "OAuth"
-      ]
+      "tags": ["SaaS", "Azure", "Cloud", "OAuth"]
     },
     {
       "id": "exp-7",
@@ -333,11 +300,7 @@
         "Respect des procédures de sécurité et qualité"
       ],
       "technologies": [],
-      "tags": [
-        "Industrie",
-        "Maintenance",
-        "Semi-conducteurs"
-      ]
+      "tags": ["Industrie", "Maintenance", "Semi-conducteurs"]
     }
   ],
   "education": [
@@ -721,14 +684,7 @@
         "/assets/images/projects/iftt-trading-2.png"
       ],
       "featured": true,
-      "tags": [
-        "Blockchain",
-        "Solana",
-        "Angular",
-        "NestJS",
-        "DevOps",
-        "Microservices"
-      ]
+      "tags": ["Blockchain", "Solana", "Angular", "NestJS", "DevOps", "Microservices"]
     }
   ],
   "certifications": [],
