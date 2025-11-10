@@ -1,35 +1,13 @@
-import { Component, signal } from '@angular/core';
-import { RouterLink, RouterLinkActive } from '@angular/router';
-import { CommonModule } from '@angular/common';
-
-interface NavItem {
-  label: string;
-  path: string;
-}
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule, RouterLink, RouterLinkActive],
+  imports: [],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
-  protected readonly isMenuOpen = signal(false);
-
-  protected readonly navItems: NavItem[] = [
-    { label: 'About', path: '/about' },
-    { label: 'Experience', path: '/experience' },
-    { label: 'Projects', path: '/projects' },
-    { label: 'CV', path: '/cv' },
-    { label: 'Contact', path: '/contact' },
-  ];
-
-  toggleMenu(): void {
-    this.isMenuOpen.update((value) => !value);
-  }
-
-  closeMenu(): void {
-    this.isMenuOpen.set(false);
-  }
+  // Simple header component - no navigation logic needed
+  // Header is fixed on the left, content scrolls on the right
 }

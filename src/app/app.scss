@@ -1,3 +1,8 @@
+// Smooth scroll behavior
+html {
+  scroll-behavior: smooth;
+}
+
 // App container with spotlight effect
 .app-container {
   min-height: 100vh;
@@ -5,10 +10,69 @@
   color: rgb(226, 232, 240); // slate-200 (light text)
 }
 
-.main-content {
+// Two-column layout container (like brittanychiang.com)
+.layout-container {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem 1.5rem;
+  padding: 0 1.5rem;
+  display: flex;
+  gap: 4rem;
+
+  @media (min-width: 1024px) {
+    padding: 0 6rem;
+    gap: 6rem;
+  }
+
+  @media (max-width: 1023px) {
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+  }
+}
+
+// Right column: scrollable content
+.main-content {
+  flex: 1;
+  padding-top: 6rem;
+
+  @media (max-width: 1023px) {
+    padding-top: 2rem;
+  }
+}
+
+// Section styles
+.section {
+  padding: 6rem 0;
+  scroll-margin-top: 6rem;
+
+  @media (max-width: 768px) {
+    padding: 4rem 0;
+  }
+
+  // First section has less top padding
+  &:first-child {
+    padding-top: 0;
+  }
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: rgb(226, 232, 240); // slate-200
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+}
+
+.section-content {
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: rgb(148, 163, 184); // slate-400
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
 }
 
 // Spotlight overlay utilities
@@ -38,6 +102,33 @@
 
 .duration-300 {
   transition-duration: 300ms;
+}
+
+// Resume link (like brittanychiang.com)
+.resume-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgb(226, 232, 240); // slate-200
+  text-decoration: none;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: rgb(94, 234, 212); // teal-300
+    gap: 0.75rem;
+
+    .resume-arrow {
+      transform: translate(4px, -4px);
+    }
+  }
+}
+
+.resume-arrow {
+  width: 1rem;
+  height: 1rem;
+  transition: transform 0.3s ease;
 }
 
 // Responsive: only show spotlight on large screens

@@ -1,84 +1,143 @@
+<!-- Left column: Fixed header (like brittanychiang.com) -->
 <header class="header">
-  <div class="header-container">
-    <!-- Logo / Name -->
-    <a routerLink="/" class="logo" (click)="closeMenu()">
-      <span class="logo-text">Mafal Gaimard</span>
-    </a>
+  <div class="header-content">
+    <!-- Name and title -->
+    <div class="header-intro">
+      <h1 class="header-name">
+        <a href="/">Mafal Gai</a>
+      </h1>
+      <h2 class="header-title">Senior Software Engineer</h2>
+      <p class="header-description">
+        I build automated and robust digital experiences with a lean mindset and modern web
+        technologies.
+      </p>
+    </div>
 
-    <!-- Desktop Navigation -->
-    <nav class="desktop-nav" aria-label="Main navigation">
-      <ul class="nav-list">
-        @for (item of navItems; track item.path) {
-          <li class="nav-item">
-            <a [routerLink]="item.path" routerLinkActive="active" class="nav-link">
-              {{ item.label }}
-            </a>
-          </li>
-        }
+    <!-- Navigation links -->
+    <nav class="header-nav" aria-label="In-page jump links">
+      <ul class="nav-list" role="list">
+        <li>
+          <a href="#about" class="nav-link">
+            <span class="nav-indicator"></span>
+            <span class="nav-text">About</span>
+          </a>
+        </li>
+        <li>
+          <a href="#experience" class="nav-link">
+            <span class="nav-indicator"></span>
+            <span class="nav-text">Experience</span>
+          </a>
+        </li>
+        <li>
+          <a href="#projects" class="nav-link">
+            <span class="nav-indicator"></span>
+            <span class="nav-text">Projects</span>
+          </a>
+        </li>
       </ul>
     </nav>
 
-    <!-- Mobile Menu Button -->
-    <button
-      class="mobile-menu-btn"
-      (click)="toggleMenu()"
-      [attr.aria-expanded]="isMenuOpen()"
-      aria-label="Toggle navigation menu"
-      type="button"
-    >
-      @if (isMenuOpen()) {
-        <!-- Close icon -->
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          class="menu-icon"
+    <!-- Social links -->
+    <ul class="header-social" role="list" aria-label="Social media">
+      <li>
+        <a
+          href="https://github.com/Maf38"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub (opens in a new tab)"
+          title="GitHub"
         >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M6 18L18 6M6 6l12 12"
-          />
-        </svg>
-      } @else {
-        <!-- Hamburger icon -->
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          class="menu-icon"
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 16 16"
+            fill="currentColor"
+            class="social-icon"
+            aria-hidden="true"
+          >
+            <path
+              d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+            ></path>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://www.linkedin.com/in/mafal-gai"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn (opens in a new tab)"
+          title="LinkedIn"
         >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M4 6h16M4 12h16M4 18h16"
-          />
-        </svg>
-      }
-    </button>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="social-icon"
+            aria-hidden="true"
+          >
+            <path
+              d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"
+            ></path>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="tel:+33123456789" aria-label="Phone" title="Phone">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="social-icon"
+            aria-hidden="true"
+          >
+            <path
+              d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
+            ></path>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://maflabs.atlassian.net"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="JIRA (opens in a new tab)"
+          title="JIRA"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="social-icon"
+            aria-hidden="true"
+          >
+            <path
+              d="M11.571 11.513H0a5.218 5.218 0 0 0 5.232 5.215h2.13v2.057A5.215 5.215 0 0 0 12.575 24V12.518a1.005 1.005 0 0 0-1.005-1.005zm5.723-5.756H5.736a5.215 5.215 0 0 0 5.215 5.214h2.129v2.058a5.218 5.218 0 0 0 5.215 5.214V6.757a1 1 0 0 0-1.001-1zm5.703-5.757H11.439a5.215 5.215 0 0 0 5.215 5.215h2.129v2.057a5.215 5.215 0 0 0 5.215 5.215V1a1 1 0 0 0-1.001-1z"
+            ></path>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://sonarqube.maflabs.fr"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="SonarQube (opens in a new tab)"
+          title="SonarQube"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="social-icon"
+            aria-hidden="true"
+          >
+            <path
+              d="M15.685.386l-.465.766c3.477 2.112 6.305 5.27 7.966 8.89L24 9.67C22.266 5.887 19.313 2.59 15.685.386zM8.462.91l-.305.952c5.813 1.862 10.464 6.508 12.326 12.324l.952-.305C19.568 7.427 14.74 2.778 8.462.91zm1.116 3.45l-.387.914a15.861 15.861 0 0 1 9.63 9.647l.913-.387a16.862 16.862 0 0 0-10.156-10.173zm1.015 3.423l-.44.898a12.626 12.626 0 0 1 7.231 7.245l.898-.44a13.628 13.628 0 0 0-7.69-7.703zm-7.086.502C1.463 10.53.002 13.426.002 16.586.002 20.85 3.445 24 7.71 24c3.16 0 6.062-1.46 8.306-3.505l-.675-.73C13.138 21.571 10.48 23 7.71 23c-3.906 0-6.707-2.91-6.707-6.414 0-2.912 1.385-5.565 3.58-7.618l-.076-.084zm2.065 2.18l-.52.848c1.001.616 1.918 1.313 2.682 2.084.764.772 1.466 1.696 2.084 2.695l.848-.52c-.68-1.096-1.458-2.127-2.29-2.961-.832-.834-1.858-1.607-2.954-2.285l.15.04zm-1.21 3.272l-.717.696c2.006 2.07 2.967 4.484 2.967 6.98 0 2.501-.867 3.99-2.89 5.267l.512.858C5.535 26.58 6.71 24.863 6.71 22.003c0-2.823-1.053-5.53-3.349-7.78z"
+            ></path>
+          </svg>
+        </a>
+      </li>
+    </ul>
   </div>
-
-  <!-- Mobile Navigation -->
-  @if (isMenuOpen()) {
-    <nav class="mobile-nav" aria-label="Mobile navigation">
-      <ul class="mobile-nav-list">
-        @for (item of navItems; track item.path) {
-          <li class="mobile-nav-item">
-            <a
-              [routerLink]="item.path"
-              routerLinkActive="active"
-              class="mobile-nav-link"
-              (click)="closeMenu()"
-            >
-              {{ item.label }}
-            </a>
-          </li>
-        }
-      </ul>
-    </nav>
-  }
 </header>
