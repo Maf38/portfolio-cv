@@ -1,0 +1,15 @@
+# Code owners for portfolio-cv
+# These owners will be requested for review when someone opens a pull request
+
+# Default owner for everything
+* @Maf38
+
+# Documentation
+/docs/ @Maf38
+*.md @Maf38
+
+# CI/CD configuration
+/.github/ @Maf38
+
+# Core application
+/src/ @Maf38
