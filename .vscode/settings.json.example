@@ -1,0 +1,45 @@
+{
+  // SonarLint Configuration
+  // Copy this file to .vscode/settings.json and configure your SonarQube token
+  "sonarlint.connectedMode.connections.sonarqube": [
+    {
+      "serverUrl": "https://sonarqube.maflabs.fr"
+      // Add your token here in the actual settings.json file:
+      // "token": "your_sonarqube_token_here"
+    }
+  ],
+  "sonarlint.connectedMode.project": {
+    "connectionId": "https://sonarqube.maflabs.fr",
+    "projectKey": "portfolio-cv"
+  },
+
+  // Editor configuration
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+
+  // TypeScript
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // Files
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/.angular": true
+  }
+}

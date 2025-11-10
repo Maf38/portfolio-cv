@@ -1,0 +1,799 @@
+{
+  "profile": {
+    "firstName": "Mafal",
+    "lastName": "GAI",
+    "fullName": "Mafal GAI",
+    "title": "Développeur .NET",
+    "subtitle": "6 ans d'expérience",
+    "birthDate": "1978-03-11",
+    "email": "gaimafal@gmail.com",
+    "phone": "+33 6 70 16 05 17",
+    "location": {
+      "city": "Grenoble",
+      "postalCode": "38000",
+      "country": "France",
+      "address": "53A rue Pierre Semard"
+    },
+    "summary": "Développeur .NET avec 6 ans d'expérience dans le développement d'applications industrielles critiques pour EDF et CEA. Spécialisé en .NET, SQL Server, et technologies Microsoft. Parcours atypique : 15 ans d'expérience industrielle (ST Microelectronics) suivis d'une reconversion réussie dans le développement logiciel. Cette double compétence apporte une rigueur industrielle et un sens aigu de la qualité au développement d'applications métier.",
+    "tagline": "Développeur Full-Stack .NET spécialisé en applications industrielles critiques",
+    "availability": "Disponible pour nouvelles opportunités",
+    "social": {
+      "github": "https://github.com/mafalgai",
+      "linkedin": "https://linkedin.com/in/mafal-gai",
+      "email": "gaimafal@gmail.com"
+    },
+    "languages": [
+      {
+        "name": "Français",
+        "level": "Langue maternelle",
+        "code": "fr-FR"
+      },
+      {
+        "name": "Anglais",
+        "level": "Intermédiaire/Avancé (B2)",
+        "code": "en-US"
+      }
+    ],
+    "driving": {
+      "license": "Permis B",
+      "vehicle": true
+    }
+  },
+  "experience": [
+    {
+      "id": "exp-1",
+      "company": "CEA (Commissariat à l'Énergie Atomique)",
+      "companyUrl": "https://www.cea.fr",
+      "via": "Capgemini",
+      "position": "Développeur .NET",
+      "location": "Grenoble, France",
+      "startDate": "2023-04",
+      "endDate": null,
+      "current": true,
+      "duration": "2 ans (en cours)",
+      "type": "CDI via ESN",
+      "description": "Développeur dans une TMA multi-applicative gérant 60 applications divisées en 2 pôles. Parc applicatif homogène autour des technologies web Microsoft. Temps partagé entre build et run sur une vingtaine d'applications.",
+      "achievements": [
+        "Correction de bugs et développement de nouvelles fonctionnalités sur 20+ applications",
+        "Migration des librairies et infrastructures vers versions modernes",
+        "Participation à la modernisation du SI (RabbitMQ, SeriLog/ELK, CI/CD)",
+        "Revue de code systématique avec SonarQube"
+      ],
+      "responsibilities": [
+        "Maintenance corrective et évolutive de 60 applications .NET",
+        "Migration progressive de .NET Framework vers .NET 8",
+        "Implémentation de nouvelles fonctionnalités selon besoins métier",
+        "Optimisation des performances et de la qualité du code"
+      ],
+      "technologies": [
+        ".NET 4.8",
+        ".NET 8",
+        "SQL Server",
+        "Entity Framework",
+        "Razor",
+        "Kendo UI",
+        "JavaScript",
+        "jQuery",
+        "RabbitMQ",
+        "SeriLog",
+        "ELK Stack",
+        "Azure DevOps",
+        "SonarQube",
+        "IIS",
+        "Windows Server"
+      ],
+      "tags": [
+        "TMA",
+        ".NET",
+        "SQL Server",
+        "Modernisation",
+        "Qualité"
+      ]
+    },
+    {
+      "id": "exp-2",
+      "company": "EDF (Électricité de France)",
+      "companyUrl": "https://www.edf.fr",
+      "via": "Capgemini",
+      "position": "Développeur Backend (Java, KornShell, Informatica)",
+      "location": "Lyon, France",
+      "startDate": "2022-04",
+      "endDate": "2023-03",
+      "current": false,
+      "duration": "1 an",
+      "type": "Mission via ESN",
+      "description": "Référent technique sur la solution TRT (moteur de contrôle backend) dans le contexte du projet GEMODO. Architecture composée de scripts KornShell, Java et ETL Informatica sur serveur RedHat Linux avec base Oracle.",
+      "achievements": [
+        "Mise en place d'une version multithreadée augmentant significativement la capacité de traitement",
+        "Premier déploiement automatisé avec Jenkins + Ansible",
+        "Amélioration des performances du moteur de contrôle",
+        "Référent technique sur l'architecture 3 composants (Ksh, Java, Informatica)"
+      ],
+      "responsibilities": [
+        "Architecture et développement du moteur TRT version 3.0",
+        "Optimisation des performances (multithreading)",
+        "Mise en place du déploiement automatisé (Jenkins + Ansible)",
+        "Support technique et résolution d'incidents"
+      ],
+      "technologies": [
+        "Java",
+        "KornShell",
+        "Informatica",
+        "Oracle Database",
+        "RedHat Linux 7",
+        "Jenkins",
+        "Ansible",
+        "SharePoint",
+        "Control-M"
+      ],
+      "tags": [
+        "Backend",
+        "Java",
+        "ETL",
+        "Performance",
+        "DevOps"
+      ]
+    },
+    {
+      "id": "exp-3",
+      "company": "EDF (Électricité de France)",
+      "companyUrl": "https://www.edf.fr",
+      "via": "Capgemini",
+      "position": "Développeur PL/SQL et VB Script",
+      "location": "Lyon, France",
+      "startDate": "2021-06",
+      "endDate": "2023-03",
+      "current": false,
+      "duration": "1 an 10 mois",
+      "type": "Mission via ESN",
+      "description": "Développement et maintenance de services contrôlant des données industrielles sensibles dans le projet GEMODO. Automatisation de l'injection de données et optimisation des requêtes PL/SQL.",
+      "achievements": [
+        "Optimisation significative des requêtes PL/SQL (performances améliorées)",
+        "Création de scripts QTP robustes pour automatisation",
+        "Migration réussie des services UFT vers RPA",
+        "Tests croisés et validation des paramétrages"
+      ],
+      "responsibilities": [
+        "Création de fichiers de paramétrage PL/SQL pour contrôle des données",
+        "Développement de scripts d'automatisation pour saisie via client web",
+        "Maintenance et mise à jour du moteur de contrôle",
+        "Contrôle et injection de données dans migrations"
+      ],
+      "technologies": [
+        "PL/SQL",
+        "VB Script",
+        "Oracle Database",
+        "SharePoint",
+        "QTP/UFT",
+        "RPA",
+        "Linux",
+        "Informatica",
+        "Control-M"
+      ],
+      "tags": [
+        "PL/SQL",
+        "Automation",
+        "Oracle",
+        "Industrial Data"
+      ]
+    },
+    {
+      "id": "exp-4",
+      "company": "EDF (Électricité de France)",
+      "companyUrl": "https://www.edf.fr",
+      "via": "Capgemini",
+      "position": "Support Niveau 3 / Testeur End-to-End",
+      "location": "Montbonnot, France",
+      "startDate": "2020-06",
+      "endDate": "2021-06",
+      "current": false,
+      "duration": "1 an 1 mois",
+      "type": "Mission via ESN",
+      "description": "Support TMA et tests de performance pour le SI industriel PRISM (Aveva). Tests de non-régression, migration de sources de données, et validation d'architecture 5 serveurs.",
+      "achievements": [
+        "Migration complète site par site des flux ORLI vers Espadon",
+        "Tests de performance avec EDF Virtual API",
+        "Validation de l'architecture 5 serveurs avec nouveau mode NRT",
+        "Rédaction et exécution de tests sous HP ALM"
+      ],
+      "responsibilities": [
+        "Tests de régression sur nouvelles versions PRISM",
+        "Tests de performance (sources de données, architecture)",
+        "Création de tickets et échanges avec éditeur Aveva",
+        "Migration flux de données ODBC vers API REST"
+      ],
+      "technologies": [
+        "HP ALM",
+        "Windows Server",
+        "SQL Server",
+        "eDNA",
+        "Aspentech",
+        "Espadon API",
+        "PowerShell",
+        "SSRS",
+        "WPF",
+        "EDF Virtual API"
+      ],
+      "tags": [
+        "Testing",
+        "Performance",
+        "Industrial SI",
+        "Migration"
+      ]
+    },
+    {
+      "id": "exp-5",
+      "company": "EDF / Rio Tinto",
+      "companyUrl": "https://www.edf.fr",
+      "via": "Capgemini",
+      "position": "Développeur Logiciel",
+      "location": "Montbonnot, France",
+      "startDate": "2019-11",
+      "endDate": "2020-05",
+      "current": false,
+      "duration": "7 mois",
+      "type": "Intégration ESN",
+      "description": "Intégration à Capgemini avec diverses missions POC au sein de l'équipe MES (Manufacturing Execution Systems) spécialisée en Data Historian. Découverte des environnements et outils.",
+      "achievements": [
+        "Mise en place d'une chaîne d'intégration continue (GitLab, Jenkins, Selenium)",
+        "Rafraîchissement interface Rio Tinto avec Angular 6 et Ionic 3",
+        "POC migration SQL Server vers MariaDB avec stack Node.js/React",
+        "Amélioration UI : migration Winforms/VB.Net vers WPF"
+      ],
+      "responsibilities": [
+        "POC et tests de nouvelles technologies",
+        "Migration et modernisation d'applications existantes",
+        "Familiarisation avec environnements MES et Data Historian"
+      ],
+      "technologies": [
+        "Angular 6",
+        "Ionic 3",
+        "React JS",
+        "Node.js",
+        "Loopback",
+        "MariaDB",
+        "SQL Server",
+        "WPF",
+        "VB.Net",
+        "GitLab",
+        "Jenkins",
+        "Selenium"
+      ],
+      "tags": [
+        "POC",
+        "MES",
+        "Angular",
+        "React",
+        "CI/CD"
+      ]
+    },
+    {
+      "id": "exp-6",
+      "company": "Cerberis",
+      "companyUrl": null,
+      "via": null,
+      "position": "Stagiaire Développeur",
+      "location": "Grenoble, France",
+      "startDate": "2019-04",
+      "endDate": "2019-09",
+      "current": false,
+      "duration": "6 mois",
+      "type": "Stage de fin d'étude",
+      "description": "Stage de fin d'étude AFPA. Conception et réalisation d'une application SaaS de type daemon service pour gérer une structure de salles imbriquée sur serveurs Exchange (architecture 5 tiers).",
+      "achievements": [
+        "Développement complet d'une application SaaS Azure",
+        "Utilisation de technologies cloud Microsoft (Azure AD, Cosmos DB, Graph API)",
+        "Sécurisation via protocole OAuth 2.0",
+        "IHM admin avec Bootstrap"
+      ],
+      "responsibilities": [
+        "Conception architecture 5 tiers",
+        "Développement daemon service .NET",
+        "Intégration Azure AD et Cosmos DB",
+        "Développement interface d'administration"
+      ],
+      "technologies": [
+        ".NET",
+        "Azure",
+        "Azure AD",
+        "Azure Cosmos DB",
+        "Microsoft Graph API",
+        "OAuth 2.0",
+        "Bootstrap",
+        "Exchange Server"
+      ],
+      "tags": [
+        "SaaS",
+        "Azure",
+        "Cloud",
+        "OAuth"
+      ]
+    },
+    {
+      "id": "exp-7",
+      "company": "ST Microelectronics",
+      "companyUrl": "https://www.st.com",
+      "via": null,
+      "position": "Technicien de Maintenance",
+      "location": "Crolles, France",
+      "startDate": "2005-01",
+      "endDate": "2018-12",
+      "current": false,
+      "duration": "13 ans",
+      "type": "CDI",
+      "description": "Technicien de maintenance dans l'industrie des semi-conducteurs. Cette expérience de 15 ans dans l'industrie a développé une grande rigueur et un excellent sens du travail en équipe.",
+      "achievements": [
+        "15 ans d'expérience industrielle en environnement haute technologie",
+        "Développement d'une rigueur industrielle appliquée au développement logiciel",
+        "Compétences techniques et travail en équipe"
+      ],
+      "responsibilities": [
+        "Maintenance préventive et corrective d'équipements de production",
+        "Support technique sur ligne de fabrication",
+        "Respect des procédures de sécurité et qualité"
+      ],
+      "technologies": [],
+      "tags": [
+        "Industrie",
+        "Maintenance",
+        "Semi-conducteurs"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "id": "edu-1",
+      "degree": "Titre Professionnel Concepteur Développeur Informatique",
+      "level": "Bac+3/4 (Niveau 6)",
+      "school": "AFPA Pont de Claix",
+      "location": "Grenoble, France",
+      "startDate": "2018-09",
+      "endDate": "2019-06",
+      "duration": "9 mois",
+      "description": "Reconversion professionnelle après 15 ans d'expérience industrielle. Formation intensive en développement logiciel.",
+      "courses": [
+        "Programmation Java JEE",
+        "Développement .NET / C#",
+        "Base de données SQL",
+        "UML / Merise",
+        "Développement mobile (Android, iOS)",
+        "Méthodologies Agile"
+      ],
+      "grade": null
+    },
+    {
+      "id": "edu-2",
+      "degree": "DUT GEII - Génie Électrique et Informatique Industrielle",
+      "level": "Bac+2",
+      "school": "Université Joseph Fourier (UJF)",
+      "location": "Grenoble, France",
+      "startDate": "2002-09",
+      "endDate": "2003-06",
+      "duration": "1 an",
+      "description": "Formation en génie électrique et informatique industrielle.",
+      "courses": [],
+      "grade": null
+    },
+    {
+      "id": "edu-3",
+      "degree": "IUP MAI - Mathématiques Appliquées et Industrielles",
+      "level": "Bac+3 (Licence)",
+      "school": "Université Joseph Fourier (UJF)",
+      "location": "Grenoble, France",
+      "startDate": "1998-09",
+      "endDate": "1999-06",
+      "duration": "1 an",
+      "description": "Formation en mathématiques appliquées au secteur industriel.",
+      "courses": [],
+      "grade": null
+    },
+    {
+      "id": "edu-4",
+      "degree": "DEUG SMb - Biochimie",
+      "level": "Bac+2",
+      "school": "Université Joseph Fourier (UJF)",
+      "location": "Grenoble, France",
+      "startDate": "1997-09",
+      "endDate": "1998-06",
+      "duration": "1 an",
+      "description": "Formation en sciences et techniques, spécialisation biochimie.",
+      "courses": [],
+      "grade": null
+    },
+    {
+      "id": "edu-5",
+      "degree": "Math Sup PC-SI - Physique Chimie Science de l'Ingénieur",
+      "level": "Classe préparatoire",
+      "school": "Lycée Berthollet",
+      "location": "Annecy, France",
+      "startDate": "1996-09",
+      "endDate": "1997-06",
+      "duration": "1 an",
+      "description": "Classe préparatoire aux grandes écoles, filière scientifique.",
+      "courses": [],
+      "grade": null
+    },
+    {
+      "id": "edu-6",
+      "degree": "Baccalauréat Scientifique",
+      "level": "Bac",
+      "school": "Lycée Saint Marie",
+      "location": "Grenoble, France",
+      "startDate": "1995-09",
+      "endDate": "1996-06",
+      "duration": "1 an",
+      "description": "Baccalauréat série scientifique.",
+      "courses": [],
+      "grade": "Mention Bien"
+    }
+  ],
+  "skills": {
+    "backend": [
+      {
+        "name": "C# / .NET",
+        "level": "Expert",
+        "years": 6,
+        "category": "backend",
+        "rating": 5
+      },
+      {
+        "name": "SQL Server",
+        "level": "Expert",
+        "years": 6,
+        "category": "backend",
+        "rating": 5
+      },
+      {
+        "name": "Entity Framework",
+        "level": "Expert",
+        "years": 6,
+        "category": "backend",
+        "rating": 5
+      },
+      {
+        "name": "PL/SQL",
+        "level": "Avancé",
+        "years": 3,
+        "category": "backend",
+        "rating": 4
+      },
+      {
+        "name": "Java",
+        "level": "Intermédiaire",
+        "years": 2,
+        "category": "backend",
+        "rating": 3
+      },
+      {
+        "name": "Oracle Database",
+        "level": "Avancé",
+        "years": 3,
+        "category": "backend",
+        "rating": 4
+      }
+    ],
+    "frontend": [
+      {
+        "name": "JavaScript",
+        "level": "Avancé",
+        "years": 6,
+        "category": "frontend",
+        "rating": 4
+      },
+      {
+        "name": "TypeScript",
+        "level": "Avancé",
+        "years": 4,
+        "category": "frontend",
+        "rating": 4
+      },
+      {
+        "name": "Angular",
+        "level": "Avancé",
+        "years": 4,
+        "category": "frontend",
+        "rating": 4
+      },
+      {
+        "name": "jQuery",
+        "level": "Avancé",
+        "years": 6,
+        "category": "frontend",
+        "rating": 4
+      },
+      {
+        "name": "Kendo UI",
+        "level": "Avancé",
+        "years": 3,
+        "category": "frontend",
+        "rating": 4
+      },
+      {
+        "name": "Bootstrap",
+        "level": "Avancé",
+        "years": 5,
+        "category": "frontend",
+        "rating": 4
+      },
+      {
+        "name": "React",
+        "level": "Débutant",
+        "years": 1,
+        "category": "frontend",
+        "rating": 2
+      }
+    ],
+    "devops": [
+      {
+        "name": "Azure DevOps",
+        "level": "Avancé",
+        "years": 6,
+        "category": "devops",
+        "rating": 4
+      },
+      {
+        "name": "Git",
+        "level": "Avancé",
+        "years": 6,
+        "category": "devops",
+        "rating": 5
+      },
+      {
+        "name": "Jenkins",
+        "level": "Intermédiaire",
+        "years": 2,
+        "category": "devops",
+        "rating": 3
+      },
+      {
+        "name": "Ansible",
+        "level": "Débutant",
+        "years": 1,
+        "category": "devops",
+        "rating": 2
+      },
+      {
+        "name": "SonarQube",
+        "level": "Avancé",
+        "years": 3,
+        "category": "devops",
+        "rating": 4
+      },
+      {
+        "name": "RabbitMQ",
+        "level": "Intermédiaire",
+        "years": 1,
+        "category": "devops",
+        "rating": 3
+      }
+    ],
+    "cloud": [
+      {
+        "name": "Microsoft Azure",
+        "level": "Avancé",
+        "years": 4,
+        "category": "cloud",
+        "rating": 4
+      },
+      {
+        "name": "Azure AD",
+        "level": "Avancé",
+        "years": 3,
+        "category": "cloud",
+        "rating": 4
+      },
+      {
+        "name": "Azure Cosmos DB",
+        "level": "Intermédiaire",
+        "years": 1,
+        "category": "cloud",
+        "rating": 3
+      }
+    ],
+    "testing": [
+      {
+        "name": "Selenium",
+        "level": "Intermédiaire",
+        "years": 2,
+        "category": "testing",
+        "rating": 3
+      },
+      {
+        "name": "HP ALM",
+        "level": "Avancé",
+        "years": 2,
+        "category": "testing",
+        "rating": 4
+      },
+      {
+        "name": "Tests de Performance",
+        "level": "Avancé",
+        "years": 2,
+        "category": "testing",
+        "rating": 4
+      }
+    ],
+    "tools": [
+      {
+        "name": "Visual Studio",
+        "level": "Expert",
+        "years": 6,
+        "category": "tools",
+        "rating": 5
+      },
+      {
+        "name": "Visual Studio Code",
+        "level": "Avancé",
+        "years": 4,
+        "category": "tools",
+        "rating": 4
+      },
+      {
+        "name": "JIRA",
+        "level": "Avancé",
+        "years": 6,
+        "category": "tools",
+        "rating": 4
+      },
+      {
+        "name": "Postman",
+        "level": "Avancé",
+        "years": 5,
+        "category": "tools",
+        "rating": 4
+      }
+    ],
+    "methodologies": [
+      {
+        "name": "Agile / Scrum",
+        "level": "Avancé",
+        "years": 6,
+        "category": "methodologies",
+        "rating": 5
+      },
+      {
+        "name": "UML",
+        "level": "Intermédiaire",
+        "years": 4,
+        "category": "methodologies",
+        "rating": 3
+      },
+      {
+        "name": "Merise",
+        "level": "Intermédiaire",
+        "years": 3,
+        "category": "methodologies",
+        "rating": 3
+      }
+    ]
+  },
+  "projects": [
+    {
+      "id": "project-iftt",
+      "name": "IFTT Trading Platform",
+      "type": "Projet personnel",
+      "status": "En développement",
+      "startDate": "2024-11",
+      "endDate": null,
+      "description": "Plateforme complète de trading automatisé sur blockchain Solana permettant de créer des ordres d'achat/vente conditionnels basés sur des indicateurs techniques (RSI, EMA, prix).",
+      "role": "Architecte & Développeur Full-Stack",
+      "team": "Solo",
+      "achievements": [
+        "Architecture microservices avec 5 services orchestrés par N8N",
+        "Collecte et agrégation de prix Solana toutes les 5s avec InfluxDB",
+        "Gestion sécurisée des clés privées avec HashiCorp Vault",
+        "Infrastructure DevOps complète (Docker, GitLab CI, Ansible, Monitoring)"
+      ],
+      "challenges": [
+        "Architecture microservices avec API Gateway centralisée",
+        "Time-series haute fréquence (5s) avec InfluxDB",
+        "Sécurité blockchain (gestion clés privées, signatures)",
+        "Orchestration 5 services Docker avec monitoring"
+      ],
+      "technologies": [
+        "Angular 18.2",
+        "TypeScript",
+        "NestJS 10.3",
+        "PostgreSQL 15",
+        "Solana",
+        "@solana/web3.js",
+        "Jupiter API",
+        "InfluxDB 2.7",
+        "HashiCorp Vault",
+        "Docker Compose",
+        "GitLab CI",
+        "Prometheus",
+        "Grafana"
+      ],
+      "metrics": {
+        "uptime": "99.9% sur 2 mois",
+        "latency": "<100ms pour récupération OHLCV",
+        "services": 5,
+        "linesOfCode": "~15000"
+      },
+      "links": {
+        "github": "https://github.com/mafalgai/iftt-trading",
+        "demo": null,
+        "documentation": "/workspace-amsterdam/devops-iftt-trading"
+      },
+      "images": [
+        "/assets/images/projects/iftt-trading-1.png",
+        "/assets/images/projects/iftt-trading-2.png"
+      ],
+      "featured": true,
+      "tags": [
+        "Blockchain",
+        "Solana",
+        "Angular",
+        "NestJS",
+        "DevOps",
+        "Microservices"
+      ]
+    }
+  ],
+  "certifications": [],
+  "hobbies": [
+    {
+      "name": "Ski",
+      "category": "Sport",
+      "icon": "ski"
+    },
+    {
+      "name": "VTT Descente & Enduro",
+      "category": "Sport",
+      "icon": "bike"
+    },
+    {
+      "name": "Randonnée",
+      "category": "Sport",
+      "icon": "hiking"
+    },
+    {
+      "name": "Jeux Vidéo FPS",
+      "category": "Loisir",
+      "icon": "gaming"
+    }
+  ],
+  "softSkills": [
+    {
+      "name": "Rigueur",
+      "level": 5,
+      "description": "15 ans d'expérience industrielle appliquée au développement"
+    },
+    {
+      "name": "Travail en équipe",
+      "level": 5,
+      "description": "Collaboration Scrum, code review, partage de connaissances"
+    },
+    {
+      "name": "Capacité d'apprentissage",
+      "level": 5,
+      "description": "Reconversion réussie, montée en compétence rapide sur nouvelles technologies"
+    },
+    {
+      "name": "Autonomie",
+      "level": 4,
+      "description": "Référent technique, prise de décisions, gestion de projets"
+    },
+    {
+      "name": "Communication",
+      "level": 4,
+      "description": "Rédaction technique, documentation, échanges avec éditeurs"
+    },
+    {
+      "name": "Résolution de problèmes",
+      "level": 5,
+      "description": "Debugging, optimisation, analyse de performance"
+    }
+  ],
+  "meta": {
+    "version": "1.0.0",
+    "lastUpdated": "2025-11-09",
+    "source": "Extraction CVs PDF 2019 + 2025",
+    "totalExperience": {
+      "industry": 13,
+      "development": 6,
+      "total": 19
+    }
+  }
+}
