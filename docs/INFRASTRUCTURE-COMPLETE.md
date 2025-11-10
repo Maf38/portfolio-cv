@@ -78,13 +78,25 @@ Déclenché sur `push` vers `main` uniquement :
 - ✅ Analyse en temps réel
 - ✅ Connecté au serveur
 
-### 5. Documentation
+### 5. Branch Protection ✅
+
+- ✅ Ruleset `protect-main` configuré et actif
+- ✅ Ruleset `protect-develop` configuré et actif
+- ✅ PR requises pour merger vers main et develop
+- ✅ Status checks requis : `lint`, `test`, `sonarqube`, `build`
+- ✅ Conversation resolution requise
+- ✅ Force push bloqué
+
+📖 **Documentation complète** : [GITHUB-BRANCH-PROTECTION.md](./GITHUB-BRANCH-PROTECTION.md)
+
+### 6. Documentation
 
 | Fichier | Description |
 |---------|-------------|
 | [CLAUDE.md](../CLAUDE.md) | Contexte projet + Règles de sécurité |
 | [GITHUB-SETUP.md](./GITHUB-SETUP.md) | Guide complet setup GitHub |
 | [GITHUB-SECRETS-SETUP.sh](./GITHUB-SECRETS-SETUP.sh) | Script configuration secrets |
+| [GITHUB-BRANCH-PROTECTION.md](./GITHUB-BRANCH-PROTECTION.md) | Configuration des rulesets de protection |
 | [WORKFLOW-FEATURES.md](./WORKFLOW-FEATURES.md) | Workflow de développement |
 | [WORKFLOW-TESTS.md](./WORKFLOW-TESTS.md) | Stratégie de tests |
 
@@ -113,26 +125,31 @@ brew install gh  # macOS
 ./docs/GITHUB-SECRETS-SETUP.sh
 ```
 
-### 2. Configurer Branch Protection Rules
+### 2. Configurer Branch Protection Rulesets ✅ TERMINÉ
 
-**Pour `main`** : https://github.com/Maf38/portfolio-cv/settings/branch_protection_rules/new
+**Interface** : https://github.com/Maf38/portfolio-cv/settings/rules
 
-✅ Branch name pattern : `main`
+✅ **Ruleset `protect-main`** configuré
+- Target: `main`
+- Status: Active
+- PR requise (0 approvals)
+- Checks requis: `lint`, `test`, `sonarqube`, `build`
+- Conversation resolution requise
+- Force push bloqué
+- Linear history requis
 
-✅ **Require a pull request before merging**
-- Require approvals: 0
+✅ **Ruleset `protect-develop`** configuré
+- Target: `develop`
+- Status: Active
+- PR requise (0 approvals)
+- Checks requis: `lint`, `test`, `sonarqube`, `build`
+- Conversation resolution requise
+- Force push bloqué
+- Linear history **non** requis (plus flexible)
 
-✅ **Require status checks to pass before merging**
-- ✅ `lint` (Lint & Format Check)
-- ✅ `test` (Unit Tests & Coverage)
-- ✅ `sonarqube` (SonarQube Analysis)
-- ✅ `build` (Build Application)
+📖 **Documentation complète** : [docs/GITHUB-BRANCH-PROTECTION.md](./GITHUB-BRANCH-PROTECTION.md)
 
-✅ **Require conversation resolution before merging**
-
-❌ **Do not allow bypassing** (décoché pour vous permettre de push)
-
-**Pour `develop`** : Même configuration (moins stricte pour le dev)
+> **Note** : Si les status checks ne sont pas encore visibles dans l'interface, exécuter le CI/CD une première fois, puis éditer les rulesets pour les ajouter.
 
 ### 3. Activer GitHub Pages
 
@@ -283,12 +300,12 @@ git branch --merged | grep -v "main\|develop" | xargs git branch -d
 
 **Actions manuelles requises** :
 1. Configurer les GitHub Secrets
-2. Configurer les Branch Protection Rules
+2. ✅ ~~Configurer les Branch Protection Rulesets~~ (TERMINÉ)
 3. Activer GitHub Pages
 
-**Temps estimé** : 10-15 minutes
+**Temps estimé** : 5-10 minutes (il ne reste que 2 actions)
 
-Une fois ces 3 actions effectuées, le pipeline sera 100% fonctionnel ! 🎉
+Une fois ces 2 actions effectuées, le pipeline sera 100% fonctionnel ! 🎉
 
 ---
 
