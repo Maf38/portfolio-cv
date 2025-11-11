@@ -32,7 +32,7 @@ html {
 // Right column: scrollable content
 .main-content {
   flex: 1;
-  padding-top: 6rem;
+  padding-top: 7rem; // Aligns center of "ABOUT" (1rem font) with center of "Mafal Gai" (3rem font)
 
   @media (max-width: 1023px) {
     padding-top: 2rem;
@@ -41,16 +41,11 @@ html {
 
 // Section styles
 .section {
-  padding: 6rem 0;
-  scroll-margin-top: 6rem;
+  padding: 0 0 2rem 0; // Reduced bottom padding from 4rem to 2rem
+  scroll-margin-top: 7rem; // Matches .main-content padding-top for proper scroll alignment
 
   @media (max-width: 768px) {
-    padding: 4rem 0;
-  }
-
-  // First section has less top padding
-  &:first-child {
-    padding-top: 0;
+    padding: 0 0 2rem 0;
   }
 }
 
@@ -136,4 +131,409 @@ html {
   .lg\\:absolute {
     position: absolute;
   }
+}
+
+// ============================================
+// ABOUT SECTION
+// ============================================
+
+.section-header {
+  margin-bottom: 1rem; // Reduced from 1.5rem to 1rem
+
+  @media (min-width: 1024px) {
+    margin-bottom: 1rem;
+  }
+}
+
+.section-heading {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgb(226, 232, 240); // slate-200
+  margin: 0;
+
+  @media (min-width: 1024px) {
+    // On desktop, section headings are sticky at top
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    padding: 0.5rem 0; // Reduced from 1.5rem to 0.5rem
+    background: linear-gradient(
+      to bottom,
+      rgb(15, 23, 42) 0%,
+      rgb(15, 23, 42) 80%,
+      transparent 100%
+    );
+  }
+}
+
+.about-content {
+  max-width: 500px;
+}
+
+.about-paragraph {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: rgb(148, 163, 184); // slate-400
+
+  strong {
+    color: rgb(226, 232, 240); // slate-200
+    font-weight: 600;
+  }
+}
+
+.about-link {
+  color: rgb(226, 232, 240); // slate-200
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  position: relative;
+
+  &:hover {
+    color: rgb(94, 234, 212); // teal-300
+  }
+
+  &:focus-visible {
+    color: rgb(94, 234, 212);
+    outline: 2px solid rgb(94, 234, 212);
+    outline-offset: 4px;
+    border-radius: 2px;
+  }
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  list-style: none;
+  margin: 1.5rem 0 0 0;
+  padding: 0;
+  font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+  font-size: 0.875rem;
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  color: rgb(148, 163, 184); // slate-400
+
+  &::before {
+    content: '▹';
+    color: rgb(94, 234, 212); // teal-300
+    margin-right: 0.75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+  }
+}
+
+// ============================================
+// EXPERIENCE SECTION
+// ============================================
+
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.experience-item {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+
+  @media (min-width: 640px) {
+    grid-template-columns: 200px 1fr;
+    padding: 1.5rem;
+  }
+
+  @media (min-width: 1024px) {
+    &:hover {
+      background: rgba(148, 163, 184, 0.1);
+      box-shadow: 0 0 0 1px rgba(148, 163, 184, 0.1);
+    }
+  }
+}
+
+.experience-header {
+  display: contents;
+}
+
+.experience-period {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: rgb(148, 163, 184); // slate-400
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 0.25rem;
+}
+
+.experience-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.experience-title {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.experience-link {
+  color: rgb(226, 232, 240); // slate-200
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: inline-block;
+
+  &:hover {
+    color: rgb(94, 234, 212); // teal-300
+
+    .experience-position {
+      color: rgb(94, 234, 212);
+    }
+  }
+
+  &:focus-visible {
+    color: rgb(94, 234, 212);
+    outline: 2px solid rgb(94, 234, 212);
+    outline-offset: 4px;
+    border-radius: 2px;
+  }
+}
+
+.experience-position {
+  color: rgb(226, 232, 240); // slate-200
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.experience-company {
+  color: rgb(148, 163, 184); // slate-400
+  font-weight: 500;
+}
+
+.experience-description {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.625;
+  color: rgb(148, 163, 184); // slate-400
+}
+
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tech-item {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: rgb(94, 234, 212); // teal-300
+  background: rgba(94, 234, 212, 0.1);
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+}
+
+.resume-link-wrapper {
+  margin-top: 3rem;
+}
+
+.resume-full-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgb(226, 232, 240); // slate-200
+  text-decoration: none;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: rgb(94, 234, 212); // teal-300
+    gap: 0.75rem;
+
+    .resume-arrow-inline {
+      transform: translate(4px, -4px);
+    }
+  }
+
+  &:focus-visible {
+    color: rgb(94, 234, 212);
+    outline: 2px solid rgb(94, 234, 212);
+    outline-offset: 4px;
+    border-radius: 2px;
+  }
+}
+
+.resume-arrow-inline {
+  width: 1rem;
+  height: 1rem;
+  transition: transform 0.3s ease;
+}
+
+// ============================================
+// PROJECTS SECTION
+// ============================================
+
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.project-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+
+  @media (min-width: 640px) {
+    grid-template-columns: 200px 1fr;
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 1024px) {
+    &:hover {
+      background: rgba(148, 163, 184, 0.1);
+      box-shadow: 0 0 0 1px rgba(148, 163, 184, 0.1);
+
+      .project-image-placeholder {
+        border-color: rgb(94, 234, 212);
+      }
+
+      .project-link {
+        color: rgb(94, 234, 212);
+      }
+    }
+  }
+}
+
+.project-featured {
+  // Featured project can have special styling if needed
+  position: relative;
+}
+
+.project-image-container {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 0.25rem;
+
+  @media (min-width: 640px) {
+    aspect-ratio: 1;
+  }
+}
+
+.project-image-placeholder {
+  width: 100%;
+  height: 100%;
+  background: rgba(148, 163, 184, 0.1);
+  border: 2px solid rgba(148, 163, 184, 0.2);
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.project-image-text {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: rgb(148, 163, 184);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.project-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.project-title {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.project-link {
+  color: rgb(226, 232, 240); // slate-200
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: inline;
+
+  &:hover {
+    color: rgb(94, 234, 212); // teal-300
+  }
+
+  &:focus-visible {
+    color: rgb(94, 234, 212);
+    outline: 2px solid rgb(94, 234, 212);
+    outline-offset: 4px;
+    border-radius: 2px;
+  }
+}
+
+.project-description {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.625;
+  color: rgb(148, 163, 184); // slate-400
+}
+
+.project-tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.project-tech-item {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: rgb(94, 234, 212); // teal-300
+  background: rgba(94, 234, 212, 0.1);
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.project-link-item {
+  color: rgb(226, 232, 240); // slate-200
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: rgb(94, 234, 212); // teal-300
+  }
+
+  &:focus-visible {
+    color: rgb(94, 234, 212);
+    outline: 2px solid rgb(94, 234, 212);
+    outline-offset: 4px;
+    border-radius: 2px;
+  }
+}
+
+.project-icon {
+  width: 1.5rem;
+  height: 1.5rem;
 }
