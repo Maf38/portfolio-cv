@@ -263,6 +263,12 @@ html {
   display: contents;
 }
 
+.experience-period-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
 .experience-period {
   font-size: 0.875rem;
   font-weight: 600;
@@ -270,6 +276,51 @@ html {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-top: 0.25rem;
+}
+
+.company-logos {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+
+  a {
+    display: flex;
+    align-items: center;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+.company-logo {
+  height: 2rem; // Base size for most logos
+  width: auto;
+  object-fit: contain;
+  color: rgb(226, 232, 240); // slate-200 for Material Design monochrome style
+
+  @media (max-width: 640px) {
+    height: 1.75rem;
+  }
+
+  // Larger logos for Inetum and CEA (recent/current experience)
+  &.large {
+    height: 2.5rem;
+
+    @media (max-width: 640px) {
+      height: 2rem;
+    }
+  }
+
+  // Smaller logos for Capgemini and Rio Tinto
+  &.small {
+    height: 1.25rem; // Reduced from 1.5rem to 1.25rem
+
+    @media (max-width: 640px) {
+      height: 1rem; // Reduced from 1.25rem to 1rem
+    }
+  }
 }
 
 .experience-details {
