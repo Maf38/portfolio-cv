@@ -525,124 +525,289 @@
         </div>
 
         <div class="projects-list">
-          <!-- IFTT Trading Platform (Featured) -->
-          <div class="project-card project-featured">
-            <div class="project-image-container">
-              <a
-                href="https://github.com/Maf38"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="IFTT Trading Platform"
-              >
-                <div class="project-image-placeholder">
-                  <span class="project-image-text">IFTT Trading</span>
-                </div>
-              </a>
-            </div>
-            <div class="project-content">
-              <h3 class="project-title">
+          <!-- IFTT Trading Platform (Featured with Tree Structure) -->
+          <div class="project-main">
+            <div class="project-main-content">
+              <h3 class="project-main-title">
                 <a
-                  href="https://github.com/Maf38"
+                  href="https://www.notion.so/IFTT-Trading-Vue-d-ensemble-du-projet-2a997b29932581ec9bd7fe7f37428c84"
                   target="_blank"
                   rel="noopener noreferrer"
                   class="project-link"
                 >
-                  IFTT Trading Automation Platform
+                  IFTT-Trading - Automated Trading Platform
+                </a>
+              </h3>
+              <p class="project-main-description">
+                Trading automation tool on Solana for executing swaps in a non-custodial environment with sophisticated conditional rules beyond simple limit orders.
+              </p>
+              <p class="project-main-example">
+                <strong>Example:</strong> IF BTC > $100,000 AND RSI 14 (1h) > 30 THEN swap USDT to MOODENG
+              </p>
+              <p class="project-main-context">
+                Personal tool rapidly developed as MVP, now in consolidation phase with DevOps ecosystem (Ansible provisioning, GitLab CI/CD, Prometheus monitoring, Vault secrets, S3 backups).
+              </p>
+
+              <!-- Sub-projects Tree -->
+              <div class="project-tree">
+                <h4 class="project-tree-title">Sub-projects:</h4>
+
+                <!-- devops-ifttt-trading -->
+                <div class="project-tree-item">
+                  <div class="project-tree-header">
+                    <span class="project-tree-name">devops-ifttt-trading</span>
+                    <span class="project-tree-desc">Infrastructure & Documentation</span>
+                    <div class="project-tree-links">
+                      <a href="https://github.com/Maf38/devops-ifttt-trading" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <img src="/assets/images/logos/github-mono.svg" alt="GitHub" class="project-tree-icon" />
+                      </a>
+                      <a href="https://www.notion.so/IFTT-Trading-Vue-d-ensemble-du-projet-2a997b29932581ec9bd7fe7f37428c84" target="_blank" rel="noopener noreferrer" aria-label="Notion">
+                        <img src="/assets/images/logos/notion-mono.svg" alt="Notion" class="project-tree-icon" />
+                      </a>
+                    </div>
+                  </div>
+                  <ul class="project-tree-tech">
+                    <li>Docker</li>
+                    <li>Ansible</li>
+                    <li>GitLab CI/CD</li>
+                    <li>Terraform</li>
+                    <li>Prometheus</li>
+                  </ul>
+                </div>
+
+                <!-- iftt-trading-automation -->
+                <div class="project-tree-item">
+                  <div class="project-tree-header">
+                    <img src="/assets/images/logos/lock-mono.svg" alt="Private" class="project-tree-lock" />
+                    <span class="project-tree-name">iftt-trading-automation</span>
+                    <span class="project-tree-desc">Unified Backend + Frontend</span>
+                    <div class="project-tree-links">
+                      <a href="https://github.com/Maf38/iftt-trading-automation" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <img src="/assets/images/logos/github-mono.svg" alt="GitHub" class="project-tree-icon" />
+                      </a>
+                    </div>
+                  </div>
+                  <ul class="project-tree-tech">
+                    <li>Angular 18</li>
+                    <li>NestJS</li>
+                    <li>PostgreSQL</li>
+                    <li>TypeScript</li>
+                    <li>WebSocket</li>
+                  </ul>
+                </div>
+
+                <!-- solana-swap-api -->
+                <div class="project-tree-item">
+                  <div class="project-tree-header">
+                    <img src="/assets/images/logos/lock-mono.svg" alt="Private" class="project-tree-lock" />
+                    <span class="project-tree-name">solana-swap-api</span>
+                    <span class="project-tree-desc">Swap execution with Vault integration</span>
+                    <div class="project-tree-links">
+                      <a href="https://github.com/Maf38/solana-swap-api" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <img src="/assets/images/logos/github-mono.svg" alt="GitHub" class="project-tree-icon" />
+                      </a>
+                    </div>
+                  </div>
+                  <ul class="project-tree-tech">
+                    <li>Node.js</li>
+                    <li>Solana Web3.js</li>
+                    <li>Jupiter API</li>
+                    <li>HashiCorp Vault</li>
+                  </ul>
+                </div>
+
+                <!-- hashicorp-vault -->
+                <div class="project-tree-item">
+                  <div class="project-tree-header">
+                    <img src="/assets/images/logos/lock-mono.svg" alt="Private" class="project-tree-lock" />
+                    <span class="project-tree-name">hashicorp-vault</span>
+                    <span class="project-tree-desc">Container orchestration with SSL/DNS challenge</span>
+                    <div class="project-tree-links">
+                      <a href="https://github.com/Maf38/hashicorp-vault" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <img src="/assets/images/logos/github-mono.svg" alt="GitHub" class="project-tree-icon" />
+                      </a>
+                    </div>
+                  </div>
+                  <ul class="project-tree-tech">
+                    <li>Docker</li>
+                    <li>Vault</li>
+                    <li>Certbot</li>
+                    <li>Nginx</li>
+                  </ul>
+                </div>
+
+                <!-- custom-solcrates-ohlcv-api -->
+                <div class="project-tree-item project-tree-item-favorite">
+                  <div class="project-tree-header">
+                    <span class="project-tree-name">custom-solcrates-ohlcv-api</span>
+                    <span class="project-tree-desc">⭐ Fork with InfluxDB/SQLite persistence, backfill & daemon</span>
+                    <div class="project-tree-links">
+                      <a href="https://github.com/Maf38/custom-solcrates-ohlcv-api" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <img src="/assets/images/logos/github-mono.svg" alt="GitHub" class="project-tree-icon" />
+                      </a>
+                    </div>
+                  </div>
+                  <ul class="project-tree-tech">
+                    <li>Node.js</li>
+                    <li>InfluxDB</li>
+                    <li>SQLite</li>
+                    <li>GeckoTerminal API</li>
+                  </ul>
+                </div>
+
+                <!-- n8n -->
+                <div class="project-tree-item">
+                  <div class="project-tree-header">
+                    <img src="/assets/images/logos/lock-mono.svg" alt="Private" class="project-tree-lock" />
+                    <span class="project-tree-name">n8n</span>
+                    <span class="project-tree-desc">Automation workflow orchestrator</span>
+                    <div class="project-tree-links">
+                      <a href="https://github.com/Maf38/n8n" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <img src="/assets/images/logos/github-mono.svg" alt="GitHub" class="project-tree-icon" />
+                      </a>
+                    </div>
+                  </div>
+                  <ul class="project-tree-tech">
+                    <li>n8n</li>
+                    <li>Workflows</li>
+                    <li>Automation</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Portfolio CV -->
+          <div class="project-card">
+            <div class="project-content">
+              <h3 class="project-title">
+                <a
+                  href="https://github.com/Maf38/portfolio-cv"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="project-link"
+                >
+                  Portfolio CV
                 </a>
               </h3>
               <p class="project-description">
-                Comprehensive blockchain trading automation platform built on Solana, featuring
-                conditional orders based on technical indicators (RSI, EMA, price). Architected a
-                microservices ecosystem with 5 orchestrated services, real-time OHLCV data
-                collection using InfluxDB, and secure private key management via HashiCorp Vault.
-                Designed retrogaming-inspired Angular 18 frontend with complete DevOps
-                infrastructure including Prometheus monitoring, Grafana dashboards, and automated
-                backup systems.
+                This portfolio website built with Angular 17 standalone components and Tailwind CSS.
               </p>
               <ul class="project-tech-list">
-                <li class="project-tech-item">Angular 18</li>
-                <li class="project-tech-item">NestJS</li>
-                <li class="project-tech-item">Solana</li>
-                <li class="project-tech-item">PostgreSQL</li>
-                <li class="project-tech-item">InfluxDB</li>
-                <li class="project-tech-item">Docker</li>
-                <li class="project-tech-item">HashiCorp Vault</li>
-                <li class="project-tech-item">Prometheus</li>
-                <li class="project-tech-item">Grafana</li>
-                <li class="project-tech-item">n8n</li>
+                <li class="project-tech-item">Angular 17</li>
+                <li class="project-tech-item">Tailwind CSS</li>
+                <li class="project-tech-item">TypeScript</li>
+                <li class="project-tech-item">GitHub Pages</li>
               </ul>
               <div class="project-links">
+                <a href="https://github.com/Maf38/portfolio-cv" target="_blank" rel="noopener noreferrer" class="project-link-item" aria-label="GitHub">
+                  <img src="/assets/images/logos/github-mono.svg" alt="GitHub" class="project-icon" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Voice in Terminal -->
+          <div class="project-card">
+            <div class="project-content">
+              <h3 class="project-title">
                 <a
-                  href="https://github.com/Maf38"
+                  href="https://github.com/Maf38/voice-in-terminal"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="project-link-item"
-                  aria-label="GitHub repository"
+                  class="project-link"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 16 16"
-                    fill="currentColor"
-                    class="project-icon"
-                  >
-                    <path
-                      d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
-                    ></path>
+                  Voice in Terminal
+                </a>
+              </h3>
+              <p class="project-description">
+                VSCode extension for voice commands using local Whisper.cpp or OpenAI API. Cross-platform support with SoX integration.
+              </p>
+              <ul class="project-tech-list">
+                <li class="project-tech-item">TypeScript</li>
+                <li class="project-tech-item">VSCode API</li>
+                <li class="project-tech-item">Whisper.cpp</li>
+                <li class="project-tech-item">Node.js</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://github.com/Maf38/voice-in-terminal" target="_blank" rel="noopener noreferrer" class="project-link-item" aria-label="GitHub">
+                  <img src="/assets/images/logos/github-mono.svg" alt="GitHub" class="project-icon" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Wednesday Memecoin -->
+          <div class="project-card">
+            <div class="project-content">
+              <h3 class="project-title">
+                <a
+                  href="https://wednesdaysolana.art/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="project-link"
+                >
+                  Wednesday Memecoin 🤖
+                </a>
+              </h3>
+              <p class="project-description">
+                Memecoin website 100% AI-assisted POC. Gothic horror theme with GSAP animations, EmulatorJS game integration, and Docker deployment.
+              </p>
+              <ul class="project-tech-list">
+                <li class="project-tech-item">Angular 19</li>
+                <li class="project-tech-item">GSAP</li>
+                <li class="project-tech-item">Docker</li>
+                <li class="project-tech-item">Solana</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://wednesdaysolana.art/" target="_blank" rel="noopener noreferrer" class="project-link-item" aria-label="Live Site">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="project-icon">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
                   </svg>
                 </a>
               </div>
             </div>
           </div>
 
-          <!-- Nuclear Project Management App -->
+          <!-- MiaWallaceBot -->
           <div class="project-card">
-            <div class="project-image-container">
-              <div class="project-image-placeholder">
-                <span class="project-image-text">EDF Nuclear</span>
-              </div>
-            </div>
             <div class="project-content">
               <h3 class="project-title">
-                <span class="project-link">Nuclear Project Management Application</span>
+                <span class="project-link">
+                  MiaWallaceBot 🔒
+                </span>
               </h3>
               <p class="project-description">
-                Mission-critical enterprise application for managing industrial projects in EDF's
-                nuclear division. Handles project planning, budgets, resources, and reporting for
-                500+ daily users. Achieved 40% performance improvement through virtualization
-                optimization and maintained zero critical incidents over 2 years.
+                AI-powered Telegram user-bot automation with ASP.NET Core 8. Simulates human-like interactions using OpenAI GPT models and WTelegram MTProto client. 100% handcrafted without AI assistance.
               </p>
               <ul class="project-tech-list">
-                <li class="project-tech-item">Angular 15</li>
-                <li class="project-tech-item">.NET Core 6</li>
-                <li class="project-tech-item">SQL Server</li>
-                <li class="project-tech-item">Azure DevOps</li>
+                <li class="project-tech-item">.NET 8</li>
+                <li class="project-tech-item">C#</li>
+                <li class="project-tech-item">OpenAI API</li>
+                <li class="project-tech-item">WTelegram</li>
+                <li class="project-tech-item">MySQL</li>
                 <li class="project-tech-item">Docker</li>
               </ul>
             </div>
           </div>
 
-          <!-- Laboratory Management System -->
+          <!-- BotCrypto -->
           <div class="project-card">
-            <div class="project-image-container">
-              <div class="project-image-placeholder">
-                <span class="project-image-text">CEA Lab</span>
-              </div>
-            </div>
             <div class="project-content">
               <h3 class="project-title">
-                <span class="project-link">Laboratory Equipment Management System</span>
+                <span class="project-link">
+                  BotCrypto (WPF)
+                </span>
               </h3>
               <p class="project-description">
-                Web application for managing laboratory equipment at the French Atomic Energy
-                Commission. Features equipment reservation system, maintenance tracking, inventory
-                management, and PDF report generation. Reduced administrative overhead by 60% across
-                3 laboratories serving 100+ users.
+                Crypto trading bot prototype in WPF with OxyPlot charting and backtesting capabilities. Built for WPF job interview preparation.
               </p>
               <ul class="project-tech-list">
-                <li class="project-tech-item">Angular 10</li>
                 <li class="project-tech-item">.NET Core 3.1</li>
-                <li class="project-tech-item">SQL Server</li>
-                <li class="project-tech-item">Active Directory</li>
+                <li class="project-tech-item">WPF</li>
+                <li class="project-tech-item">OxyPlot</li>
+                <li class="project-tech-item">Binance.Net</li>
+                <li class="project-tech-item">MVVM</li>
               </ul>
             </div>
           </div>
