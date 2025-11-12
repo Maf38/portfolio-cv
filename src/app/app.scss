@@ -235,7 +235,7 @@ html {
 .experience-list {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 2rem; // Reduced from 3rem to make CV more compact
 }
 
 .experience-item {
@@ -306,10 +306,10 @@ html {
 
   // Larger logos for Inetum and CEA (recent/current experience)
   &.large {
-    height: 2.5rem;
+    height: 3.5rem; // Increased from 2.5rem for better visibility of text-based logos
 
     @media (max-width: 640px) {
-      height: 2rem;
+      height: 2.5rem; // Increased from 2rem
     }
   }
 
