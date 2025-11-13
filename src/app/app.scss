@@ -169,7 +169,8 @@ html {
 }
 
 .about-content {
-  max-width: 500px;
+  max-width: 100%; // Match experience section width
+  text-align: justify; // Justify text for better appearance
 }
 
 .about-paragraph {
@@ -294,6 +295,29 @@ html {
   }
 }
 
+// Stacked company logos layout (for multi-row logo display)
+.company-logos-stacked {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.company-logos-row {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+
+  a {
+    display: flex;
+    align-items: center;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
 .company-logo {
   height: 2rem; // Base size for most logos
   width: auto;
@@ -319,6 +343,15 @@ html {
 
     @media (max-width: 640px) {
       height: 1rem; // Reduced from 1.25rem to 1rem
+    }
+  }
+
+  // Extra small logos for Rio Tinto (even smaller)
+  &.x-small {
+    height: 0.875rem; // Very small size for Rio Tinto
+
+    @media (max-width: 640px) {
+      height: 0.75rem;
     }
   }
 }
@@ -374,6 +407,7 @@ html {
   font-size: 0.875rem;
   line-height: 1.625;
   color: rgb(148, 163, 184); // slate-400
+  text-align: justify; // Justify text for squared right edge
 }
 
 .tech-list {
@@ -442,32 +476,51 @@ html {
 }
 
 .project-card {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
   padding: 1.5rem;
   border-radius: 0.5rem;
   transition: all 0.3s ease;
-
-  @media (min-width: 640px) {
-    grid-template-columns: 200px 1fr;
-    gap: 1.5rem;
-  }
 
   @media (min-width: 1024px) {
     &:hover {
       background: rgba(148, 163, 184, 0.1);
       box-shadow: 0 0 0 1px rgba(148, 163, 184, 0.1);
 
-      .project-image-placeholder {
-        border-color: rgb(94, 234, 212);
-      }
-
       .project-link {
         color: rgb(94, 234, 212);
       }
+
+      .project-icon {
+        opacity: 0.7;
+      }
     }
   }
+}
+
+.project-header {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.project-links-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 2rem; // Reserve space even if empty for alignment
+
+  a {
+    color: rgb(226, 232, 240);
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: rgb(94, 234, 212);
+      transform: translateY(-2px);
+    }
+  }
+}
+
+.project-info {
+  flex: 1;
 }
 
 .project-featured {
@@ -542,6 +595,7 @@ html {
   font-size: 0.875rem;
   line-height: 1.625;
   color: rgb(148, 163, 184); // slate-400
+  text-align: justify; // Justify text for better appearance
 }
 
 .project-tech-list {
@@ -623,6 +677,7 @@ html {
   line-height: 1.625;
   color: rgb(148, 163, 184); // slate-400
   margin-bottom: 0.5rem;
+  text-align: justify; // Justify text for better appearance
 }
 
 .project-main-example {
@@ -634,6 +689,7 @@ html {
   background: transparent;
   border: none;
   border-radius: 0;
+  text-align: justify; // Justify text for better appearance
 }
 
 .project-main-context {
@@ -641,6 +697,7 @@ html {
   line-height: 1.625;
   color: rgb(148, 163, 184); // slate-400
   margin-bottom: 1.5rem;
+  text-align: justify; // Justify text for better appearance
 }
 
 // Minimalist Tree structure
@@ -655,13 +712,10 @@ html {
   font-size: 0.875rem;
   font-weight: 600;
   color: rgb(148, 163, 184); // slate-400 (subtle)
-  margin-bottom: 1rem;
-  margin-left: 0;
-  padding-left: 0;
+  margin-bottom: 0.75rem;
+  margin-top: 1.5rem;
   text-transform: none;
   letter-spacing: normal;
-  position: relative;
-  left: -1rem; // Move title outside the tree trunk
 }
 
 .project-tree-item {
@@ -703,6 +757,7 @@ html {
   color: rgb(148, 163, 184); // slate-400
   flex: 1;
   min-width: 200px;
+  text-align: justify; // Justify text for squared right edge
 }
 
 .project-tree-links {
@@ -724,6 +779,13 @@ html {
 .project-tree-icon {
   width: 1rem;
   height: 1rem;
+
+  // Enlarge GitHub-Private icons by 25% to compensate for visual weight difference
+  // caused by composite design (GitHub octocat + lock overlay)
+  &[alt="GitHub Private"] {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
 }
 
 .project-tree-tech {
