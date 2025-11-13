@@ -729,7 +729,7 @@ html {
     content: '';
     position: absolute;
     left: 0;
-    top: 0.75rem;
+    top: 0.625rem; // Align with project name baseline
     width: 1.5rem;
     height: 1px;
     background: rgba(148, 163, 184, 0.3);
@@ -739,7 +739,7 @@ html {
 
 .project-tree-header {
   display: flex;
-  align-items: center;
+  align-items: flex-start; // Align items to the top
   gap: 0.5rem;
   flex-wrap: wrap;
   margin-bottom: 0.5rem;

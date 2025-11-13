@@ -532,8 +532,10 @@
 
         <div class="projects-list">
           <!-- IFTTT Trading Platform (Featured with Tree Structure) -->
-          <div class="project-main">
-            <div class="project-main-content">
+          <div class="project-card">
+            <div class="project-content">
+              <div class="project-main">
+                <div class="project-main-content">
               <h3 class="project-main-title">
                 <a
                   href="https://www.notion.so/IFTT-Trading-Vue-d-ensemble-du-projet-2a997b29932581ec9bd7fe7f37428c84"
@@ -569,14 +571,16 @@
                       </a>
                     </div>
                     <span class="project-tree-name">devops-ifttt-trading</span>
-                    <span class="project-tree-desc">Infrastructure & Documentation</span>
+                    <span class="project-tree-desc">Complete DevOps ecosystem with Ansible provisioning for automated VM setup, GitLab CI/CD pipelines, Prometheus/Grafana monitoring stack, Traefik reverse proxy, and S3 backup automation. Comprehensive documentation and infrastructure-as-code for the entire platform.</span>
                   </div>
                   <ul class="project-tree-tech">
-                    <li>Docker</li>
+                    <li>Docker Compose</li>
                     <li>Ansible</li>
                     <li>GitLab CI/CD</li>
-                    <li>Terraform</li>
                     <li>Prometheus</li>
+                    <li>Grafana</li>
+                    <li>Traefik</li>
+                    <li>S3</li>
                   </ul>
                 </div>
 
@@ -589,7 +593,7 @@
                       </a>
                     </div>
                     <span class="project-tree-name">iftt-trading-automation</span>
-                    <span class="project-tree-desc">Unified Backend + Frontend</span>
+                    <span class="project-tree-desc">Full-stack monorepo combining Angular 18 retro-gaming frontend with NestJS backend. Real-time WebSocket updates, JWT authentication, Phantom wallet integration, PostgreSQL with TypeORM, and comprehensive rule engine for conditional trading logic.</span>
                   </div>
                   <ul class="project-tree-tech">
                     <li>Angular 18</li>
@@ -597,6 +601,9 @@
                     <li>PostgreSQL</li>
                     <li>TypeScript</li>
                     <li>WebSocket</li>
+                    <li>OAuth2/OIDC</li>
+                    <li>Wallet Adapter</li>
+                    <li>Docker Compose</li>
                   </ul>
                 </div>
 
@@ -609,13 +616,14 @@
                       </a>
                     </div>
                     <span class="project-tree-name">solana-swap-api</span>
-                    <span class="project-tree-desc">Swap execution with Vault integration</span>
+                    <span class="project-tree-desc">Dedicated microservice for executing Solana token swaps via Jupiter aggregator. Integrates with HashiCorp Vault for secure private key management, handles transaction signing, and provides REST API endpoints for swap operations with slippage control.</span>
                   </div>
                   <ul class="project-tree-tech">
                     <li>Node.js</li>
                     <li>Solana Web3.js</li>
                     <li>Jupiter API</li>
                     <li>HashiCorp Vault</li>
+                    <li>Docker Compose</li>
                   </ul>
                 </div>
 
@@ -628,10 +636,10 @@
                       </a>
                     </div>
                     <span class="project-tree-name">hashicorp-vault</span>
-                    <span class="project-tree-desc">Container orchestration with SSL/DNS challenge</span>
+                    <span class="project-tree-desc">Production-ready HashiCorp Vault deployment with automated SSL certificate management via Certbot DNS challenge. Nginx reverse proxy configuration, secure secrets storage for Solana private keys, and integration with all platform microservices.</span>
                   </div>
                   <ul class="project-tree-tech">
-                    <li>Docker</li>
+                    <li>Docker Compose</li>
                     <li>Vault</li>
                     <li>Certbot</li>
                     <li>Nginx</li>
@@ -647,13 +655,14 @@
                       </a>
                     </div>
                     <span class="project-tree-name">custom-solcrates-ohlcv-api</span>
-                    <span class="project-tree-desc">Fork with InfluxDB/SQLite persistence, backfill & daemon</span>
+                    <span class="project-tree-desc">Custom fork of solcrates-ohlcv-api adding dual persistence layer (InfluxDB time-series + SQLite metadata), historical data backfill capabilities, and daemon mode for continuous candle data collection from GeckoTerminal API for technical analysis.</span>
                   </div>
                   <ul class="project-tree-tech">
                     <li>Node.js</li>
                     <li>InfluxDB</li>
                     <li>SQLite</li>
                     <li>GeckoTerminal API</li>
+                    <li>Docker Compose</li>
                   </ul>
                 </div>
 
@@ -666,15 +675,18 @@
                       </a>
                     </div>
                     <span class="project-tree-name">n8n</span>
-                    <span class="project-tree-desc">Automation workflow orchestrator</span>
+                    <span class="project-tree-desc">Core business logic orchestrator connecting to iftt-trading-automation backend via OAuth2. Handles trading decision-making with native multi-processing of market data streams. Strategic choice enabling integration with Telegram notifications, external APIs, and extensible workflow automation for future enhancements.</span>
                   </div>
                   <ul class="project-tree-tech">
                     <li>n8n</li>
                     <li>Workflows</li>
                     <li>Automation</li>
+                    <li>OAuth2</li>
                   </ul>
                 </div>
               </div>
+            </div>
+          </div>
             </div>
           </div>
 
@@ -706,6 +718,9 @@
                     <li class="project-tech-item">Tailwind CSS</li>
                     <li class="project-tech-item">TypeScript</li>
                     <li class="project-tech-item">GitHub Pages</li>
+                    <li class="project-tech-item">GitHub Actions</li>
+                    <li class="project-tech-item">SonarQube</li>
+                    <li class="project-tech-item">Jira</li>
                   </ul>
                 </div>
               </div>
@@ -755,9 +770,7 @@
                     <img src="/assets/images/logos/github-mono.svg" alt="GitHub" class="project-icon" />
                   </a>
                   <a href="https://wednesdaysolana.art/" target="_blank" rel="noopener noreferrer" aria-label="Live Site">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="project-icon">
-                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm0-4h-2V7h2v8z"/>
-                    </svg>
+                    <img src="/assets/images/logos/www-mono.svg" alt="Website" class="project-icon" />
                   </a>
                 </div>
                 <div class="project-info">
