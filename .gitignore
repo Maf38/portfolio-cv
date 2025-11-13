@@ -65,3 +65,6 @@ docs/design-reference/
 
 # Temporary logo directory (not needed for deployment)
 /logo/
+
+# Screenshot directory (temporary files for setup section)
+/screenshot/

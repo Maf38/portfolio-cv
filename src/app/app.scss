@@ -837,3 +837,102 @@ html {
     margin-left: 0;
   }
 }
+
+// ===========================
+// Setup Section Styles (Twitch-style)
+// ===========================
+.setup-grid {
+  display: grid;
+  grid-template-columns: minmax(200px, 300px) 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.setup-screenshot {
+  cursor: zoom-in;
+  position: relative;
+  border-radius: 0.5rem;
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+  }
+
+  &:hover img {
+    transform: scale(1.5);
+    z-index: 100;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
+  }
+}
+
+.setup-configs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.setup-config {
+  h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgb(226, 232, 240);
+    margin-top: 1.5rem;
+    margin-bottom: 0.25rem;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  .setup-label {
+    font-size: 0.875rem;
+    color: rgb(100, 116, 139);
+    margin: 0 0 0.5rem 0;
+    font-weight: 500;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+
+    li {
+      color: rgb(148, 163, 184);
+      font-size: 0.875rem;
+      line-height: 1.8;
+      padding-left: 0;
+
+      &::before {
+        content: '•';
+        color: rgb(100, 116, 139);
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}
+
+// Responsive adjustments for Setup section
+@media (max-width: 1024px) {
+  .setup-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .setup-screenshot {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .setup-configs {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .setup-config h3 {
+    font-size: 0.9375rem;
+  }
+}
