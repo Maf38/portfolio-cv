@@ -655,10 +655,13 @@ html {
   font-size: 0.875rem;
   font-weight: 600;
   color: rgb(148, 163, 184); // slate-400 (subtle)
-  margin-bottom: 0.75rem;
-  margin-left: -1rem;
+  margin-bottom: 1rem;
+  margin-left: 0;
+  padding-left: 0;
   text-transform: none;
   letter-spacing: normal;
+  position: relative;
+  left: -1rem; // Move title outside the tree trunk
 }
 
 .project-tree-item {
@@ -678,11 +681,6 @@ html {
     background: rgba(148, 163, 184, 0.3);
   }
 
-  &.project-tree-item-favorite {
-    .project-tree-name {
-      color: rgb(251, 191, 36); // amber for favorite
-    }
-  }
 }
 
 .project-tree-header {
