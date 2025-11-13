@@ -472,7 +472,7 @@ html {
 .projects-list {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 2rem; // Reduced from 4rem for tighter spacing
 }
 
 .project-card {
