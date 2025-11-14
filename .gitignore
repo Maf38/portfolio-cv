@@ -68,3 +68,6 @@ docs/design-reference/
 
 # Screenshot directory (temporary files for setup section)
 /screenshot/
+
+# Refactoring plan (internal doc, not for commit)
+docs/REFACTORING-PLAN.md
