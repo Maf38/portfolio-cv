@@ -56,8 +56,8 @@
       "achievements": [
         "Correction de bugs et développement de nouvelles fonctionnalités sur 20+ applications",
         "Migration des librairies et infrastructures vers versions modernes",
-        "Participation à la modernisation du SI (RabbitMQ, SeriLog/ELK, CI/CD)",
-        "Revue de code systématique avec SonarQube"
+        "Utilisation d'un environnement moderne avec CI/CD, SonarQube et tests unitaires",
+        "Participation à la modernisation du SI (RabbitMQ, SeriLog/ELK)"
       ],
       "responsibilities": [
         "Maintenance corrective et évolutive de 60 applications .NET",
@@ -127,63 +127,62 @@
       "company": "EDF (Électricité de France)",
       "companyUrl": "https://www.edf.fr",
       "via": "Capgemini",
-      "position": "Développeur PL/SQL et VB Script",
+      "position": "Développeur PL/SQL et Automatisation",
       "location": "Lyon, France",
       "startDate": "2021-06",
       "endDate": "2023-03",
       "current": false,
       "duration": "1 an 10 mois",
       "type": "Mission via ESN",
-      "description": "Développement et maintenance de services contrôlant des données industrielles sensibles dans le projet GEMODO. Automatisation de l'injection de données et optimisation des requêtes PL/SQL.",
+      "description": "Développement et maintenance de services pour l'application GEMODO (Gestion et Exploitation des Modèles de Données). Automatisation de l'injection de données avec UFT et développement de requêtes PL/SQL pour contrôler la conformité syntaxique et sémantique des données selon les règles métier.",
       "achievements": [
         "Optimisation significative des requêtes PL/SQL (performances améliorées)",
-        "Création de scripts QTP robustes pour automatisation",
-        "Migration réussie des services UFT vers RPA",
-        "Tests croisés et validation des paramétrages"
+        "Détournement de l'outil de test end-to-end UFT pour automatiser l'injection de données",
+        "Développement de scripts VBScript (UFT) pour automatisation de la saisie",
+        "Création de requêtes PL/SQL pour contrôler la conformité syntaxique et sémantique des données injectées"
       ],
       "responsibilities": [
         "Création de fichiers de paramétrage PL/SQL pour contrôle des données",
-        "Développement de scripts d'automatisation pour saisie via client web",
-        "Maintenance et mise à jour du moteur de contrôle",
-        "Contrôle et injection de données dans migrations"
+        "Développement de scripts UFT (VBScript) pour automatisation de saisie via client web",
+        "Écriture de requêtes PL/SQL pour faire tourner des services de contrôle",
+        "Validation que les données respectent les règles métier définies par le service"
       ],
       "technologies": [
         "PL/SQL",
-        "VB Script",
+        "VBScript",
         "Oracle Database",
+        "UFT (Unified Functional Testing)",
         "SharePoint",
-        "QTP/UFT",
-        "RPA",
         "Linux",
         "Informatica",
         "Control-M"
       ],
-      "tags": ["PL/SQL", "Automation", "Oracle", "Industrial Data"]
+      "tags": ["PL/SQL", "UFT", "Automation", "Oracle", "GEMODO"]
     },
     {
       "id": "exp-4",
       "company": "EDF (Électricité de France)",
       "companyUrl": "https://www.edf.fr",
       "via": "Capgemini",
-      "position": "Support Niveau 3 / Testeur End-to-End",
+      "position": "Responsable Migration Architecture DPA",
       "location": "Montbonnot, France",
       "startDate": "2020-06",
       "endDate": "2021-06",
       "current": false,
       "duration": "1 an 1 mois",
       "type": "Mission via ESN",
-      "description": "Support TMA et tests de performance pour le SI industriel PRISM (Aveva). Tests de non-régression, migration de sources de données, et validation d'architecture 5 serveurs.",
+      "description": "Responsable de la montée de version de l'application DPA (Data & Process Analytics). Migration d'une architecture 4 serveurs vers 5 serveurs et changement de source de données : passage d'un MES avec connexions ODBC classiques vers un MES moderne gérant Hadoop Espadon.",
       "achievements": [
-        "Migration complète site par site des flux ORLI vers Espadon",
-        "Tests de performance avec EDF Virtual API",
-        "Validation de l'architecture 5 serveurs avec nouveau mode NRT",
-        "Rédaction et exécution de tests sous HP ALM"
+        "Migration complète de l'architecture 4 serveurs vers 5 serveurs",
+        "Changement de source de données : ODBC classique vers Hadoop Espadon",
+        "Tests de charge pour valider le bon fonctionnement du SI avec les nouvelles technologies",
+        "Validation de l'architecture modernisée avec nouveau mode NRT"
       ],
       "responsibilities": [
-        "Tests de régression sur nouvelles versions PRISM",
-        "Tests de performance (sources de données, architecture)",
-        "Création de tickets et échanges avec éditeur Aveva",
-        "Migration flux de données ODBC vers API REST"
+        "Gestion de la montée de version de l'application DPA",
+        "Migration de l'architecture et de la source de données",
+        "Tests de charge et de performance sur la nouvelle architecture",
+        "Validation du fonctionnement du SI avec les nouvelles technologies"
       ],
       "technologies": [
         "HP ALM",
@@ -191,13 +190,14 @@
         "SQL Server",
         "eDNA",
         "Aspentech",
+        "Hadoop",
         "Espadon API",
         "PowerShell",
         "SSRS",
         "WPF",
         "EDF Virtual API"
       ],
-      "tags": ["Testing", "Performance", "Industrial SI", "Migration"]
+      "tags": ["Migration", "Architecture", "Performance", "Hadoop", "DPA"]
     },
     {
       "id": "exp-5",
@@ -211,16 +211,19 @@
       "current": false,
       "duration": "7 mois",
       "type": "Intégration ESN",
-      "description": "Intégration à Capgemini avec diverses missions POC au sein de l'équipe MES (Manufacturing Execution Systems) spécialisée en Data Historian. Découverte des environnements et outils.",
+      "description": "Intégration à Capgemini avec diverses missions POC au sein de l'équipe MES (Manufacturing Execution Systems) spécialisée en Data Historian. Découverte des environnements et outils. Expérience de développement mobile Ionic sur application Rio Tinto et gestion du MES Rio Tinto.",
       "achievements": [
         "Mise en place d'une chaîne d'intégration continue (GitLab, Jenkins, Selenium)",
         "Rafraîchissement interface Rio Tinto avec Angular 6 et Ionic 3",
+        "Expérience de développement mobile avec Ionic sur application Rio Tinto",
+        "Expérience de gestion du MES Rio Tinto",
         "POC migration SQL Server vers MariaDB avec stack Node.js/React",
         "Amélioration UI : migration Winforms/VB.Net vers WPF"
       ],
       "responsibilities": [
         "POC et tests de nouvelles technologies",
         "Migration et modernisation d'applications existantes",
+        "Développement mobile avec Angular 6 et Ionic 3",
         "Familiarisation avec environnements MES et Data Historian"
       ],
       "technologies": [
@@ -237,7 +240,7 @@
         "Jenkins",
         "Selenium"
       ],
-      "tags": ["POC", "MES", "Angular", "React", "CI/CD"]
+      "tags": ["POC", "MES", "Angular 6", "Ionic", "React", "CI/CD", "Rio Tinto"]
     },
     {
       "id": "exp-6",
