@@ -42,353 +42,258 @@
   "experience": [
     {
       "id": "exp-1",
-      "company": "CEA (Commissariat à l'Énergie Atomique)",
+      "company": "Inetum - CEA",
       "companyUrl": "https://www.cea.fr",
-      "via": "Capgemini",
-      "position": "Développeur .NET",
+      "via": "Inetum",
+      "position": "NET Developer",
       "location": "Grenoble, France",
       "startDate": "2023-04",
       "endDate": null,
       "current": true,
-      "duration": "2 ans (en cours)",
+      "duration": "Apr 2023 — Present",
       "type": "CDI via ESN",
-      "description": "Développeur dans une TMA multi-applicative gérant 60 applications divisées en 2 pôles. Parc applicatif homogène autour des technologies web Microsoft. Temps partagé entre build et run sur une vingtaine d'applications.",
-      "achievements": [
-        "Correction de bugs et développement de nouvelles fonctionnalités sur 20+ applications",
-        "Migration des librairies et infrastructures vers versions modernes",
-        "Utilisation d'un environnement moderne avec CI/CD, SonarQube et tests unitaires",
-        "Participation à la modernisation du SI (RabbitMQ, SeriLog/ELK)"
-      ],
-      "responsibilities": [
-        "Maintenance corrective et évolutive de 60 applications .NET",
-        "Migration progressive de .NET Framework vers .NET 8",
-        "Implémentation de nouvelles fonctionnalités selon besoins métier",
-        "Optimisation des performances et de la qualité du code"
-      ],
+      "description": "Managing a multi-application maintenance portfolio of 70+ applications, balancing build and run operations across a web-focused Microsoft ecosystem. Working in a modern development environment using CI/CD with Azure DevOps, SonarQube quality gates, and comprehensive unit testing. Working with both legacy (.NET 4.8, Razor, Kendo UI) and modern (.NET 8) stacks. Participating in the SI modernization (RabbitMQ, SeriLog/ELK).",
       "technologies": [
-        ".NET 4.8",
-        ".NET 8",
-        "SQL Server",
-        "Entity Framework",
-        "Razor",
-        "Kendo UI",
-        "JavaScript",
-        "jQuery",
-        "RabbitMQ",
-        "SeriLog",
-        "ELK Stack",
+        ".NET 4.8 / .NET 8",
         "Azure DevOps",
-        "SonarQube",
+        "SQL Server 2014/2019",
+        "Windows Server",
         "IIS",
-        "Windows Server"
-      ],
-      "tags": ["TMA", ".NET", "SQL Server", "Modernisation", "Qualité"]
+        "SonarQube",
+        "Razor",
+        "Kendo UI"
+      ]
     },
     {
       "id": "exp-2",
-      "company": "EDF (Électricité de France)",
+      "company": "Capgemini - EDF",
       "companyUrl": "https://www.edf.fr",
       "via": "Capgemini",
-      "position": "Développeur Backend (Java, KornShell, Informatica)",
+      "position": "Backend Developer",
       "location": "Lyon, France",
       "startDate": "2022-04",
       "endDate": "2023-03",
       "current": false,
-      "duration": "1 an",
+      "duration": "Apr 2022 — Mar 2023",
       "type": "Mission via ESN",
-      "description": "Référent technique sur la solution TRT (moteur de contrôle backend) dans le contexte du projet GEMODO. Architecture composée de scripts KornShell, Java et ETL Informatica sur serveur RedHat Linux avec base Oracle.",
-      "achievements": [
-        "Mise en place d'une version multithreadée augmentant significativement la capacité de traitement",
-        "Premier déploiement automatisé avec Jenkins + Ansible",
-        "Amélioration des performances du moteur de contrôle",
-        "Référent technique sur l'architecture 3 composants (Ksh, Java, Informatica)"
-      ],
-      "responsibilities": [
-        "Architecture et développement du moteur TRT version 3.0",
-        "Optimisation des performances (multithreading)",
-        "Mise en place du déploiement automatisé (Jenkins + Ansible)",
-        "Support technique et résolution d'incidents"
-      ],
+      "description": "Developed backend solutions for the GEMODO project using Java and KornShell scripting on RedHat Linux. Implemented ETL processes with Informatica for data integration workflows, and maintained SharePoint collaboration systems. Focused on automation and data processing pipelines in an enterprise Linux environment.",
       "technologies": [
         "Java",
         "KornShell",
         "Informatica",
-        "Oracle Database",
-        "RedHat Linux 7",
-        "Jenkins",
-        "Ansible",
-        "SharePoint",
-        "Control-M"
-      ],
-      "tags": ["Backend", "Java", "ETL", "Performance", "DevOps"]
+        "RedHat Linux",
+        "SharePoint"
+      ]
     },
     {
       "id": "exp-3",
-      "company": "EDF (Électricité de France)",
+      "company": "Capgemini - EDF",
       "companyUrl": "https://www.edf.fr",
       "via": "Capgemini",
-      "position": "Développeur PL/SQL et Automatisation",
+      "position": "PL/SQL Developer & Test Automation",
       "location": "Lyon, France",
       "startDate": "2021-06",
       "endDate": "2023-03",
       "current": false,
-      "duration": "1 an 10 mois",
+      "duration": "Jun 2021 — Mar 2023",
       "type": "Mission via ESN",
-      "description": "Développement et maintenance de services pour l'application GEMODO (Gestion et Exploitation des Modèles de Données). Automatisation de l'injection de données avec UFT et développement de requêtes PL/SQL pour contrôler la conformité syntaxique et sémantique des données selon les règles métier.",
-      "achievements": [
-        "Optimisation significative des requêtes PL/SQL (performances améliorées)",
-        "Détournement de l'outil de test end-to-end UFT pour automatiser l'injection de données",
-        "Développement de scripts VBScript (UFT) pour automatisation de la saisie",
-        "Création de requêtes PL/SQL pour contrôler la conformité syntaxique et sémantique des données injectées"
-      ],
-      "responsibilities": [
-        "Création de fichiers de paramétrage PL/SQL pour contrôle des données",
-        "Développement de scripts UFT (VBScript) pour automatisation de saisie via client web",
-        "Écriture de requêtes PL/SQL pour faire tourner des services de contrôle",
-        "Validation que les données respectent les règles métier définies par le service"
-      ],
+      "description": "Developed and maintained services for the GEMODO application. Repurposed UFT (Unified Functional Testing), an end-to-end testing tool, to automate data injection through VBScript-based form filling. Developed PL/SQL queries and procedures to validate syntactic and semantic data conformity against business rules, ensuring data quality and integrity. Maintained ETL processes through Informatica on Linux infrastructure.",
       "technologies": [
         "PL/SQL",
-        "VBScript",
         "Oracle Database",
         "UFT (Unified Functional Testing)",
-        "SharePoint",
-        "Linux",
+        "VBScript",
         "Informatica",
-        "Control-M"
-      ],
-      "tags": ["PL/SQL", "UFT", "Automation", "Oracle", "GEMODO"]
+        "Control-M",
+        "Linux",
+        "SharePoint"
+      ]
     },
     {
       "id": "exp-4",
-      "company": "EDF (Électricité de France)",
+      "company": "Capgemini - EDF",
       "companyUrl": "https://www.edf.fr",
       "via": "Capgemini",
-      "position": "Responsable Migration Architecture DPA",
+      "position": "Architecture Migration, Performance Testing & End-to-End Testing — DPA",
       "location": "Montbonnot, France",
       "startDate": "2020-06",
       "endDate": "2021-06",
       "current": false,
-      "duration": "1 an 1 mois",
+      "duration": "Jun 2020 — Jun 2021",
       "type": "Mission via ESN",
-      "description": "Responsable de la montée de version de l'application DPA (Data & Process Analytics). Migration d'une architecture 4 serveurs vers 5 serveurs et changement de source de données : passage d'un MES avec connexions ODBC classiques vers un MES moderne gérant Hadoop Espadon.",
-      "achievements": [
-        "Migration complète de l'architecture 4 serveurs vers 5 serveurs",
-        "Changement de source de données : ODBC classique vers Hadoop Espadon",
-        "Tests de charge pour valider le bon fonctionnement du SI avec les nouvelles technologies",
-        "Validation de l'architecture modernisée avec nouveau mode NRT"
-      ],
-      "responsibilities": [
-        "Gestion de la montée de version de l'application DPA",
-        "Migration de l'architecture et de la source de données",
-        "Tests de charge et de performance sur la nouvelle architecture",
-        "Validation du fonctionnement du SI avec les nouvelles technologies"
-      ],
+      "description": "Led the architecture upgrade of the DPA application, a MES system using data models to prevent SPC (Statistical Process Control) drifts. Managed the migration from a 4-server to a 5-server architecture, and orchestrated the data source transition from legacy ODBC connections to a modern MES managing Hadoop Espadon. Conducted comprehensive load testing to validate system performance with the new technology stack and NRT (Near Real-Time) mode.",
       "technologies": [
-        "HP ALM",
-        "Windows Server",
-        "SQL Server",
-        "eDNA",
-        "Aspentech",
         "Hadoop",
         "Espadon API",
+        "Windows Server",
+        "SQL Server",
         "PowerShell",
-        "SSRS",
-        "WPF",
-        "EDF Virtual API"
-      ],
-      "tags": ["Migration", "Architecture", "Performance", "Hadoop", "DPA"]
+        "HP ALM",
+        "eDNA",
+        "Aspentech"
+      ]
     },
     {
       "id": "exp-5",
-      "company": "EDF / Rio Tinto",
-      "companyUrl": "https://www.edf.fr",
+      "company": "Capgemini (EDF / Rio Tinto)",
+      "companyUrl": "https://www.capgemini.com",
       "via": "Capgemini",
-      "position": "Développeur Logiciel",
+      "position": "Software Developer",
       "location": "Montbonnot, France",
       "startDate": "2019-11",
       "endDate": "2020-05",
       "current": false,
-      "duration": "7 mois",
+      "duration": "Nov 2019 — May 2020",
       "type": "Intégration ESN",
-      "description": "Intégration à Capgemini avec diverses missions POC au sein de l'équipe MES (Manufacturing Execution Systems) spécialisée en Data Historian. Découverte des environnements et outils. Expérience de développement mobile Ionic sur application Rio Tinto et gestion du MES Rio Tinto.",
-      "achievements": [
-        "Mise en place d'une chaîne d'intégration continue (GitLab, Jenkins, Selenium)",
-        "Rafraîchissement interface Rio Tinto avec Angular 6 et Ionic 3",
-        "Expérience de développement mobile avec Ionic sur application Rio Tinto",
-        "Expérience de gestion du MES Rio Tinto",
-        "POC migration SQL Server vers MariaDB avec stack Node.js/React",
-        "Amélioration UI : migration Winforms/VB.Net vers WPF"
-      ],
-      "responsibilities": [
-        "POC et tests de nouvelles technologies",
-        "Migration et modernisation d'applications existantes",
-        "Développement mobile avec Angular 6 et Ionic 3",
-        "Familiarisation avec environnements MES et Data Historian"
-      ],
+      "description": "Contributed to proof-of-concept development for Manufacturing Execution Systems (MES) team working on EDF and Rio Tinto projects. Refreshed the Rio Tinto interface using Angular 6 and Ionic 3 for mobile development. Gained hands-on experience managing the Rio Tinto MES. Implemented CI/CD test automation pipelines (GitLab, Jenkins, Selenium) on hybrid Linux/Windows Server environments. First professional experience with enterprise consulting and cross-platform development.",
       "technologies": [
         "Angular 6",
         "Ionic 3",
-        "React JS",
-        "Node.js",
-        "Loopback",
-        "MariaDB",
-        "SQL Server",
-        "WPF",
-        "VB.Net",
+        "Linux",
+        "Windows Server",
         "GitLab",
         "Jenkins",
-        "Selenium"
-      ],
-      "tags": ["POC", "MES", "Angular 6", "Ionic", "React", "CI/CD", "Rio Tinto"]
+        "Selenium",
+        "MES Management"
+      ]
     },
     {
       "id": "exp-6",
-      "company": "Cerberis",
+      "company": "· Cerberis",
       "companyUrl": null,
       "via": null,
-      "position": "Stagiaire Développeur",
+      "position": "Software Developer Intern",
       "location": "Grenoble, France",
       "startDate": "2019-04",
       "endDate": "2019-09",
       "current": false,
-      "duration": "6 mois",
+      "duration": "Apr 2019 — Sep 2019",
       "type": "Stage de fin d'étude",
-      "description": "Stage de fin d'étude AFPA. Conception et réalisation d'une application SaaS de type daemon service pour gérer une structure de salles imbriquée sur serveurs Exchange (architecture 5 tiers).",
-      "achievements": [
-        "Développement complet d'une application SaaS Azure",
-        "Utilisation de technologies cloud Microsoft (Azure AD, Cosmos DB, Graph API)",
-        "Sécurisation via protocole OAuth 2.0",
-        "IHM admin avec Bootstrap"
-      ],
-      "responsibilities": [
-        "Conception architecture 5 tiers",
-        "Développement daemon service .NET",
-        "Intégration Azure AD et Cosmos DB",
-        "Développement interface d'administration"
-      ],
+      "description": "Developed a SaaS daemon service for Microsoft Exchange integration as first professional software development experience. Built .NET applications interfacing with Office 365 APIs and deployed on Azure cloud infrastructure. Learned modern software engineering practices and cloud-based architecture.",
       "technologies": [
-        ".NET",
+        ".NET Framework",
+        "Office 365 API",
         "Azure",
-        "Azure AD",
-        "Azure Cosmos DB",
-        "Microsoft Graph API",
-        "OAuth 2.0",
-        "Bootstrap",
-        "Exchange Server"
-      ],
-      "tags": ["SaaS", "Azure", "Cloud", "OAuth"]
+        "Exchange"
+      ]
     },
     {
       "id": "exp-7",
-      "company": "ST Microelectronics",
+      "company": "· ST Microelectronics",
       "companyUrl": "https://www.st.com",
       "via": null,
-      "position": "Technicien de Maintenance",
+      "position": "Maintenance Technician",
       "location": "Crolles, France",
       "startDate": "2005-01",
       "endDate": "2018-12",
       "current": false,
-      "duration": "13 ans",
+      "duration": "2005 — 2018",
       "type": "CDI",
-      "description": "Technicien de maintenance dans l'industrie des semi-conducteurs. Cette expérience de 15 ans dans l'industrie a développé une grande rigueur et un excellent sens du travail en équipe.",
-      "achievements": [
-        "15 ans d'expérience industrielle en environnement haute technologie",
-        "Développement d'une rigueur industrielle appliquée au développement logiciel",
-        "Compétences techniques et travail en équipe"
-      ],
-      "responsibilities": [
-        "Maintenance préventive et corrective d'équipements de production",
-        "Support technique sur ligne de fabrication",
-        "Respect des procédures de sécurité et qualité"
-      ],
-      "technologies": [],
-      "tags": ["Industrie", "Maintenance", "Semi-conducteurs"]
+      "description": "Started as Process Technician (quality technician) and evolved to Maintenance Technician role. Specialized in dry etching machines (oxide and metal) from LAM Research and TEL equipment suppliers. Worked within TPM (Total Productive Maintenance) framework developed by Toyota, with strong acculturation to Lean methodology. During the 2008 crisis, contributed to productivity improvements to maintain competitiveness in the 200mm wafer fabrication environment.",
+      "technologies": [
+        "TPM",
+        "Lean",
+        "Lam Research",
+        "TEL",
+        "Etch 200mm"
+      ]
+    },
+    {
+      "id": "exp-8",
+      "company": "· Canalog",
+      "companyUrl": null,
+      "via": null,
+      "position": "Wiring Assembler",
+      "location": "France",
+      "startDate": "2005-01",
+      "endDate": "2005-12",
+      "current": false,
+      "duration": "2005",
+      "type": "Contract",
+      "description": "Worked as a wiring assembler (monteur câbleur) for machines manufacturing glass syringes. Assembled and wired precision equipment components for pharmaceutical manufacturing industry.",
+      "technologies": [
+        "Wiring Assembly",
+        "Manufacturing",
+        "Medical Equipment"
+      ]
     }
   ],
   "education": [
     {
       "id": "edu-1",
-      "degree": "Titre Professionnel Concepteur Développeur Informatique",
+      "degree": "Titre professionnel Concepteur Développeur Informatique",
       "level": "Bac+3/4 (Niveau 6)",
-      "school": "AFPA Pont de Claix",
+      "school": "AFPA",
       "location": "Grenoble, France",
       "startDate": "2018-09",
       "endDate": "2019-06",
-      "duration": "9 mois",
-      "description": "Reconversion professionnelle après 15 ans d'expérience industrielle. Formation intensive en développement logiciel.",
-      "courses": [
-        "Programmation Java JEE",
-        "Développement .NET / C#",
-        "Base de données SQL",
-        "UML / Merise",
-        "Développement mobile (Android, iOS)",
-        "Méthodologies Agile"
-      ],
+      "duration": "2019",
+      "description": "Professional certification in software development and design.",
+      "courses": [],
       "grade": null
     },
     {
       "id": "edu-2",
-      "degree": "DUT GEII - Génie Électrique et Informatique Industrielle",
+      "degree": "DUT GEII (Génie Électrique et Informatique Industrielle)",
       "level": "Bac+2",
-      "school": "Université Joseph Fourier (UJF)",
+      "school": "Université Joseph Fourier, Grenoble",
       "location": "Grenoble, France",
       "startDate": "2002-09",
       "endDate": "2003-06",
-      "duration": "1 an",
-      "description": "Formation en génie électrique et informatique industrielle.",
+      "duration": "2003",
+      "description": "Two-year technical degree in Electrical Engineering and Industrial Computer Science.",
       "courses": [],
       "grade": null
     },
     {
       "id": "edu-3",
-      "degree": "IUP MAI - Mathématiques Appliquées et Industrielles",
+      "degree": "IUP MAI (Maîtrise des Applications Informatiques)",
       "level": "Bac+3 (Licence)",
-      "school": "Université Joseph Fourier (UJF)",
+      "school": "Université Joseph Fourier, Grenoble",
       "location": "Grenoble, France",
       "startDate": "1998-09",
       "endDate": "1999-06",
-      "duration": "1 an",
-      "description": "Formation en mathématiques appliquées au secteur industriel.",
+      "duration": "1999",
+      "description": "University Institute of Engineering - Computer Applications.",
       "courses": [],
       "grade": null
     },
     {
       "id": "edu-4",
-      "degree": "DEUG SMb - Biochimie",
+      "degree": "DEUG SMb (Sciences de la Matière)",
       "level": "Bac+2",
-      "school": "Université Joseph Fourier (UJF)",
+      "school": "Université Joseph Fourier, Grenoble",
       "location": "Grenoble, France",
       "startDate": "1997-09",
       "endDate": "1998-06",
-      "duration": "1 an",
-      "description": "Formation en sciences et techniques, spécialisation biochimie.",
+      "duration": "1998",
+      "description": "Two-year undergraduate degree in Physical Sciences.",
       "courses": [],
       "grade": null
     },
     {
       "id": "edu-5",
-      "degree": "Math Sup PC-SI - Physique Chimie Science de l'Ingénieur",
+      "degree": "Math Sup PC-SI",
       "level": "Classe préparatoire",
-      "school": "Lycée Berthollet",
+      "school": "Lycée Berthollet, Annecy",
       "location": "Annecy, France",
       "startDate": "1996-09",
       "endDate": "1997-06",
-      "duration": "1 an",
-      "description": "Classe préparatoire aux grandes écoles, filière scientifique.",
+      "duration": "1997",
+      "description": "Preparatory class for engineering schools (Physics, Chemistry, and Engineering Sciences).",
       "courses": [],
       "grade": null
     },
     {
       "id": "edu-6",
-      "degree": "Baccalauréat Scientifique",
+      "degree": "BAC S mention bien (Scientific Baccalaureate)",
       "level": "Bac",
-      "school": "Lycée Saint Marie",
-      "location": "Grenoble, France",
+      "school": "Lycée Saint Marie, La Seyne-sur-Mer",
+      "location": "La Seyne-sur-Mer, France",
       "startDate": "1995-09",
       "endDate": "1996-06",
-      "duration": "1 an",
-      "description": "Baccalauréat série scientifique.",
+      "duration": "1996",
+      "description": "French high school diploma in Sciences with honors.",
       "courses": [],
       "grade": "Mention Bien"
     }
@@ -687,7 +592,14 @@
         "/assets/images/projects/iftt-trading-2.png"
       ],
       "featured": true,
-      "tags": ["Blockchain", "Solana", "Angular", "NestJS", "DevOps", "Microservices"]
+      "tags": [
+        "Blockchain",
+        "Solana",
+        "Angular",
+        "NestJS",
+        "DevOps",
+        "Microservices"
+      ]
     }
   ],
   "certifications": [],
@@ -746,9 +658,9 @@
     }
   ],
   "meta": {
-    "version": "1.0.0",
-    "lastUpdated": "2025-11-09",
-    "source": "Extraction CVs PDF 2019 + 2025",
+    "version": "2.0.0",
+    "lastUpdated": "2025-11-14",
+    "source": "Extraction exacte de app.html",
     "totalExperience": {
       "industry": 13,
       "development": 6,
