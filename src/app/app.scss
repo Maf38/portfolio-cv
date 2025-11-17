@@ -734,7 +734,6 @@ html {
     height: 1px;
     background: rgba(148, 163, 184, 0.3);
   }
-
 }
 
 .project-tree-header {
@@ -782,7 +781,7 @@ html {
 
   // Enlarge GitHub-Private icons by 25% to compensate for visual weight difference
   // caused by composite design (GitHub octocat + lock overlay)
-  &[alt="GitHub Private"] {
+  &[alt='GitHub Private'] {
     width: 1.25rem;
     height: 1.25rem;
   }

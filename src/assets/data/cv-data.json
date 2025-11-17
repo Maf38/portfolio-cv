@@ -205,13 +205,7 @@
       "duration": "2005 — 2018",
       "type": "CDI",
       "description": "Started as Process Technician (quality technician) and evolved to Maintenance Technician role. Specialized in dry etching machines (oxide and metal) from LAM Research and TEL equipment suppliers. Worked within TPM (Total Productive Maintenance) framework developed by Toyota, with strong acculturation to Lean methodology. During the 2008 crisis, contributed to productivity improvements to maintain competitiveness in the 200mm wafer fabrication environment.",
-      "technologies": [
-        "TPM",
-        "Lean",
-        "Lam Research",
-        "TEL",
-        "Etch 200mm"
-      ]
+      "technologies": ["TPM", "Lean", "Lam Research", "TEL", "Etch 200mm"]
     },
     {
       "id": "exp-8",
@@ -226,11 +220,7 @@
       "duration": "2005",
       "type": "Contract",
       "description": "Worked as a wiring assembler (monteur câbleur) for machines manufacturing glass syringes. Assembled and wired precision equipment components for pharmaceutical manufacturing industry.",
-      "technologies": [
-        "Wiring Assembly",
-        "Manufacturing",
-        "Medical Equipment"
-      ]
+      "technologies": ["Wiring Assembly", "Manufacturing", "Medical Equipment"]
     }
   ],
   "education": [
@@ -607,14 +597,7 @@
         "/assets/images/projects/iftt-trading-2.png"
       ],
       "featured": true,
-      "tags": [
-        "Blockchain",
-        "Solana",
-        "Angular",
-        "NestJS",
-        "DevOps",
-        "Microservices"
-      ]
+      "tags": ["Blockchain", "Solana", "Angular", "NestJS", "DevOps", "Microservices"]
     },
     {
       "id": "project-portfolio",
@@ -660,13 +643,7 @@
       },
       "images": [],
       "featured": false,
-      "tags": [
-        "Angular",
-        "Tailwind CSS",
-        "Design System",
-        "CI/CD",
-        "Testing"
-      ]
+      "tags": ["Angular", "Tailwind CSS", "Design System", "CI/CD", "Testing"]
     }
   ],
   "certifications": [],

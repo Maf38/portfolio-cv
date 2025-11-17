@@ -307,6 +307,7 @@ test: add playwright tests for navigation
 - [docs/SETUP-GUIDE.md](./docs/SETUP-GUIDE.md) - Guide complet de setup du projet
 - [docs/WORKFLOW-FEATURES.md](./docs/WORKFLOW-FEATURES.md) - **Workflow de développement des features** (SonarQube, coding standards, best practices Angular)
 - [docs/WORKFLOW-TESTS.md](./docs/WORKFLOW-TESTS.md) - **Workflow de tests** (unit, E2E, visual regression, coverage)
+- [docs/DEV-WORKFLOW.md](./docs/DEV-WORKFLOW.md) - **Workflow de développement quotidien** (lint:fix, commits, PR, bonnes pratiques)
 
 ### Projets de Référence
 
