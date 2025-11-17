@@ -45,7 +45,7 @@
       "company": "Inetum - CEA",
       "companyUrl": "https://www.cea.fr",
       "via": "Inetum",
-      "position": "NET Developer",
+      "position": ".NET Developer",
       "location": "Grenoble, France",
       "startDate": "2023-04",
       "endDate": null,
@@ -55,11 +55,19 @@
       "description": "Managing a multi-application maintenance portfolio of 70+ applications, balancing build and run operations across a web-focused Microsoft ecosystem. Working in a modern development environment using CI/CD with Azure DevOps, SonarQube quality gates, and comprehensive unit testing. Working with both legacy (.NET 4.8, Razor, Kendo UI) and modern (.NET 8) stacks. Participating in the SI modernization (RabbitMQ, SeriLog/ELK).",
       "technologies": [
         ".NET 4.8 / .NET 8",
+        "C#",
+        "LINQ",
+        "Entity Framework",
+        "ADO.NET",
+        "VB.NET",
         "Azure DevOps",
         "SQL Server 2014/2019",
         "Windows Server",
         "IIS",
         "SonarQube",
+        "Keycloak",
+        "Serilog",
+        "ELK",
         "Razor",
         "Kendo UI"
       ]
@@ -80,7 +88,10 @@
       "technologies": [
         "Java",
         "KornShell",
-        "Informatica",
+        "ETL Informatica",
+        "Oracle DB",
+        "Jenkins",
+        "SAFe",
         "RedHat Linux",
         "SharePoint"
       ]
@@ -172,8 +183,12 @@
       "description": "Developed a SaaS daemon service for Microsoft Exchange integration as first professional software development experience. Built .NET applications interfacing with Office 365 APIs and deployed on Azure cloud infrastructure. Learned modern software engineering practices and cloud-based architecture.",
       "technologies": [
         ".NET Framework",
+        "Entity Framework",
         "Office 365 API",
+        "OpenID Connect",
+        "OAuth 2.0",
         "Azure",
+        "Cosmos DB",
         "Exchange"
       ]
     },
