@@ -74,7 +74,9 @@ describe('HeaderComponent', () => {
 
   it('should have LinkedIn link', () => {
     const compiled = fixture.nativeElement as HTMLElement;
-    const linkedinLink = compiled.querySelector('a[href="https://www.linkedin.com/in/mafal-gai-7a456817a/"]');
+    const linkedinLink = compiled.querySelector(
+      'a[href="https://www.linkedin.com/in/mafal-gai-7a456817a/"]',
+    );
     expect(linkedinLink).toBeTruthy();
     expect(linkedinLink?.getAttribute('aria-label')).toContain('LinkedIn');
   });

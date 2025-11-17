@@ -148,8 +148,22 @@
     </ul>
 
     <!-- Contact Card Modal -->
-    <div *ngIf="showContactCard" class="contact-card-overlay" (click)="closeContactCard()">
-      <div class="contact-card" (click)="$event.stopPropagation()">
+    <div
+      *ngIf="showContactCard"
+      class="contact-card-overlay"
+      role="button"
+      tabindex="0"
+      (click)="closeContactCard()"
+      (keydown.escape)="closeContactCard()"
+    >
+      <div
+        class="contact-card"
+        role="dialog"
+        aria-modal="true"
+        tabindex="0"
+        (click)="$event.stopPropagation()"
+        (keydown)="$event.stopPropagation()"
+      >
         <div class="contact-card-header">
           <h3>Contact Info</h3>
           <button class="contact-card-close" (click)="closeContactCard()" aria-label="Close">
@@ -165,7 +179,9 @@
             </svg>
             <div class="contact-info">
               <span class="contact-label">Email</span>
-              <a href="mailto:Mafal Gai <gaimafal@gmail.com>" class="contact-value">gaimafal@gmail.com</a>
+              <a href="mailto:Mafal Gai <gaimafal&#64;gmail.com>" class="contact-value"
+                >gaimafal&#64;gmail.com</a
+              >
             </div>
             <button
               class="copy-button"
