@@ -262,14 +262,14 @@
     },
     {
       "id": "edu-3",
-      "degree": "IUP MAI (Maîtrise des Applications Informatiques)",
+      "degree": "IUP MAI (Mathématiques Appliquées et Industrielles)",
       "level": "Bac+3 (Licence)",
       "school": "Université Joseph Fourier, Grenoble",
       "location": "Grenoble, France",
       "startDate": "1998-09",
       "endDate": "1999-06",
       "duration": "1999",
-      "description": "University Institute of Engineering - Computer Applications.",
+      "description": "University Institute of Engineering - Applied and Industrial Mathematics.",
       "courses": [],
       "grade": null
     },
