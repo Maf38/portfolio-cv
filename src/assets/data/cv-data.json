@@ -282,7 +282,7 @@
       "startDate": "1997-09",
       "endDate": "1998-06",
       "duration": "1998",
-      "description": "Two-year undergraduate degree in Physical Sciences.",
+      "description": "Two-year undergraduate degree in Material Sciences with focus on Biology, Chemistry, and Physics.",
       "courses": [],
       "grade": null
     },
@@ -614,6 +614,58 @@
         "NestJS",
         "DevOps",
         "Microservices"
+      ]
+    },
+    {
+      "id": "project-portfolio",
+      "name": "Portfolio CV Angular",
+      "type": "Projet personnel",
+      "status": "En développement",
+      "startDate": "2025-11",
+      "endDate": null,
+      "description": "Portfolio professionnel moderne développé en Angular 17+ avec Tailwind CSS. Design minimaliste inspiré du portfolio de Brittany Chiang (https://brittanychiang.com), démontrant un équilibre entre respect des principes de design fonctionnel et créativité personnelle. Intègre un système de CV éditable via JSON et export PDF.",
+      "role": "Développeur Full-Stack",
+      "team": "Solo",
+      "achievements": [
+        "Architecture Angular 17+ avec Standalone Components",
+        "Design system Tailwind CSS responsive et accessible",
+        "Pipeline CI/CD avec GitHub Actions et SonarQube",
+        "Tests E2E avec Playwright et visual regression",
+        "Export PDF conservant le design web"
+      ],
+      "challenges": [
+        "Adaptation créative d'un design existant tout en respectant l'identité visuelle",
+        "Architecture modulaire et maintenable pour évolution future",
+        "Qualité de code avec Quality Gates SonarQube",
+        "Performance web >95 (Lighthouse)"
+      ],
+      "technologies": [
+        "Angular 17+",
+        "TypeScript",
+        "Tailwind CSS",
+        "GitHub Actions",
+        "SonarQube",
+        "Playwright",
+        "GitHub Pages"
+      ],
+      "metrics": {
+        "lighthouse": ">95",
+        "coverage": ">80%",
+        "components": "~15"
+      },
+      "links": {
+        "github": "https://github.com/Maf38/portfolio-cv",
+        "demo": null,
+        "inspiration": "https://brittanychiang.com"
+      },
+      "images": [],
+      "featured": false,
+      "tags": [
+        "Angular",
+        "Tailwind CSS",
+        "Design System",
+        "CI/CD",
+        "Testing"
       ]
     }
   ],
