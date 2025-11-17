@@ -40,12 +40,12 @@ describe('HeaderComponent', () => {
   it('should render navigation links', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     const navLinks = compiled.querySelectorAll('.nav-link');
-    expect(navLinks.length).toBe(3);
+    expect(navLinks.length).toBe(5);
 
     const navTexts = Array.from(navLinks).map(
       (link) => link.querySelector('.nav-text')?.textContent,
     );
-    expect(navTexts).toEqual(['About', 'Experience', 'Projects']);
+    expect(navTexts).toEqual(['About', 'Experience', 'Projects', 'Education', 'Setup']);
   });
 
   it('should have correct href for navigation links', () => {
@@ -55,6 +55,8 @@ describe('HeaderComponent', () => {
     expect(navLinks[0].getAttribute('href')).toBe('#about');
     expect(navLinks[1].getAttribute('href')).toBe('#experience');
     expect(navLinks[2].getAttribute('href')).toBe('#projects');
+    expect(navLinks[3].getAttribute('href')).toBe('#education');
+    expect(navLinks[4].getAttribute('href')).toBe('#setup');
   });
 
   it('should render all 5 social icons', () => {
@@ -72,16 +74,15 @@ describe('HeaderComponent', () => {
 
   it('should have LinkedIn link', () => {
     const compiled = fixture.nativeElement as HTMLElement;
-    const linkedinLink = compiled.querySelector('a[href="https://www.linkedin.com/in/mafal-gai"]');
+    const linkedinLink = compiled.querySelector('a[href="https://www.linkedin.com/in/mafal-gai-7a456817a/"]');
     expect(linkedinLink).toBeTruthy();
     expect(linkedinLink?.getAttribute('aria-label')).toContain('LinkedIn');
   });
 
-  it('should have phone link', () => {
+  it('should have email icon in social links', () => {
     const compiled = fixture.nativeElement as HTMLElement;
-    const phoneLink = compiled.querySelector('a[href="tel:+33123456789"]');
-    expect(phoneLink).toBeTruthy();
-    expect(phoneLink?.getAttribute('aria-label')).toContain('Phone');
+    const socialIcons = compiled.querySelectorAll('.header-social li');
+    expect(socialIcons.length).toBe(5); // GitHub, LinkedIn, Email, JIRA, SonarQube
   });
 
   it('should have JIRA link', () => {
@@ -101,7 +102,7 @@ describe('HeaderComponent', () => {
   it('should have navigation indicators', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     const indicators = compiled.querySelectorAll('.nav-indicator');
-    expect(indicators.length).toBe(3);
+    expect(indicators.length).toBe(5);
   });
 
   it('should open external links in new tab', () => {
