@@ -145,6 +145,51 @@
           />
         </a>
       </li>
+      <!-- CV Download Buttons -->
+      <li class="cv-download-item">
+        <button
+          type="button"
+          (click)="downloadCv('fr')"
+          class="cv-download-link"
+          aria-label="Download CV in French"
+          title="Download CV (FR)"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="social-icon cv-icon"
+            aria-hidden="true"
+          >
+            <path
+              d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"
+            />
+          </svg>
+          <span class="cv-lang-badge">FR</span>
+        </button>
+      </li>
+      <li class="cv-download-item">
+        <button
+          type="button"
+          (click)="downloadCv('en')"
+          class="cv-download-link"
+          aria-label="Download CV in English"
+          title="Download CV (EN)"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="social-icon cv-icon"
+            aria-hidden="true"
+          >
+            <path
+              d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"
+            />
+          </svg>
+          <span class="cv-lang-badge">EN</span>
+        </button>
+      </li>
     </ul>
 
     <!-- Contact Card Modal -->
