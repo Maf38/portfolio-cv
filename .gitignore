@@ -62,3 +62,12 @@ cv-history/
 
 # Design reference images
 docs/design-reference/
+
+# Temporary logo directory (not needed for deployment)
+/logo/
+
+# Screenshot directory (temporary files for setup section)
+/screenshot/
+
+# Refactoring plan (internal doc, not for commit)
+docs/REFACTORING-PLAN.md

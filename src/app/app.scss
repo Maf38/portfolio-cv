@@ -1,0 +1,937 @@
+// Smooth scroll behavior
+html {
+  scroll-behavior: smooth;
+}
+
+// App container with spotlight effect
+.app-container {
+  min-height: 100vh;
+  background: rgb(15, 23, 42); // slate-900 (dark blue background like brittanychiang.com)
+  color: rgb(226, 232, 240); // slate-200 (light text)
+}
+
+// Two-column layout container (like brittanychiang.com)
+.layout-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  gap: 4rem;
+
+  @media (min-width: 1024px) {
+    padding: 0 6rem;
+    gap: 6rem;
+  }
+
+  @media (max-width: 1023px) {
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+  }
+}
+
+// Right column: scrollable content
+.main-content {
+  flex: 1;
+  padding-top: 7rem; // Aligns center of "ABOUT" (1rem font) with center of "Mafal Gai" (3rem font)
+
+  @media (max-width: 1023px) {
+    padding-top: 2rem;
+  }
+}
+
+// Section styles
+.section {
+  padding: 0 0 2rem 0; // Reduced bottom padding from 4rem to 2rem
+  scroll-margin-top: 7rem; // Matches .main-content padding-top for proper scroll alignment
+
+  @media (max-width: 768px) {
+    padding: 0 0 2rem 0;
+  }
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: rgb(226, 232, 240); // slate-200
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+}
+
+.section-content {
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: rgb(148, 163, 184); // slate-400
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
+}
+
+// Spotlight overlay utilities
+.pointer-events-none {
+  pointer-events: none;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.inset-0 {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.z-30 {
+  z-index: 30;
+}
+
+.transition {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.duration-300 {
+  transition-duration: 300ms;
+}
+
+// Resume link (like brittanychiang.com)
+.resume-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgb(226, 232, 240); // slate-200
+  text-decoration: none;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: rgb(94, 234, 212); // teal-300
+    gap: 0.75rem;
+
+    .resume-arrow {
+      transform: translate(4px, -4px);
+    }
+  }
+}
+
+.resume-arrow {
+  width: 1rem;
+  height: 1rem;
+  transition: transform 0.3s ease;
+}
+
+// Responsive: only show spotlight on large screens
+@media (max-width: 1024px) {
+  .lg\\:absolute {
+    position: absolute;
+  }
+}
+
+// ============================================
+// ABOUT SECTION
+// ============================================
+
+.section-header {
+  margin-bottom: 1rem; // Reduced from 1.5rem to 1rem
+
+  @media (min-width: 1024px) {
+    margin-bottom: 1rem;
+  }
+}
+
+.section-heading {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgb(226, 232, 240); // slate-200
+  margin: 0;
+
+  @media (min-width: 1024px) {
+    // On desktop, section headings are sticky at top
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    padding: 0.5rem 0; // Reduced from 1.5rem to 0.5rem
+    background: linear-gradient(
+      to bottom,
+      rgb(15, 23, 42) 0%,
+      rgb(15, 23, 42) 80%,
+      transparent 100%
+    );
+  }
+}
+
+.about-content {
+  max-width: 100%; // Match experience section width
+  text-align: justify; // Justify text for better appearance
+}
+
+.about-paragraph {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: rgb(148, 163, 184); // slate-400
+
+  strong {
+    color: rgb(226, 232, 240); // slate-200
+    font-weight: 600;
+  }
+}
+
+.about-link {
+  color: rgb(226, 232, 240); // slate-200
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  position: relative;
+
+  &:hover {
+    color: rgb(94, 234, 212); // teal-300
+  }
+
+  &:focus-visible {
+    color: rgb(94, 234, 212);
+    outline: 2px solid rgb(94, 234, 212);
+    outline-offset: 4px;
+    border-radius: 2px;
+  }
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  list-style: none;
+  margin: 1.5rem 0 0 0;
+  padding: 0;
+  font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+  font-size: 0.875rem;
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  color: rgb(148, 163, 184); // slate-400
+
+  &::before {
+    content: '▹';
+    color: rgb(94, 234, 212); // teal-300
+    margin-right: 0.75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+  }
+}
+
+// ============================================
+// EXPERIENCE SECTION
+// ============================================
+
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; // Reduced from 3rem to make CV more compact
+}
+
+.experience-item {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+
+  @media (min-width: 640px) {
+    grid-template-columns: 200px 1fr;
+    padding: 1.5rem;
+  }
+
+  @media (min-width: 1024px) {
+    &:hover {
+      background: rgba(148, 163, 184, 0.1);
+      box-shadow: 0 0 0 1px rgba(148, 163, 184, 0.1);
+    }
+  }
+}
+
+.experience-header {
+  display: contents;
+}
+
+.experience-period-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.experience-period {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: rgb(148, 163, 184); // slate-400
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 0.25rem;
+}
+
+.company-logos {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+
+  a {
+    display: flex;
+    align-items: center;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+// Stacked company logos layout (for multi-row logo display)
+.company-logos-stacked {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.company-logos-row {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+
+  a {
+    display: flex;
+    align-items: center;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+.company-logo {
+  height: 2rem; // Base size for most logos
+  width: auto;
+  object-fit: contain;
+  color: rgb(226, 232, 240); // slate-200 for Material Design monochrome style
+
+  @media (max-width: 640px) {
+    height: 1.75rem;
+  }
+
+  // Larger logos for Inetum and CEA (recent/current experience)
+  &.large {
+    height: 3.5rem; // Increased from 2.5rem for better visibility of text-based logos
+
+    @media (max-width: 640px) {
+      height: 2.5rem; // Increased from 2rem
+    }
+  }
+
+  // Smaller logos for Capgemini and Rio Tinto
+  &.small {
+    height: 1.25rem; // Reduced from 1.5rem to 1.25rem
+
+    @media (max-width: 640px) {
+      height: 1rem; // Reduced from 1.25rem to 1rem
+    }
+  }
+
+  // Extra small logos for Rio Tinto (even smaller)
+  &.x-small {
+    height: 0.875rem; // Very small size for Rio Tinto
+
+    @media (max-width: 640px) {
+      height: 0.75rem;
+    }
+  }
+}
+
+.experience-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.experience-title {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.experience-link {
+  color: rgb(226, 232, 240); // slate-200
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: inline-block;
+
+  &:hover {
+    color: rgb(94, 234, 212); // teal-300
+
+    .experience-position {
+      color: rgb(94, 234, 212);
+    }
+  }
+
+  &:focus-visible {
+    color: rgb(94, 234, 212);
+    outline: 2px solid rgb(94, 234, 212);
+    outline-offset: 4px;
+    border-radius: 2px;
+  }
+}
+
+.experience-position {
+  color: rgb(226, 232, 240); // slate-200
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.experience-company {
+  color: rgb(148, 163, 184); // slate-400
+  font-weight: 500;
+}
+
+.experience-description {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.625;
+  color: rgb(148, 163, 184); // slate-400
+  text-align: justify; // Justify text for squared right edge
+}
+
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tech-item {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: rgb(94, 234, 212); // teal-300
+  background: rgba(94, 234, 212, 0.1);
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+}
+
+.resume-link-wrapper {
+  margin-top: 3rem;
+}
+
+.resume-full-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgb(226, 232, 240); // slate-200
+  text-decoration: none;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: rgb(94, 234, 212); // teal-300
+    gap: 0.75rem;
+
+    .resume-arrow-inline {
+      transform: translate(4px, -4px);
+    }
+  }
+
+  &:focus-visible {
+    color: rgb(94, 234, 212);
+    outline: 2px solid rgb(94, 234, 212);
+    outline-offset: 4px;
+    border-radius: 2px;
+  }
+}
+
+.resume-arrow-inline {
+  width: 1rem;
+  height: 1rem;
+  transition: transform 0.3s ease;
+}
+
+// ============================================
+// PROJECTS SECTION
+// ============================================
+
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; // Reduced from 4rem for tighter spacing
+}
+
+.project-card {
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+
+  @media (min-width: 1024px) {
+    &:hover {
+      background: rgba(148, 163, 184, 0.1);
+      box-shadow: 0 0 0 1px rgba(148, 163, 184, 0.1);
+
+      .project-link {
+        color: rgb(94, 234, 212);
+      }
+
+      .project-icon {
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+.project-header {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.project-links-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 2rem; // Reserve space even if empty for alignment
+
+  a {
+    color: rgb(226, 232, 240);
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: rgb(94, 234, 212);
+      transform: translateY(-2px);
+    }
+  }
+}
+
+.project-info {
+  flex: 1;
+}
+
+.project-featured {
+  // Featured project can have special styling if needed
+  position: relative;
+}
+
+.project-image-container {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 0.25rem;
+
+  @media (min-width: 640px) {
+    aspect-ratio: 1;
+  }
+}
+
+.project-image-placeholder {
+  width: 100%;
+  height: 100%;
+  background: rgba(148, 163, 184, 0.1);
+  border: 2px solid rgba(148, 163, 184, 0.2);
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.project-image-text {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: rgb(148, 163, 184);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.project-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.project-title {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.project-link {
+  color: rgb(226, 232, 240); // slate-200
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: inline;
+
+  &:hover {
+    color: rgb(94, 234, 212); // teal-300
+  }
+
+  &:focus-visible {
+    color: rgb(94, 234, 212);
+    outline: 2px solid rgb(94, 234, 212);
+    outline-offset: 4px;
+    border-radius: 2px;
+  }
+}
+
+.project-description {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.625;
+  color: rgb(148, 163, 184); // slate-400
+  text-align: justify; // Justify text for better appearance
+}
+
+.project-tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.project-tech-item {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: rgb(94, 234, 212); // teal-300
+  background: rgba(94, 234, 212, 0.1);
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.project-link-item {
+  color: rgb(226, 232, 240); // slate-200
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: rgb(94, 234, 212); // teal-300
+  }
+
+  &:focus-visible {
+    color: rgb(94, 234, 212);
+    outline: 2px solid rgb(94, 234, 212);
+    outline-offset: 4px;
+    border-radius: 2px;
+  }
+}
+
+.project-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+// ============================================
+// PROJECT TREE STRUCTURE (IFTTT-Trading)
+// ============================================
+
+.project-main {
+  margin-bottom: 3rem;
+}
+
+.project-main-content {
+  max-width: 100%;
+}
+
+.project-main-title {
+  font-size: 1.125rem; // Same as other project titles (reduced from 1.5rem)
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: rgb(226, 232, 240); // slate-200
+
+  .project-link {
+    color: rgb(226, 232, 240);
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: rgb(94, 234, 212); // teal-300
+    }
+  }
+}
+
+.project-main-description {
+  font-size: 0.875rem;
+  line-height: 1.625;
+  color: rgb(148, 163, 184); // slate-400
+  margin-bottom: 0.5rem;
+  text-align: justify; // Justify text for better appearance
+}
+
+.project-main-example {
+  font-size: 0.875rem;
+  line-height: 1.625;
+  color: rgb(148, 163, 184); // slate-400
+  margin-bottom: 0.5rem;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  text-align: justify; // Justify text for better appearance
+}
+
+.project-main-context {
+  font-size: 0.875rem;
+  line-height: 1.625;
+  color: rgb(148, 163, 184); // slate-400
+  margin-bottom: 1.5rem;
+  text-align: justify; // Justify text for better appearance
+}
+
+// Minimalist Tree structure
+.project-tree {
+  margin-top: 1.5rem;
+  margin-left: 1rem;
+  border-left: 1px solid rgba(148, 163, 184, 0.3); // Vertical trunk line
+  padding-left: 0;
+}
+
+.project-tree-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: rgb(148, 163, 184); // slate-400 (subtle)
+  margin-bottom: 0.75rem;
+  margin-top: 1.5rem;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.project-tree-item {
+  position: relative;
+  margin-bottom: 0.75rem;
+  padding-left: 2rem;
+  transition: all 0.2s ease;
+
+  // Tree branch: horizontal line
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.625rem; // Align with project name baseline
+    width: 1.5rem;
+    height: 1px;
+    background: rgba(148, 163, 184, 0.3);
+  }
+}
+
+.project-tree-header {
+  display: flex;
+  align-items: flex-start; // Align items to the top
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+}
+
+.project-tree-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: rgb(226, 232, 240); // slate-200
+  font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+}
+
+.project-tree-desc {
+  font-size: 0.8125rem;
+  color: rgb(148, 163, 184); // slate-400
+  flex: 1;
+  min-width: 200px;
+  text-align: justify; // Justify text for squared right edge
+}
+
+.project-tree-links {
+  display: flex;
+  gap: 0.375rem;
+  order: -1; // Move to the left side
+
+  a {
+    display: flex;
+    align-items: center;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+.project-tree-icon {
+  width: 1rem;
+  height: 1rem;
+
+  // Enlarge GitHub-Private icons by 25% to compensate for visual weight difference
+  // caused by composite design (GitHub octocat + lock overlay)
+  &[alt='GitHub Private'] {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+}
+
+.project-tree-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    font-size: 0.6875rem;
+    font-weight: 500;
+    color: rgb(94, 234, 212); // teal-300
+    background: rgba(94, 234, 212, 0.1);
+    padding: 0.125rem 0.5rem;
+    border-radius: 9999px;
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .project-tree {
+    margin-left: 0.5rem;
+  }
+
+  .project-tree-item {
+    padding-left: 1rem;
+
+    &::before {
+      width: 0.75rem;
+    }
+
+    &::after {
+      left: 0.625rem;
+    }
+  }
+
+  .project-tree-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .project-tree-desc {
+    min-width: 100%;
+  }
+
+  .project-tree-links {
+    margin-left: 0;
+  }
+}
+
+// ===========================
+// Setup Section Styles (Twitch-style)
+// ===========================
+.setup-grid {
+  display: grid;
+  grid-template-columns: minmax(200px, 300px) 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.setup-screenshot {
+  cursor: zoom-in;
+  position: relative;
+  border-radius: 0.5rem;
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+  }
+
+  &:hover img {
+    transform: scale(1.5);
+    z-index: 100;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
+  }
+}
+
+.setup-configs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.setup-config {
+  h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgb(226, 232, 240);
+    margin-top: 1.5rem;
+    margin-bottom: 0.25rem;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  .setup-label {
+    font-size: 0.875rem;
+    color: rgb(100, 116, 139);
+    margin: 0 0 0.5rem 0;
+    font-weight: 500;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+
+    li {
+      color: rgb(148, 163, 184);
+      font-size: 0.875rem;
+      line-height: 1.8;
+      padding-left: 0;
+
+      &::before {
+        content: '•';
+        color: rgb(100, 116, 139);
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}
+
+// Responsive adjustments for Setup section
+@media (max-width: 1024px) {
+  .setup-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .setup-screenshot {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .setup-configs {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .setup-config h3 {
+    font-size: 0.9375rem;
+  }
+}
