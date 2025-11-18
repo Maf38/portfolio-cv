@@ -1,4 +1,21 @@
 <div class="experience-container">
   <h1 class="experience-title">Experience</h1>
   <p class="experience-subtitle">This page is under construction.</p>
+
+  <div class="view-resume-section">
+    <button
+      type="button"
+      class="view-resume-link"
+      (click)="downloadFullResume()"
+      aria-label="View Full Résumé"
+    >
+      <svg class="resume-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
+      </svg>
+      <span class="resume-text">View Full Résumé</span>
+      <svg class="arrow-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+        <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"/>
+      </svg>
+    </button>
+  </div>
 </div>

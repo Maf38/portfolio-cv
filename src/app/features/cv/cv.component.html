@@ -34,7 +34,9 @@
   </div>
 
   @if (cvData$ | async; as cvData) {
-  <app-cv-display [cvData]="cvData" [language]="currentLanguage" />
+  <div id="cv-content">
+    <app-cv-display [cvData]="cvData" [language]="currentLanguage" />
+  </div>
   } @else {
   <div class="loading">
     <p>Loading CV data...</p>
