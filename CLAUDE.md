@@ -30,6 +30,14 @@ Portfolio professionnel Angular moderne pour maximiser la visibilité pendant la
 - **Tailwind CSS**: Plus rapide que Angular Material pour MVP, design system flexible
 - **Standalone Components**: Architecture moderne, tree-shaking optimal
 
+### Configuration Dev Server
+
+**⚠️ IMPORTANT - Accès depuis VM**:
+- L'application doit être accessible depuis l'IP de la VM (192.168.1.82)
+- **Toujours lancer le dev server avec `--host 0.0.0.0`** pour écouter sur toutes les interfaces réseau
+- Commande: `npm start -- --port 4201 --host 0.0.0.0`
+- URL d'accès: `http://192.168.1.82:4201/`
+
 ### Qualité & DevOps
 
 **Outils de qualité intégrés**:
@@ -299,6 +307,7 @@ test: add playwright tests for navigation
 - [docs/SETUP-GUIDE.md](./docs/SETUP-GUIDE.md) - Guide complet de setup du projet
 - [docs/WORKFLOW-FEATURES.md](./docs/WORKFLOW-FEATURES.md) - **Workflow de développement des features** (SonarQube, coding standards, best practices Angular)
 - [docs/WORKFLOW-TESTS.md](./docs/WORKFLOW-TESTS.md) - **Workflow de tests** (unit, E2E, visual regression, coverage)
+- [docs/DEV-WORKFLOW.md](./docs/DEV-WORKFLOW.md) - **Workflow de développement quotidien** (lint:fix, commits, PR, bonnes pratiques)
 
 ### Projets de Référence
 

@@ -34,6 +34,18 @@
             <span class="nav-text">Projects</span>
           </a>
         </li>
+        <li>
+          <a href="#education" class="nav-link">
+            <span class="nav-indicator"></span>
+            <span class="nav-text">Education</span>
+          </a>
+        </li>
+        <li>
+          <a href="#setup" class="nav-link">
+            <span class="nav-indicator"></span>
+            <span class="nav-text">Setup</span>
+          </a>
+        </li>
       </ul>
     </nav>
 
@@ -62,7 +74,7 @@
       </li>
       <li>
         <a
-          href="https://www.linkedin.com/in/mafal-gai"
+          href="https://www.linkedin.com/in/mafal-gai-7a456817a/"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn (opens in a new tab)"
@@ -82,7 +94,7 @@
         </a>
       </li>
       <li>
-        <a href="tel:+33123456789" aria-label="Phone" title="Phone">
+        <a href="#" (click)="toggleContactCard($event)" aria-label="Contact" title="Contact">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -125,19 +137,139 @@
           aria-label="SonarQube (opens in a new tab)"
           title="SonarQube"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="currentColor"
+          <img
+            src="/assets/images/logos/sonarqube-logo-mono.svg"
+            alt="SonarQube"
             class="social-icon"
             aria-hidden="true"
-          >
-            <path
-              d="M15.685.386l-.465.766c3.477 2.112 6.305 5.27 7.966 8.89L24 9.67C22.266 5.887 19.313 2.59 15.685.386zM8.462.91l-.305.952c5.813 1.862 10.464 6.508 12.326 12.324l.952-.305C19.568 7.427 14.74 2.778 8.462.91zm1.116 3.45l-.387.914a15.861 15.861 0 0 1 9.63 9.647l.913-.387a16.862 16.862 0 0 0-10.156-10.173zm1.015 3.423l-.44.898a12.626 12.626 0 0 1 7.231 7.245l.898-.44a13.628 13.628 0 0 0-7.69-7.703zm-7.086.502C1.463 10.53.002 13.426.002 16.586.002 20.85 3.445 24 7.71 24c3.16 0 6.062-1.46 8.306-3.505l-.675-.73C13.138 21.571 10.48 23 7.71 23c-3.906 0-6.707-2.91-6.707-6.414 0-2.912 1.385-5.565 3.58-7.618l-.076-.084zm2.065 2.18l-.52.848c1.001.616 1.918 1.313 2.682 2.084.764.772 1.466 1.696 2.084 2.695l.848-.52c-.68-1.096-1.458-2.127-2.29-2.961-.832-.834-1.858-1.607-2.954-2.285l.15.04zm-1.21 3.272l-.717.696c2.006 2.07 2.967 4.484 2.967 6.98 0 2.501-.867 3.99-2.89 5.267l.512.858C5.535 26.58 6.71 24.863 6.71 22.003c0-2.823-1.053-5.53-3.349-7.78z"
-            ></path>
-          </svg>
+          />
         </a>
       </li>
     </ul>
+
+    <!-- Contact Card Modal -->
+    <div
+      *ngIf="showContactCard"
+      class="contact-card-overlay"
+      role="button"
+      tabindex="0"
+      (click)="closeContactCard()"
+      (keydown.escape)="closeContactCard()"
+    >
+      <div
+        class="contact-card"
+        role="dialog"
+        aria-modal="true"
+        tabindex="0"
+        (click)="$event.stopPropagation()"
+        (keydown)="$event.stopPropagation()"
+      >
+        <div class="contact-card-header">
+          <h3>Contact Info</h3>
+          <button class="contact-card-close" (click)="closeContactCard()" aria-label="Close">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="close-icon"
+            >
+              <path
+                d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="contact-card-content">
+          <div class="contact-item">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="contact-icon"
+            >
+              <path
+                d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+              />
+            </svg>
+            <div class="contact-info">
+              <span class="contact-label">Email</span>
+              <a href="mailto:Mafal Gai <gaimafal&#64;gmail.com>" class="contact-value"
+                >gaimafal&#64;gmail.com</a
+              >
+            </div>
+            <button
+              class="copy-button"
+              (click)="copyToClipboard('Mafal Gai <gaimafal@gmail.com>', 'email')"
+              [attr.aria-label]="copiedItem === 'email' ? 'Copied!' : 'Copy email'"
+              [title]="copiedItem === 'email' ? 'Copied!' : 'Copy email'"
+            >
+              <svg
+                *ngIf="copiedItem !== 'email'"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="copy-icon"
+              >
+                <path
+                  d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"
+                />
+              </svg>
+              <svg
+                *ngIf="copiedItem === 'email'"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="copy-icon"
+              >
+                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+              </svg>
+            </button>
+          </div>
+          <div class="contact-item">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="contact-icon"
+            >
+              <path
+                d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
+              />
+            </svg>
+            <div class="contact-info">
+              <span class="contact-label">Phone</span>
+              <a href="tel:+33670160517" class="contact-value">+33 6 70 16 05 17</a>
+            </div>
+            <button
+              class="copy-button"
+              (click)="copyToClipboard('+33670160517', 'phone')"
+              [attr.aria-label]="copiedItem === 'phone' ? 'Copied!' : 'Copy phone'"
+              [title]="copiedItem === 'phone' ? 'Copied!' : 'Copy phone'"
+            >
+              <svg
+                *ngIf="copiedItem !== 'phone'"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="copy-icon"
+              >
+                <path
+                  d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"
+                />
+              </svg>
+              <svg
+                *ngIf="copiedItem === 'phone'"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="copy-icon"
+              >
+                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </header>

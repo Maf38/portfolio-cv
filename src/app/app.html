@@ -14,23 +14,802 @@
     <main class="main-content">
       <!-- About Section -->
       <section id="about" class="section">
-        <h2 class="section-title">About</h2>
-        <p class="section-content">
-          Lead Developer with 6 years of experience in full-stack development, specializing in
-          Angular, .NET Core, and cloud technologies.
-        </p>
+        <div class="section-header">
+          <h2 class="section-heading">About</h2>
+        </div>
+
+        <div class="about-content">
+          <p class="about-paragraph">
+            Currently working as a .NET Developer on a multi-application maintenance team managing
+            70+ applications, I split my time between build and run operations across a web-focused
+            application portfolio. My daily environment revolves around Microsoft technologies:
+            Windows Server, IIS, Azure DevOps for CI/CD pipelines, and SQL Server 2014/2019 for
+            database management.
+          </p>
+
+          <p class="about-paragraph">
+            I'm a versatile developer who has experimented with various technologies throughout my
+            career. I have a real passion for web technologies and I'm thrilled to have made a
+            professional shift that allows me to practice them daily. However, I remain
+            fundamentally a backend-oriented developer. My industrial background naturally exposed
+            me to Lean concepts, and I deeply appreciate Agile work organization. Over time, I've
+            also been increasingly drawn to Linux systems, containerization, and Node.js ecosystem,
+            as these perfectly align with the projects I build on a daily basis. My goal is
+            naturally to evolve professionally within these technologies to further enhance my
+            skills.
+          </p>
+
+          <p class="about-paragraph">
+            My objective is to build robust, maintainable, and automated software systems,
+            anticipating the evolution of development practices toward more artificial intelligence
+            and automation. I don't just aim to write code that works, but to create professional
+            architectures that will stand the test of time and team changes.
+          </p>
+        </div>
       </section>
 
       <!-- Experience Section -->
       <section id="experience" class="section">
-        <h2 class="section-title">Experience</h2>
-        <p class="section-content">Professional timeline coming soon...</p>
+        <div class="section-header">
+          <h2 class="section-heading">Experience</h2>
+        </div>
+
+        <div class="experience-list">
+          <!-- Experience items loop -->
+          @for (exp of cvData.experience; track exp.id) {
+            <div class="experience-item">
+              <div class="experience-header">
+                <div class="experience-period-container">
+                  <span class="experience-period">{{ exp.duration }}</span>
+
+                  <!-- Inetum - CEA: Two logos side by side -->
+                  @if (exp.company === 'Inetum - CEA') {
+                    <div class="company-logos">
+                      <a
+                        href="https://inetum.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Inetum"
+                        title="Inetum"
+                      >
+                        <img
+                          src="/assets/images/logos/inetum-logo-mono.svg"
+                          alt="Inetum"
+                          class="company-logo large"
+                        />
+                      </a>
+                      <a
+                        href="https://www.cea.fr"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="CEA"
+                        title="CEA"
+                      >
+                        <img
+                          src="/assets/images/logos/cea-logo-mono.svg"
+                          alt="CEA"
+                          class="company-logo large"
+                        />
+                      </a>
+                    </div>
+                  }
+
+                  <!-- Capgemini - EDF: Two logos (Capgemini small, EDF normal) -->
+                  @else if (exp.company === 'Capgemini - EDF') {
+                    <div class="company-logos">
+                      <a
+                        href="https://www.capgemini.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Capgemini"
+                        title="Capgemini"
+                      >
+                        <img
+                          src="/assets/images/logos/capgemini-logo-mono.svg"
+                          alt="Capgemini"
+                          class="company-logo small"
+                        />
+                      </a>
+                      <a
+                        href="https://www.edf.fr"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="EDF"
+                        title="EDF"
+                      >
+                        <img
+                          src="/assets/images/logos/edf-logo-mono.svg"
+                          alt="EDF"
+                          class="company-logo"
+                        />
+                      </a>
+                    </div>
+                  }
+
+                  <!-- Capgemini (EDF / Rio Tinto): Stacked layout -->
+                  @else if (exp.company === 'Capgemini (EDF / Rio Tinto)') {
+                    <div class="company-logos-stacked">
+                      <!-- First row: Capgemini alone (larger) -->
+                      <div class="company-logos-row">
+                        <a
+                          href="https://www.capgemini.com"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="Capgemini"
+                          title="Capgemini"
+                        >
+                          <img
+                            src="/assets/images/logos/capgemini-logo-mono.svg"
+                            alt="Capgemini"
+                            class="company-logo small"
+                          />
+                        </a>
+                      </div>
+                      <!-- Second row: EDF + Rio Tinto -->
+                      <div class="company-logos-row">
+                        <a
+                          href="https://www.edf.fr"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="EDF"
+                          title="EDF"
+                        >
+                          <img
+                            src="/assets/images/logos/edf-logo-mono.svg"
+                            alt="EDF"
+                            class="company-logo"
+                          />
+                        </a>
+                        <a
+                          href="https://www.riotinto.com"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="Rio Tinto"
+                          title="Rio Tinto"
+                        >
+                          <img
+                            src="/assets/images/logos/rio-tinto-logo-mono.svg"
+                            alt="Rio Tinto"
+                            class="company-logo x-small"
+                          />
+                        </a>
+                      </div>
+                    </div>
+                  }
+
+                  <!-- ST Microelectronics: Single logo -->
+                  @else if (exp.company === '· ST Microelectronics') {
+                    <div class="company-logos">
+                      <a
+                        href="https://www.st.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="ST Microelectronics"
+                        title="ST Microelectronics"
+                      >
+                        <img
+                          src="/assets/images/logos/st-microelectronics-mono.svg"
+                          alt="ST Microelectronics"
+                          class="company-logo"
+                        />
+                      </a>
+                    </div>
+                  }
+
+                  <!-- Canalog: Becton Dickinson logo -->
+                  @else if (exp.company === '· Canalog') {
+                    <div class="company-logos">
+                      <a
+                        href="https://www.bd.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Becton Dickinson"
+                        title="Becton Dickinson"
+                      >
+                        <img
+                          src="/assets/images/logos/becton-dickinson-mono.svg"
+                          alt="Becton Dickinson"
+                          class="company-logo large"
+                        />
+                      </a>
+                    </div>
+                  }
+                </div>
+                <div class="experience-details">
+                  <h3 class="experience-title">
+                    @if (exp.companyUrl) {
+                      <a
+                        [href]="exp.companyUrl"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="experience-link"
+                        [attr.aria-label]="exp.position + ' at ' + exp.company"
+                      >
+                        <span class="experience-position">{{ exp.position }}</span>
+                        <span class="experience-company"> {{ exp.company }}</span>
+                      </a>
+                    } @else {
+                      <span class="experience-position">{{ exp.position }}</span>
+                      <span class="experience-company">{{ exp.company }}</span>
+                    }
+                  </h3>
+                  <p class="experience-description">
+                    {{ exp.description }}
+                  </p>
+                  <ul class="tech-list">
+                    @for (tech of exp.technologies; track tech) {
+                      <li class="tech-item">{{ tech }}</li>
+                    }
+                  </ul>
+                </div>
+              </div>
+            </div>
+          }
+        </div>
+
+        <div class="resume-link-wrapper">
+          <a
+            href="/assets/cv/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="resume-full-link"
+          >
+            <span>View Full Résumé</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              class="resume-arrow-inline"
+              aria-hidden="true"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </a>
+        </div>
       </section>
 
       <!-- Projects Section -->
       <section id="projects" class="section">
-        <h2 class="section-title">Projects</h2>
-        <p class="section-content">Featured projects coming soon...</p>
+        <div class="section-header">
+          <h2 class="section-heading">Projects</h2>
+        </div>
+
+        <div class="projects-list">
+          <!-- IFTTT Trading Platform (Featured with Tree Structure) -->
+          <div class="project-card">
+            <div class="project-content">
+              <div class="project-main">
+                <div class="project-main-content">
+                  <h3 class="project-main-title">
+                    <a
+                      href="https://www.notion.so/IFTTT-Trading-specifications-2aa97b29932581fdb0cbc79236eb530f"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="project-link"
+                    >
+                      IFTTT-Trading - Automated Trading Platform
+                    </a>
+                  </h3>
+                  <p class="project-main-description">
+                    Trading automation tool on Solana for executing swaps in a non-custodial
+                    environment with sophisticated conditional rules beyond simple limit orders.
+                  </p>
+                  <p class="project-main-example">
+                    Example: IF BTC > $100,000 AND RSI 14 (1h) > 30 THEN swap USDT to MOODENG
+                  </p>
+                  <p class="project-main-context">
+                    Personal tool rapidly developed as MVP, now in consolidation phase with DevOps
+                    ecosystem (Ansible provisioning, GitLab CI/CD, Prometheus monitoring, Vault
+                    secrets, S3 backups).
+                  </p>
+
+                  <!-- Sub-projects Tree -->
+                  <h4 class="project-tree-title">Sub-projects:</h4>
+                  <div class="project-tree">
+                    <!-- devops-ifttt-trading -->
+                    <div class="project-tree-item">
+                      <div class="project-tree-header">
+                        <div class="project-tree-links">
+                          <a
+                            href="https://github.com/Maf38/devops-ifttt-trading"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="GitHub (Private)"
+                            title="Private Repository"
+                          >
+                            <img
+                              src="/assets/images/logos/github-private-mono.svg"
+                              alt="GitHub Private"
+                              class="project-tree-icon"
+                            />
+                          </a>
+                          <a
+                            href="https://www.notion.so/IFTT-Trading-Vue-d-ensemble-du-projet-2a997b29932581ec9bd7fe7f37428c84"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Notion"
+                          >
+                            <img
+                              src="/assets/images/logos/notion-mono.svg"
+                              alt="Notion"
+                              class="project-tree-icon"
+                            />
+                          </a>
+                        </div>
+                        <span class="project-tree-name">devops-ifttt-trading</span>
+                        <span class="project-tree-desc"
+                          >Complete DevOps ecosystem with Ansible provisioning for automated VM
+                          setup, GitLab CI/CD pipelines, Prometheus/Grafana monitoring stack,
+                          Traefik reverse proxy, and S3 backup automation. Comprehensive
+                          documentation and infrastructure-as-code for the entire platform.</span
+                        >
+                      </div>
+                      <ul class="project-tree-tech">
+                        <li>Docker Compose</li>
+                        <li>Ansible</li>
+                        <li>GitLab CI/CD</li>
+                        <li>Prometheus</li>
+                        <li>Grafana</li>
+                        <li>Traefik</li>
+                        <li>S3</li>
+                      </ul>
+                    </div>
+
+                    <!-- iftt-trading-automation -->
+                    <div class="project-tree-item">
+                      <div class="project-tree-header">
+                        <div class="project-tree-links">
+                          <a
+                            href="https://github.com/Maf38/iftt-trading-automation"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="GitHub (Private)"
+                            title="Private Repository"
+                          >
+                            <img
+                              src="/assets/images/logos/github-private-mono.svg"
+                              alt="GitHub Private"
+                              class="project-tree-icon"
+                            />
+                          </a>
+                        </div>
+                        <span class="project-tree-name">iftt-trading-automation</span>
+                        <span class="project-tree-desc"
+                          >Full-stack monorepo combining Angular 18 retro-gaming frontend with
+                          NestJS backend. Real-time WebSocket updates, JWT authentication, Phantom
+                          wallet integration, PostgreSQL with TypeORM, and comprehensive rule engine
+                          for conditional trading logic.</span
+                        >
+                      </div>
+                      <ul class="project-tree-tech">
+                        <li>Angular 18</li>
+                        <li>NestJS</li>
+                        <li>PostgreSQL</li>
+                        <li>TypeScript</li>
+                        <li>WebSocket</li>
+                        <li>OAuth2/OIDC</li>
+                        <li>Wallet Adapter</li>
+                        <li>Docker Compose</li>
+                      </ul>
+                    </div>
+
+                    <!-- solana-swap-api -->
+                    <div class="project-tree-item">
+                      <div class="project-tree-header">
+                        <div class="project-tree-links">
+                          <a
+                            href="https://github.com/Maf38/solana-swap-api"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="GitHub (Private)"
+                            title="Private Repository"
+                          >
+                            <img
+                              src="/assets/images/logos/github-private-mono.svg"
+                              alt="GitHub Private"
+                              class="project-tree-icon"
+                            />
+                          </a>
+                        </div>
+                        <span class="project-tree-name">solana-swap-api</span>
+                        <span class="project-tree-desc"
+                          >Dedicated microservice for executing Solana token swaps via Jupiter
+                          aggregator. Integrates with HashiCorp Vault for secure private key
+                          management, handles transaction signing, and provides REST API endpoints
+                          for swap operations with slippage control.</span
+                        >
+                      </div>
+                      <ul class="project-tree-tech">
+                        <li>Node.js</li>
+                        <li>Solana Web3.js</li>
+                        <li>Jupiter API</li>
+                        <li>HashiCorp Vault</li>
+                        <li>Docker Compose</li>
+                      </ul>
+                    </div>
+
+                    <!-- hashicorp-vault -->
+                    <div class="project-tree-item">
+                      <div class="project-tree-header">
+                        <div class="project-tree-links">
+                          <a
+                            href="https://github.com/Maf38/hashicorp-vault"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="GitHub (Private)"
+                            title="Private Repository"
+                          >
+                            <img
+                              src="/assets/images/logos/github-private-mono.svg"
+                              alt="GitHub Private"
+                              class="project-tree-icon"
+                            />
+                          </a>
+                        </div>
+                        <span class="project-tree-name">hashicorp-vault</span>
+                        <span class="project-tree-desc"
+                          >Production-ready HashiCorp Vault deployment with automated SSL
+                          certificate management via Certbot DNS challenge. Nginx reverse proxy
+                          configuration, secure secrets storage for Solana private keys, and
+                          integration with all platform microservices.</span
+                        >
+                      </div>
+                      <ul class="project-tree-tech">
+                        <li>Docker Compose</li>
+                        <li>Vault</li>
+                        <li>Certbot</li>
+                        <li>Nginx</li>
+                      </ul>
+                    </div>
+
+                    <!-- custom-solcrates-ohlcv-api -->
+                    <div class="project-tree-item">
+                      <div class="project-tree-header">
+                        <div class="project-tree-links">
+                          <a
+                            href="https://github.com/Maf38/custom-solcrates-ohlcv-api"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="GitHub"
+                          >
+                            <img
+                              src="/assets/images/logos/github-mono.svg"
+                              alt="GitHub"
+                              class="project-tree-icon"
+                            />
+                          </a>
+                        </div>
+                        <span class="project-tree-name">custom-solcrates-ohlcv-api</span>
+                        <span class="project-tree-desc"
+                          >Custom fork of solcrates-ohlcv-api adding dual persistence layer
+                          (InfluxDB time-series + SQLite metadata), historical data backfill
+                          capabilities, and daemon mode for continuous candle data collection from
+                          GeckoTerminal API for technical analysis.</span
+                        >
+                      </div>
+                      <ul class="project-tree-tech">
+                        <li>Node.js</li>
+                        <li>InfluxDB</li>
+                        <li>SQLite</li>
+                        <li>GeckoTerminal API</li>
+                        <li>Docker Compose</li>
+                      </ul>
+                    </div>
+
+                    <!-- n8n -->
+                    <div class="project-tree-item">
+                      <div class="project-tree-header">
+                        <div class="project-tree-links">
+                          <a
+                            href="https://github.com/Maf38/n8n"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="GitHub (Private)"
+                            title="Private Repository"
+                          >
+                            <img
+                              src="/assets/images/logos/github-private-mono.svg"
+                              alt="GitHub Private"
+                              class="project-tree-icon"
+                            />
+                          </a>
+                        </div>
+                        <span class="project-tree-name">n8n</span>
+                        <span class="project-tree-desc"
+                          >Core business logic orchestrator connecting to iftt-trading-automation
+                          backend via OAuth2. Handles trading decision-making with native
+                          multi-processing of market data streams. Strategic choice enabling
+                          integration with Telegram notifications, external APIs, and extensible
+                          workflow automation for future enhancements.</span
+                        >
+                      </div>
+                      <ul class="project-tree-tech">
+                        <li>n8n</li>
+                        <li>Workflows</li>
+                        <li>Automation</li>
+                        <li>OAuth2</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Portfolio CV -->
+          <div class="project-card">
+            <div class="project-content">
+              <div class="project-header">
+                <div class="project-links-left">
+                  <a
+                    href="https://github.com/Maf38/portfolio-cv"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub"
+                  >
+                    <img
+                      src="/assets/images/logos/github-mono.svg"
+                      alt="GitHub"
+                      class="project-icon"
+                    />
+                  </a>
+                </div>
+                <div class="project-info">
+                  <h3 class="project-title">
+                    <a
+                      href="https://github.com/Maf38/portfolio-cv"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="project-link"
+                    >
+                      Portfolio CV
+                    </a>
+                  </h3>
+                  <p class="project-description">
+                    This portfolio website built with Angular 17 standalone components and Tailwind
+                    CSS.
+                  </p>
+                  <ul class="project-tech-list">
+                    <li class="project-tech-item">Angular 17</li>
+                    <li class="project-tech-item">Tailwind CSS</li>
+                    <li class="project-tech-item">TypeScript</li>
+                    <li class="project-tech-item">GitHub Pages</li>
+                    <li class="project-tech-item">GitHub Actions</li>
+                    <li class="project-tech-item">SonarQube</li>
+                    <li class="project-tech-item">Jira</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Voice in Terminal -->
+          <div class="project-card">
+            <div class="project-content">
+              <div class="project-header">
+                <div class="project-links-left">
+                  <a
+                    href="https://github.com/Maf38/voice-in-terminal"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub"
+                  >
+                    <img
+                      src="/assets/images/logos/github-mono.svg"
+                      alt="GitHub"
+                      class="project-icon"
+                    />
+                  </a>
+                </div>
+                <div class="project-info">
+                  <h3 class="project-title">
+                    <a
+                      href="https://github.com/Maf38/voice-in-terminal"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="project-link"
+                    >
+                      Voice in Terminal
+                    </a>
+                  </h3>
+                  <p class="project-description">
+                    VSCode extension for voice commands using local Whisper.cpp or OpenAI API.
+                    Cross-platform support with SoX integration.
+                  </p>
+                  <ul class="project-tech-list">
+                    <li class="project-tech-item">TypeScript</li>
+                    <li class="project-tech-item">VSCode API</li>
+                    <li class="project-tech-item">Whisper.cpp</li>
+                    <li class="project-tech-item">Node.js</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Wednesday Memecoin -->
+          <div class="project-card">
+            <div class="project-content">
+              <div class="project-header">
+                <div class="project-links-left">
+                  <a
+                    href="https://github.com/Maf38/wednesday-app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub"
+                  >
+                    <img
+                      src="/assets/images/logos/github-mono.svg"
+                      alt="GitHub"
+                      class="project-icon"
+                    />
+                  </a>
+                  <a
+                    href="https://wednesdaysolana.art/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Live Site"
+                  >
+                    <img
+                      src="/assets/images/logos/www-mono.svg"
+                      alt="Website"
+                      class="project-icon"
+                    />
+                  </a>
+                </div>
+                <div class="project-info">
+                  <h3 class="project-title">
+                    <a
+                      href="https://wednesdaysolana.art/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="project-link"
+                    >
+                      Wednesday Memecoin
+                    </a>
+                  </h3>
+                  <p class="project-description">
+                    Memecoin website 100% AI-assisted POC. Gothic horror theme with GSAP animations,
+                    EmulatorJS game integration, and Docker deployment.
+                  </p>
+                  <ul class="project-tech-list">
+                    <li class="project-tech-item">Angular 19</li>
+                    <li class="project-tech-item">GSAP</li>
+                    <li class="project-tech-item">Docker</li>
+                    <li class="project-tech-item">Solana</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- MiaWallaceBot -->
+          <div class="project-card">
+            <div class="project-content">
+              <div class="project-header">
+                <div class="project-links-left">
+                  <a
+                    href="https://github.com/Maf38/MiaWallaceBot"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub (Private)"
+                    title="Private Repository"
+                  >
+                    <img
+                      src="/assets/images/logos/github-private-mono.svg"
+                      alt="GitHub Private"
+                      class="project-icon"
+                    />
+                  </a>
+                </div>
+                <div class="project-info">
+                  <h3 class="project-title">
+                    <a
+                      href="https://github.com/Maf38/MiaWallaceBot"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="project-link"
+                    >
+                      MiaWallaceBot
+                    </a>
+                  </h3>
+                  <p class="project-description">
+                    AI-powered Telegram user-bot automation with ASP.NET Core 8. Simulates
+                    human-like interactions using OpenAI GPT models and WTelegram MTProto client.
+                    100% handcrafted without AI assistance.
+                  </p>
+                  <ul class="project-tech-list">
+                    <li class="project-tech-item">.NET 8</li>
+                    <li class="project-tech-item">C#</li>
+                    <li class="project-tech-item">OpenAI API</li>
+                    <li class="project-tech-item">WTelegram</li>
+                    <li class="project-tech-item">MySQL</li>
+                    <li class="project-tech-item">Docker</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- BotCrypto -->
+          <div class="project-card">
+            <div class="project-content">
+              <div class="project-header">
+                <div class="project-links-left">
+                  <a
+                    href="https://github.com/Maf38/BotCrypto"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub (Private)"
+                    title="Private Repository"
+                  >
+                    <img
+                      src="/assets/images/logos/github-private-mono.svg"
+                      alt="GitHub Private"
+                      class="project-icon"
+                    />
+                  </a>
+                </div>
+                <div class="project-info">
+                  <h3 class="project-title">
+                    <a
+                      href="https://github.com/Maf38/BotCrypto"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="project-link"
+                    >
+                      BotCrypto (WPF)
+                    </a>
+                  </h3>
+                  <p class="project-description">
+                    Crypto trading bot prototype in WPF with OxyPlot charting and backtesting
+                    capabilities. Built for WPF job interview preparation.
+                  </p>
+                  <ul class="project-tech-list">
+                    <li class="project-tech-item">.NET Core 3.1</li>
+                    <li class="project-tech-item">WPF</li>
+                    <li class="project-tech-item">OxyPlot</li>
+                    <li class="project-tech-item">Binance.Net</li>
+                    <li class="project-tech-item">MVVM</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Education Section -->
+      <section id="education" class="section">
+        <div class="section-header">
+          <h2 class="section-heading">Education</h2>
+        </div>
+
+        <div class="experience-list">
+          <!-- Education items loop -->
+          @for (edu of cvData.education; track edu.id) {
+            <div class="experience-item">
+              <div class="experience-header">
+                <div class="experience-period-container">
+                  <span class="experience-period">{{ edu.duration }}</span>
+                </div>
+                <div class="experience-details">
+                  <h3 class="experience-title">
+                    <span class="experience-position">{{ edu.degree }}</span>
+                    <span class="experience-company">· {{ edu.school }}</span>
+                  </h3>
+                  <p class="experience-description">
+                    {{ edu.description }}
+                  </p>
+                </div>
+              </div>
+            </div>
+          }
+        </div>
       </section>
 
       <!-- CV Section -->
@@ -58,10 +837,65 @@
         </a>
       </section>
 
-      <!-- Contact Section -->
-      <section id="contact" class="section">
-        <h2 class="section-title">Contact</h2>
-        <p class="section-content">Contact form coming soon...</p>
+      <!-- Setup Section -->
+      <section id="setup" class="section">
+        <h2 class="section-title">Setup</h2>
+
+        <div class="setup-grid">
+          <!-- Screenshot Column -->
+          <div class="setup-screenshot">
+            <img src="/assets/images/setup/unraid.png" alt="Unraid Server" />
+          </div>
+
+          <!-- Config Columns -->
+          <div class="setup-configs">
+            <!-- Column 1 -->
+            <div class="setup-config">
+              <h3>Homelab Server</h3>
+              <p class="setup-label">Unraid OS Plus</p>
+              <ul>
+                <li>Intel Xeon E31270 &#64; 3.40GHz</li>
+                <li>32 GB DDR3 &#64; 3333 MHz</li>
+                <li>Array: 5 disks (1 parity + 4 data)</li>
+                <li>Cache: 2x SSD RAID 0 (BTRFS)</li>
+                <li>33.64 TB Total (6 TB used)</li>
+                <li>2x Ubuntu VMs (Dev + INFRA)</li>
+                <li>RTX 2070 + Ollama</li>
+              </ul>
+
+              <h3>Desktop PC</h3>
+              <p class="setup-label">Windows 10 Pro</p>
+              <ul>
+                <li>Intel Core i7-9700K</li>
+                <li>32 GB DDR4</li>
+                <li>NVIDIA RTX 4070 (12 GB)</li>
+                <li>28+ TB Multi-drive</li>
+              </ul>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="setup-config">
+              <h3>Development Laptop</h3>
+              <p class="setup-label">Dell Precision 7540</p>
+              <ul>
+                <li>Intel Core i9 (9th Gen)</li>
+                <li>32 GB DDR4</li>
+                <li>NVIDIA Quadro RTX 4000</li>
+                <li>1 TB NVMe SSD</li>
+                <li>Ubuntu 22.04 LTS</li>
+              </ul>
+
+              <h3>Self-Hosted</h3>
+              <p class="setup-label">Infrastructure</p>
+              <ul>
+                <li>SonarQube</li>
+                <li>N8N</li>
+                <li>Airsonic</li>
+                <li>Plex Media Server</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
   </div>

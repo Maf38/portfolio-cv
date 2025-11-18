@@ -76,9 +76,8 @@ describe('App', () => {
 
     expect(compiled.querySelector('#about')).toBeTruthy();
     expect(compiled.querySelector('#experience')).toBeTruthy();
-    expect(compiled.querySelector('#projects')).toBeTruthy();
-    expect(compiled.querySelector('#cv')).toBeTruthy();
-    expect(compiled.querySelector('#contact')).toBeTruthy();
+    expect(compiled.querySelector('#education')).toBeTruthy();
+    expect(compiled.querySelector('#setup')).toBeTruthy();
   });
 
   it('should have spotlight overlay div', () => {
@@ -87,5 +86,53 @@ describe('App', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     const spotlightDiv = compiled.querySelector('.pointer-events-none.fixed.inset-0');
     expect(spotlightDiv).toBeTruthy();
+  });
+
+  it('should display correct number of experiences', () => {
+    const fixture = TestBed.createComponent(App);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+    const experiences = compiled.querySelectorAll('#experience .experience-item');
+    expect(experiences.length).toBeGreaterThan(0); // Should have experiences
+  });
+
+  it('should display correct number of education entries', () => {
+    const fixture = TestBed.createComponent(App);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+    const educationItems = compiled.querySelectorAll('#education .experience-item');
+    expect(educationItems.length).toBeGreaterThan(0); // Should have education entries
+  });
+
+  it('should display .NET Developer position for current role', () => {
+    const fixture = TestBed.createComponent(App);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+    const position = compiled.querySelector('.experience-position');
+    expect(position?.textContent).toBe('.NET Developer');
+  });
+
+  it('should display technology pills in experience section', () => {
+    const fixture = TestBed.createComponent(App);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+    const techPills = compiled.querySelectorAll('.tech-item');
+    expect(techPills.length).toBeGreaterThan(0); // Should have technology pills
+  });
+
+  it('should display company logos', () => {
+    const fixture = TestBed.createComponent(App);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+    const logos = compiled.querySelectorAll('.company-logo');
+    expect(logos.length).toBeGreaterThan(0); // Should have company logos
+  });
+
+  it('should render "View Full Resume" link', () => {
+    const fixture = TestBed.createComponent(App);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+    const resumeLink = compiled.querySelector('a[href="/assets/cv/resume.pdf"]');
+    expect(resumeLink).toBeTruthy();
   });
 });

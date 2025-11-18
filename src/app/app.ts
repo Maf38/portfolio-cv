@@ -1,16 +1,20 @@
 import { Component, signal, HostListener, PLATFORM_ID, inject } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
+import { isPlatformBrowser, CommonModule } from '@angular/common';
 import { HeaderComponent } from './shared/components/header/header.component';
+import cvData from '../assets/data/cv-data.json';
 
 @Component({
   selector: 'app-root',
-  imports: [HeaderComponent],
+  imports: [HeaderComponent, CommonModule],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
 export class App {
   private readonly platformId = inject(PLATFORM_ID);
   private readonly isBrowser = isPlatformBrowser(this.platformId);
+
+  // CV Data from JSON (single source of truth)
+  protected readonly cvData = cvData;
 
   // Spotlight effect background (halo lumineux qui suit la souris)
   protected readonly spotlightBackground = signal('transparent');
