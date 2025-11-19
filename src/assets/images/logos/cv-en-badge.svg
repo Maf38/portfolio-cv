@@ -17,6 +17,6 @@
     <!-- Background circle (slate-400) -->
     <circle cx="9" cy="9" r="9" fill="#94a3b8"/>
     <!-- EN text (black) -->
-    <text x="9" y="13" text-anchor="middle" font-size="7" font-weight="700" font-family="system-ui, sans-serif" fill="#000000">EN</text>
+    <text x="9" y="13.5" text-anchor="middle" font-size="9" font-weight="700" font-family="system-ui, sans-serif" fill="#000000">EN</text>
   </g>
 </svg>
