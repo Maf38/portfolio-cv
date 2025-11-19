@@ -1,6 +1,5 @@
-import { Component, inject } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PdfExportService } from '../../../features/cv/services/pdf-export.service';
 import { CvLanguage } from '../../../features/cv/models/cv-data.types';
 
 @Component({
@@ -11,7 +10,7 @@ import { CvLanguage } from '../../../features/cv/models/cv-data.types';
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
-  private pdfExportService = inject(PdfExportService);
+  @Output() cvDownloadRequested = new EventEmitter<CvLanguage>();
 
   showContactCard = false;
   copiedItem: 'email' | 'phone' | null = null;
@@ -50,20 +49,7 @@ export class HeaderComponent {
   /**
    * Download CV in specified language
    */
-  async downloadCv(language: CvLanguage): Promise<void> {
-    try {
-      // Navigate to CV page first if not already there
-      const currentPath = window.location.pathname;
-      if (!currentPath.includes('/cv')) {
-        window.location.href = '/cv';
-        // Wait for navigation and page load
-        await new Promise((resolve) => setTimeout(resolve, 500));
-      }
-
-      // Export to PDF
-      await this.pdfExportService.exportCv(language);
-    } catch (error) {
-      console.error('Error downloading CV from header:', error);
-    }
+  downloadCv(language: CvLanguage): void {
+    this.cvDownloadRequested.emit(language);
   }
 }

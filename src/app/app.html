@@ -8,7 +8,7 @@
   <!-- Two-column layout like brittanychiang.com -->
   <div class="layout-container">
     <!-- Left column: Fixed header and navigation -->
-    <app-header />
+    <app-header (cvDownloadRequested)="downloadCv($event)" />
 
     <!-- Right column: Scrollable content -->
     <main class="main-content">
@@ -898,5 +898,10 @@
         </div>
       </section>
     </main>
+  </div>
+
+  <!-- Hidden CV printable component for PDF export -->
+  <div id="cv-printable" style="position: absolute; left: -9999px; top: 0;">
+    <app-cv-printable [cvData]="cvPrintableData()"></app-cv-printable>
   </div>
 </div>

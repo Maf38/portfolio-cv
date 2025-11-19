@@ -134,6 +134,17 @@
   transition: color 0.3s ease;
 }
 
+// Social links container
+.social-links-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; // 2x more space between the two rows of icons
+
+  @media (min-width: 1024px) {
+    margin-top: auto;
+  }
+}
+
 // Social links
 .header-social {
   list-style: none;
@@ -142,10 +153,6 @@
   display: flex;
   gap: 1.5rem;
   align-items: center;
-
-  @media (min-width: 1024px) {
-    margin-top: auto;
-  }
 
   li {
     display: flex;
@@ -163,9 +170,25 @@
   }
 }
 
+// CV Download row - separate line below social icons
+.cv-download-row {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
 .social-icon {
   width: 1.5rem;
   height: 1.5rem;
+}
+
+// CV badge icons - larger to show PDF and language badge clearly
+.cv-badge-icon {
+  width: 2.3rem; // 36.8px - balanced size to see PDF icon and EN/FR badge
+  height: 2.3rem;
 }
 
 // CV Download buttons

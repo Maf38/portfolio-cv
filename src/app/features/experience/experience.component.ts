@@ -1,5 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { PdfExportService } from '../cv/services/pdf-export.service';
+import cvFullData from '../../../assets/data/cv-full-data.json';
 
 @Component({
   selector: 'app-experience',
@@ -16,16 +17,11 @@ export class ExperienceComponent {
    */
   async downloadFullResume(): Promise<void> {
     try {
-      // Navigate to CV page if not already there
-      const currentPath = window.location.pathname;
-      if (!currentPath.includes('/cv')) {
-        window.location.href = '/cv';
-        // Wait for navigation and page load
-        await new Promise((resolve) => setTimeout(resolve, 500));
-      }
+      // Get English CV data
+      const cvData = cvFullData.en;
 
-      // Export CV in English
-      await this.pdfExportService.exportCv('en');
+      // Export CV in English using pdfMake
+      await this.pdfExportService.exportToPdf(cvData, { language: 'en' });
     } catch (error) {
       console.error('Error downloading full resume:', error);
     }
