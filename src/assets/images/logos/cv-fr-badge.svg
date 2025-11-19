@@ -16,7 +16,7 @@
   <g transform="translate(22, 22)">
     <!-- Background circle (black) -->
     <circle cx="9" cy="9" r="9" fill="#000000"/>
-    <!-- FR text (white) -->
-    <text x="9" y="13" text-anchor="middle" font-size="7" font-weight="700" font-family="system-ui, sans-serif" fill="white">FR</text>
+    <!-- FR text (slate-400) -->
+    <text x="9" y="13" text-anchor="middle" font-size="7" font-weight="700" font-family="system-ui, sans-serif" fill="#94a3b8">FR</text>
   </g>
 </svg>
