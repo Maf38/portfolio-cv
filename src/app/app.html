@@ -248,11 +248,11 @@
         </div>
 
         <div class="resume-link-wrapper">
-          <a
-            href="/assets/cv/resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            type="button"
+            (click)="downloadCv('en')"
             class="resume-full-link"
+            aria-label="Download Full Résumé (EN)"
           >
             <span>View Full Résumé</span>
             <svg
@@ -268,7 +268,7 @@
                 clip-rule="evenodd"
               ></path>
             </svg>
-          </a>
+          </button>
         </div>
       </section>
 
@@ -814,11 +814,11 @@
 
       <!-- CV Section -->
       <section id="cv" class="section">
-        <a
-          href="/assets/cv/resume.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
+        <button
+          type="button"
+          (click)="downloadCv('en')"
           class="resume-link"
+          aria-label="Download Full Résumé (EN)"
         >
           <span>View Full Résumé</span>
           <svg
@@ -834,7 +834,7 @@
               clip-rule="evenodd"
             ></path>
           </svg>
-        </a>
+        </button>
       </section>
 
       <!-- Setup Section -->

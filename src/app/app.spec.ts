@@ -129,12 +129,13 @@ describe('App', () => {
     expect(logos.length).toBeGreaterThan(0); // Should have company logos
   });
 
-  it('should render "View Full Resume" link', () => {
+  it('should render "View Full Resume" button', () => {
     const fixture = TestBed.createComponent(App);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    const resumeLink = compiled.querySelector('a[href="/assets/cv/resume.pdf"]');
-    expect(resumeLink).toBeTruthy();
+    const resumeButton = compiled.querySelector('button.resume-link');
+    expect(resumeButton).toBeTruthy();
+    expect(resumeButton?.textContent).toContain('View Full Résumé');
   });
 
   describe('CV Download functionality', () => {
