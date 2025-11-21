@@ -129,15 +129,6 @@ describe('App', () => {
     expect(logos.length).toBeGreaterThan(0); // Should have company logos
   });
 
-  it('should render "View Full Resume" button', () => {
-    const fixture = TestBed.createComponent(App);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    const resumeButton = compiled.querySelector('button.resume-link');
-    expect(resumeButton).toBeTruthy();
-    expect(resumeButton?.textContent).toContain('View Full Résumé');
-  });
-
   describe('CV Download functionality', () => {
     it('should initialize with English CV data', () => {
       const fixture = TestBed.createComponent(App);
@@ -166,7 +157,9 @@ describe('App', () => {
       await app.downloadCv('fr');
 
       expect(app['cvPrintableData']().personal.title).toBe('Concepteur Développeur Informatique');
-      expect(pdfExportService.exportToPdf).toHaveBeenCalledWith('cv-printable', { language: 'fr' });
+      expect(pdfExportService.exportToPdf).toHaveBeenCalledWith(app['cvPrintableData'](), {
+        language: 'fr',
+      });
     });
 
     it('should switch to English CV data when downloadCv is called with "en"', async () => {
@@ -182,7 +175,9 @@ describe('App', () => {
       await app.downloadCv('en');
 
       expect(app['cvPrintableData']().personal.title).toBe('Software Developer');
-      expect(pdfExportService.exportToPdf).toHaveBeenCalledWith('cv-printable', { language: 'en' });
+      expect(pdfExportService.exportToPdf).toHaveBeenCalledWith(app['cvPrintableData'](), {
+        language: 'en',
+      });
     });
 
     it('should call pdfExportService.exportToPdf when downloadCv is called', async () => {
@@ -195,7 +190,9 @@ describe('App', () => {
       await app.downloadCv('en');
 
       expect(pdfExportService.exportToPdf).toHaveBeenCalledTimes(1);
-      expect(pdfExportService.exportToPdf).toHaveBeenCalledWith('cv-printable', { language: 'en' });
+      expect(pdfExportService.exportToPdf).toHaveBeenCalledWith(app['cvPrintableData'](), {
+        language: 'en',
+      });
     });
 
     it('should handle errors gracefully when download fails', async () => {

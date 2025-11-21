@@ -62,9 +62,13 @@ export class App {
       // Get CV data for selected language
       const cvData = language === 'fr' ? this.cvFullData.fr : this.cvFullData.en;
 
+      // Update printable data signal for display/testing
+      this.cvPrintableData.set(cvData);
+
       // Export to PDF using pdfMake (no need for DOM element anymore)
       await this.pdfExportService.exportToPdf(cvData, { language });
     } catch (error) {
+      // eslint-disable-next-line no-console
       console.error('Error downloading CV:', error);
     }
   }
