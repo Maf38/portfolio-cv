@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Observable } from 'rxjs';
 import { CvDisplayComponent } from './components/cv-display/cv-display.component';
@@ -15,13 +15,11 @@ import { CvData, CvLanguage } from './models/cv-data.types';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CvComponent implements OnInit {
+  private readonly cvDataService = inject(CvDataService);
+  private readonly pdfExportService = inject(PdfExportService);
+
   cvData$!: Observable<CvData>;
   currentLanguage: CvLanguage = 'fr';
-
-  constructor(
-    private cvDataService: CvDataService,
-    private pdfExportService: PdfExportService
-  ) {}
 
   ngOnInit(): void {
     this.cvData$ = this.cvDataService.getCvData();

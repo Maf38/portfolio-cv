@@ -2,7 +2,10 @@ import { Component, signal, HostListener, PLATFORM_ID, inject } from '@angular/c
 import { isPlatformBrowser, CommonModule } from '@angular/common';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { PdfExportService } from './features/cv/services/pdf-export.service';
-import { CvPrintableComponent, CvPrintableData } from './features/cv/components/cv-printable/cv-printable.component';
+import {
+  CvPrintableComponent,
+  CvPrintableData,
+} from './features/cv/components/cv-printable/cv-printable.component';
 import cvData from '../assets/data/cv-data.json';
 import cvFullData from '../assets/data/cv-full-data.json';
 

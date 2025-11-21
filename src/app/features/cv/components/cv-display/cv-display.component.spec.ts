@@ -130,31 +130,26 @@ describe('CvDisplayComponent', () => {
 
   it('should display profile information', () => {
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.cv-name')?.textContent).toContain(
-      'John Doe'
-    );
-    expect(compiled.querySelector('.cv-title')?.textContent).toContain(
-      'Software Developer'
-    );
+    expect(compiled.querySelector('.cv-name')?.textContent).toContain('John Doe');
+    expect(compiled.querySelector('.cv-title')?.textContent).toContain('Software Developer');
   });
 
   it('should display experience items', () => {
     const compiled = fixture.nativeElement as HTMLElement;
-    const experienceItems =
-      compiled.querySelectorAll('.experience-item');
+    const experienceItems = compiled.querySelectorAll('.experience-item');
     expect(experienceItems.length).toBe(1);
-    expect(
-      compiled.querySelector('.experience-position')?.textContent
-    ).toContain('Senior Developer');
+    expect(compiled.querySelector('.experience-position')?.textContent).toContain(
+      'Senior Developer',
+    );
   });
 
   it('should display education items', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     const educationItems = compiled.querySelectorAll('.education-item');
     expect(educationItems.length).toBe(1);
-    expect(
-      compiled.querySelector('.education-degree')?.textContent
-    ).toContain('Master in Computer Science');
+    expect(compiled.querySelector('.education-degree')?.textContent).toContain(
+      'Master in Computer Science',
+    );
   });
 
   it('should format date range correctly', () => {

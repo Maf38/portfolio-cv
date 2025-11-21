@@ -34,12 +34,12 @@
   </div>
 
   @if (cvData$ | async; as cvData) {
-  <div id="cv-content">
-    <app-cv-display [cvData]="cvData" [language]="currentLanguage" />
-  </div>
+    <div id="cv-content">
+      <app-cv-display [cvData]="cvData" [language]="currentLanguage" />
+    </div>
   } @else {
-  <div class="loading">
-    <p>Loading CV data...</p>
-  </div>
+    <div class="loading">
+      <p>Loading CV data...</p>
+    </div>
   }
 </div>

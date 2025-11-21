@@ -18,19 +18,18 @@ export class CvDisplayComponent {
    * Group skills by category for display
    */
   getSkillCategories(): Array<keyof typeof this.cvData.skills> {
-    return Object.keys(this.cvData.skills) as Array<
-      keyof typeof this.cvData.skills
-    >;
+    return Object.keys(this.cvData.skills) as Array<keyof typeof this.cvData.skills>;
   }
 
   /**
    * Get skills for a specific category
    */
-  getSkillsForCategory(category: string) {
-    const skillCategory = this.cvData.skills as unknown as Record<
-      string,
-      unknown[]
-    >;
+  getSkillsForCategory(category: string): Array<{
+    name: string;
+    level: string;
+    years: number;
+  }> {
+    const skillCategory = this.cvData.skills as unknown as Record<string, unknown[]>;
     return skillCategory[category] as Array<{
       name: string;
       level: string;
@@ -89,34 +88,8 @@ export class CvDisplayComponent {
   private formatDate(dateStr: string): string {
     const [year, month] = dateStr.split('-');
     const monthNames = {
-      fr: [
-        'Jan',
-        'Fév',
-        'Mar',
-        'Avr',
-        'Mai',
-        'Jun',
-        'Jul',
-        'Aoû',
-        'Sep',
-        'Oct',
-        'Nov',
-        'Déc',
-      ],
-      en: [
-        'Jan',
-        'Feb',
-        'Mar',
-        'Apr',
-        'May',
-        'Jun',
-        'Jul',
-        'Aug',
-        'Sep',
-        'Oct',
-        'Nov',
-        'Dec',
-      ],
+      fr: ['Jan', 'Fév', 'Mar', 'Avr', 'Mai', 'Jun', 'Jul', 'Aoû', 'Sep', 'Oct', 'Nov', 'Déc'],
+      en: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
     };
 
     const monthIndex = parseInt(month, 10) - 1;

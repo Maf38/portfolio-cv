@@ -203,7 +203,9 @@ describe('App', () => {
       const app = fixture.componentInstance;
 
       const pdfExportService = TestBed.inject(PdfExportService);
-      spyOn(pdfExportService, 'exportToPdf').and.returnValue(Promise.reject(new Error('Test error')));
+      spyOn(pdfExportService, 'exportToPdf').and.returnValue(
+        Promise.reject(new Error('Test error')),
+      );
       spyOn(console, 'error');
 
       await app.downloadCv('en');

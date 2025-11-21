@@ -14,6 +14,7 @@ import { CvLanguage, CvExportOptions } from '../models/cv-data.types';
 import { CvPrintableData } from '../components/cv-printable/cv-printable.component';
 
 // Register fonts for pdfMake
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 (pdfMake as any).vfs = (pdfFonts as any).pdfMake?.vfs || pdfFonts;
 
 @Injectable({
@@ -25,44 +26,29 @@ export class PdfExportService {
    * @param cvData - CV data for the selected language
    * @param options - Export options (language, filename)
    */
-  async exportToPdf(
-    cvData: CvPrintableData,
-    options: CvExportOptions
-  ): Promise<void> {
+  async exportToPdf(cvData: CvPrintableData, options: CvExportOptions): Promise<void> {
     const filename = options.filename || this.getDefaultFilename(options.language);
 
     try {
-      console.log('📄 Generating PDF with pdfMake...');
-      console.log('🌍 Language:', options.language);
-
       // Get background pattern SVG
       const backgroundSvg = this.getRandomBackgroundPattern();
-      console.log('🎨 Background SVG length:', backgroundSvg.length);
-      console.log('🎨 Background SVG preview:', backgroundSvg.substring(0, 150));
 
       // Convert photo to base64
       const photoBase64 = await this.getPhotoAsBase64();
-      console.log('📷 Photo loaded:', photoBase64 ? `Yes (${photoBase64.length} bytes)` : 'No');
 
       // Create document definition
       const docDefinition = this.createDocumentDefinition(
         cvData,
         options.language,
         backgroundSvg,
-        photoBase64
+        photoBase64,
       );
-
-      // Log content statistics
-      console.log('📊 Content items:', (docDefinition.content as Content[]).length);
-      console.log('📊 Experience entries:', cvData.experience.length);
-      console.log('📊 Education entries:', cvData.education.length);
-      console.log('📊 About paragraphs:', cvData.about.length);
 
       // Generate and download PDF
       pdfMake.createPdf(docDefinition).download(filename);
-
-      console.log('✅ PDF generated successfully with pdfMake');
     } catch (error) {
+      // Log error for debugging but throw a clean error message
+      // eslint-disable-next-line no-console
       console.error('Error exporting PDF:', error);
       throw new Error('Failed to export PDF');
     }
@@ -82,13 +68,13 @@ export class PdfExportService {
    * Randomly selects one pattern for variety
    */
   private getRandomBackgroundPattern(): string {
-    const patterns = [
-      () => hexagons('#3b82f6', 0.05), // Blue hexagons - very subtle
-      () => topography('#6b7280', 0.05), // Gray topography
-      () => circuitBoard('#22c55e', 0.04), // Green circuit board
-      () => bankNote('#a855f7', 0.05), // Purple bank note
-      () => fancyRectangles('#14b8a6', 0.05), // Teal fancy rectangles
-      () => squares('#3b82f6', 0.04), // Blue squares
+    const patterns: Array<() => string> = [
+      (): string => hexagons('#3b82f6', 0.05), // Blue hexagons - very subtle
+      (): string => topography('#6b7280', 0.05), // Gray topography
+      (): string => circuitBoard('#22c55e', 0.04), // Green circuit board
+      (): string => bankNote('#a855f7', 0.05), // Purple bank note
+      (): string => fancyRectangles('#14b8a6', 0.05), // Teal fancy rectangles
+      (): string => squares('#3b82f6', 0.04), // Blue squares
     ];
 
     const randomPattern = patterns[Math.floor(Math.random() * patterns.length)];
@@ -109,13 +95,17 @@ export class PdfExportService {
       }
 
       const blob = await response.blob();
-      return new Promise((resolve, reject) => {
+      return new Promise<string>((resolve, reject): void => {
         const reader = new FileReader();
-        reader.onloadend = () => resolve(reader.result as string);
+        reader.onloadend = (): void => {
+          resolve(reader.result as string);
+        };
         reader.onerror = reject;
         reader.readAsDataURL(blob);
       });
     } catch (error) {
+      // Photo loading is optional, log warning for debugging
+      // eslint-disable-next-line no-console
       console.warn('Could not load photo, PDF will be generated without photo:', error);
       return '';
     }
@@ -124,7 +114,11 @@ export class PdfExportService {
   /**
    * Get section titles based on language
    */
-  private getSectionTitles(language: CvLanguage) {
+  private getSectionTitles(language: CvLanguage): {
+    about: string;
+    experience: string;
+    education: string;
+  } {
     return language === 'fr'
       ? {
           about: 'À PROPOS DE MOI',
@@ -145,7 +139,7 @@ export class PdfExportService {
     cvData: CvPrintableData,
     language: CvLanguage,
     backgroundSvg: string,
-    photoBase64: string
+    photoBase64: string,
   ): TDocumentDefinitions {
     const titles = this.getSectionTitles(language);
 
@@ -215,7 +209,7 @@ export class PdfExportService {
             text: paragraph,
             style: 'paragraph',
             margin: [0, 0, 0, 5] as [number, number, number, number],
-          }) as Content
+          }) as Content,
       ),
 
       // Experience section
@@ -288,8 +282,6 @@ export class PdfExportService {
 
     // Extract SVG from data URL for background
     const extractedSvg = this.extractSvgFromDataUrl(backgroundSvg);
-    console.log('🖼️  Extracted SVG length:', extractedSvg.length);
-    console.log('🖼️  Extracted SVG preview:', extractedSvg.substring(0, 100));
 
     return {
       content,
@@ -387,7 +379,7 @@ export class PdfExportService {
    * Export CV with language-specific settings
    * @deprecated Use exportToPdf with cvData instead
    */
-  async exportCv(language: CvLanguage): Promise<void> {
+  async exportCv(_language: CvLanguage): Promise<void> {
     throw new Error('exportCv is deprecated. Use exportToPdf with cvData instead.');
   }
 }

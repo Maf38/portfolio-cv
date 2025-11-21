@@ -63,13 +63,13 @@ export class CvPrintableComponent {
    * Generate a random professional background pattern using hero-patterns
    */
   private generateRandomPattern(): string {
-    const patterns = [
-      () => hexagons('#3b82f6', 0.05), // Blue hexagons - very subtle
-      () => topography('#6b7280', 0.05), // Gray topography
-      () => circuitBoard('#22c55e', 0.04), // Green circuit board
-      () => bankNote('#a855f7', 0.05), // Purple bank note
-      () => fancyRectangles('#14b8a6', 0.05), // Teal fancy rectangles
-      () => squares('#3b82f6', 0.04), // Blue squares
+    const patterns: Array<() => string> = [
+      (): string => hexagons('#3b82f6', 0.05), // Blue hexagons - very subtle
+      (): string => topography('#6b7280', 0.05), // Gray topography
+      (): string => circuitBoard('#22c55e', 0.04), // Green circuit board
+      (): string => bankNote('#a855f7', 0.05), // Purple bank note
+      (): string => fancyRectangles('#14b8a6', 0.05), // Teal fancy rectangles
+      (): string => squares('#3b82f6', 0.04), // Blue squares
     ];
 
     const randomPattern = patterns[Math.floor(Math.random() * patterns.length)];

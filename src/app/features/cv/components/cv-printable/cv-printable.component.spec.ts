@@ -18,10 +18,7 @@ describe('CvPrintableComponent', () => {
       email: 'gaimafal@gmail.com',
       driverLicense: 'Driving license B and vehicle',
     },
-    about: [
-      'First paragraph about me',
-      'Second paragraph about me',
-    ],
+    about: ['First paragraph about me', 'Second paragraph about me'],
     experience: [
       {
         period: '2024 - Present',
@@ -172,7 +169,7 @@ describe('CvPrintableComponent', () => {
       const sections = compiled.queryAll(By.css('.cv-section'));
       const expSection = sections.find(
         (section) =>
-          section.query(By.css('.cv-section-title'))?.nativeElement.textContent === 'EXPERIENCE'
+          section.query(By.css('.cv-section-title'))?.nativeElement.textContent === 'EXPERIENCE',
       );
       expect(expSection).toBeTruthy();
     });
@@ -219,7 +216,7 @@ describe('CvPrintableComponent', () => {
       const sections = compiled.queryAll(By.css('.cv-section'));
       const eduSection = sections.find(
         (section) =>
-          section.query(By.css('.cv-section-title'))?.nativeElement.textContent === 'EDUCATION'
+          section.query(By.css('.cv-section-title'))?.nativeElement.textContent === 'EDUCATION',
       );
       expect(eduSection).toBeTruthy();
     });

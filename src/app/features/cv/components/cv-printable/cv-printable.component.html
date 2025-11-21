@@ -11,7 +11,7 @@
 
       <div class="cv-contact">
         <div class="cv-contact-item">
-          <span class="cv-label">{{cvData.personal.birthDate}}</span>
+          <span class="cv-label">{{ cvData.personal.birthDate }}</span>
         </div>
         <div class="cv-contact-item">
           <span>{{ cvData.personal.address }}</span>
@@ -20,7 +20,9 @@
           <span>{{ cvData.personal.phone }}</span>
         </div>
         <div class="cv-contact-item">
-          <a [href]="'mailto:' + cvData.personal.email" class="cv-email">{{ cvData.personal.email }}</a>
+          <a [href]="'mailto:' + cvData.personal.email" class="cv-email">{{
+            cvData.personal.email
+          }}</a>
         </div>
         <div class="cv-contact-item">
           <span class="cv-driver-license">{{ cvData.personal.driverLicense }}</span>
