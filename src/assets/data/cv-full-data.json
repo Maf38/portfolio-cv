@@ -20,42 +20,104 @@
         "company": "Inetum - CEA",
         "title": ".NET Developer",
         "description": "Managing a multi-application maintenance portfolio of 70+ applications, balancing build and run operations across a web-focused Microsoft ecosystem. Working in a modern development environment using CI/CD with Azure DevOps, SonarQube quality gates, and comprehensive unit testing. Working with both legacy (.NET 4.8, Razor, Kendo UI) and modern (.NET 8) stacks. Participating in the SI modernization (RabbitMQ, SeriLog/ELK).",
-        "skills": [".NET 4.8 / .NET 8", "C#", "LINQ", "Entity Framework", "ADO.NET", "VB.NET", "Azure DevOps", "SQL Server 2014/2019", "Windows Server", "IIS", "SonarQube", "Keycloak", "Serilog", "ELK", "Razor", "Kendo UI"]
+        "skills": [
+          ".NET 4.8 / .NET 8",
+          "C#",
+          "LINQ",
+          "Entity Framework",
+          "ADO.NET",
+          "VB.NET",
+          "Azure DevOps",
+          "SQL Server 2014/2019",
+          "Windows Server",
+          "IIS",
+          "SonarQube",
+          "Keycloak",
+          "Serilog",
+          "ELK",
+          "Razor",
+          "Kendo UI"
+        ]
       },
       {
         "period": "Apr 2022 — Mar 2023",
         "company": "Capgemini - EDF",
         "title": "Backend Developer",
         "description": "Developed backend solutions for the GEMODO project using Java and KornShell scripting on RedHat Linux. Implemented ETL processes with Informatica for data integration workflows, and maintained SharePoint collaboration systems. Focused on automation and data processing pipelines in an enterprise Linux environment.",
-        "skills": ["Java", "KornShell", "ETL Informatica", "Oracle DB", "Jenkins", "SAFe", "RedHat Linux", "SharePoint"]
+        "skills": [
+          "Java",
+          "KornShell",
+          "ETL Informatica",
+          "Oracle DB",
+          "Jenkins",
+          "SAFe",
+          "RedHat Linux",
+          "SharePoint"
+        ]
       },
       {
         "period": "Jun 2021 — Mar 2023",
         "company": "Capgemini - EDF",
         "title": "PL/SQL Developer & Test Automation",
         "description": "Developed and maintained services for the GEMODO application. Repurposed UFT (Unified Functional Testing), an end-to-end testing tool, to automate data injection through VBScript-based form filling. Developed PL/SQL queries and procedures to validate syntactic and semantic data conformity against business rules, ensuring data quality and integrity. Maintained ETL processes through Informatica on Linux infrastructure.",
-        "skills": ["PL/SQL", "Oracle Database", "UFT (Unified Functional Testing)", "VBScript", "Informatica", "Control-M", "Linux", "SharePoint"]
+        "skills": [
+          "PL/SQL",
+          "Oracle Database",
+          "UFT (Unified Functional Testing)",
+          "VBScript",
+          "Informatica",
+          "Control-M",
+          "Linux",
+          "SharePoint"
+        ]
       },
       {
         "period": "Jun 2020 — Jun 2021",
         "company": "Capgemini - EDF",
         "title": "Architecture Migration, Performance Testing & End-to-End Testing — DPA",
         "description": "Led the architecture upgrade of the DPA application, a MES system using data models to prevent SPC (Statistical Process Control) drifts. Managed the migration from a 4-server to a 5-server architecture, and orchestrated the data source transition from legacy ODBC connections to a modern MES managing Hadoop Espadon. Conducted comprehensive load testing to validate system performance with the new technology stack and NRT (Near Real-Time) mode.",
-        "skills": ["Hadoop", "Espadon API", "Windows Server", "SQL Server", "PowerShell", "HP ALM", "eDNA", "Aspentech"]
+        "skills": [
+          "Hadoop",
+          "Espadon API",
+          "Windows Server",
+          "SQL Server",
+          "PowerShell",
+          "HP ALM",
+          "eDNA",
+          "Aspentech"
+        ]
       },
       {
         "period": "Nov 2019 — May 2020",
         "company": "Capgemini (EDF / Rio Tinto)",
         "title": "Software Developer",
         "description": "Contributed to proof-of-concept development for Manufacturing Execution Systems (MES) team working on EDF and Rio Tinto projects. Refreshed the Rio Tinto interface using Angular 6 and Ionic 3 for mobile development. Gained hands-on experience managing the Rio Tinto MES. Implemented CI/CD test automation pipelines (GitLab, Jenkins, Selenium) on hybrid Linux/Windows Server environments. First professional experience with enterprise consulting and cross-platform development.",
-        "skills": ["Angular 6", "Ionic 3", "Linux", "Windows Server", "GitLab", "Jenkins", "Selenium", "MES Management"]
+        "skills": [
+          "Angular 6",
+          "Ionic 3",
+          "Linux",
+          "Windows Server",
+          "GitLab",
+          "Jenkins",
+          "Selenium",
+          "MES Management"
+        ]
       },
       {
         "period": "Apr 2019 — Sep 2019",
         "company": "Cerberis",
         "title": "Software Developer Intern",
         "description": "Developed a SaaS daemon service for Microsoft Exchange integration as first professional software development experience. Built .NET applications interfacing with Office 365 APIs and deployed on Azure cloud infrastructure. Learned modern software engineering practices and cloud-based architecture.",
-        "skills": [".NET Framework", "Entity Framework", "Office 365 API", "OpenID Connect", "OAuth 2.0", "Azure", "Cosmos DB", "Exchange"]
+        "skills": [
+          ".NET Framework",
+          "Entity Framework",
+          "Office 365 API",
+          "OpenID Connect",
+          "OAuth 2.0",
+          "Azure",
+          "Cosmos DB",
+          "Exchange"
+        ]
       },
       {
         "period": "2005 — 2018",
@@ -132,42 +194,104 @@
         "company": "Inetum - CEA",
         "title": "Développeur .NET",
         "description": "Gestion d'un portefeuille de maintenance multi-applications de plus de 70 applications, équilibrant les opérations de build et de run dans un écosystème Microsoft orienté web. Travail dans un environnement de développement moderne utilisant CI/CD avec Azure DevOps, quality gates SonarQube et tests unitaires complets. Travail avec des stacks legacy (.NET 4.8, Razor, Kendo UI) et modernes (.NET 8). Participation à la modernisation du SI (RabbitMQ, SeriLog/ELK).",
-        "skills": [".NET 4.8 / .NET 8", "C#", "LINQ", "Entity Framework", "ADO.NET", "VB.NET", "Azure DevOps", "SQL Server 2014/2019", "Windows Server", "IIS", "SonarQube", "Keycloak", "Serilog", "ELK", "Razor", "Kendo UI"]
+        "skills": [
+          ".NET 4.8 / .NET 8",
+          "C#",
+          "LINQ",
+          "Entity Framework",
+          "ADO.NET",
+          "VB.NET",
+          "Azure DevOps",
+          "SQL Server 2014/2019",
+          "Windows Server",
+          "IIS",
+          "SonarQube",
+          "Keycloak",
+          "Serilog",
+          "ELK",
+          "Razor",
+          "Kendo UI"
+        ]
       },
       {
         "period": "Avr 2022 — Mars 2023",
         "company": "Capgemini - EDF",
         "title": "Développeur Backend",
         "description": "Développement de solutions backend pour le projet GEMODO en utilisant Java et KornShell sur RedHat Linux. Mise en œuvre de processus ETL avec Informatica pour les workflows d'intégration de données, et maintenance des systèmes de collaboration SharePoint. Focus sur l'automatisation et les pipelines de traitement de données dans un environnement Linux d'entreprise.",
-        "skills": ["Java", "KornShell", "ETL Informatica", "Oracle DB", "Jenkins", "SAFe", "RedHat Linux", "SharePoint"]
+        "skills": [
+          "Java",
+          "KornShell",
+          "ETL Informatica",
+          "Oracle DB",
+          "Jenkins",
+          "SAFe",
+          "RedHat Linux",
+          "SharePoint"
+        ]
       },
       {
         "period": "Juin 2021 — Mars 2023",
         "company": "Capgemini - EDF",
         "title": "Développeur PL/SQL & Automatisation des Tests",
         "description": "Développement et maintenance des services pour l'application GEMODO. Réutilisation d'UFT (Unified Functional Testing), un outil de test end-to-end, pour automatiser l'injection de données via le remplissage de formulaires basé sur VBScript. Développement de requêtes et procédures PL/SQL pour valider la conformité syntaxique et sémantique des données par rapport aux règles métier, assurant la qualité et l'intégrité des données. Maintenance des processus ETL via Informatica sur infrastructure Linux.",
-        "skills": ["PL/SQL", "Oracle Database", "UFT (Unified Functional Testing)", "VBScript", "Informatica", "Control-M", "Linux", "SharePoint"]
+        "skills": [
+          "PL/SQL",
+          "Oracle Database",
+          "UFT (Unified Functional Testing)",
+          "VBScript",
+          "Informatica",
+          "Control-M",
+          "Linux",
+          "SharePoint"
+        ]
       },
       {
         "period": "Juin 2020 — Juin 2021",
         "company": "Capgemini - EDF",
         "title": "Migration d'Architecture, Tests de Performance & Tests End-to-End — DPA",
         "description": "Direction de la mise à niveau architecturale de l'application DPA, un système MES utilisant des modèles de données pour prévenir les dérives SPC (Statistical Process Control). Gestion de la migration d'une architecture 4 serveurs vers 5 serveurs, et orchestration de la transition des sources de données depuis des connexions ODBC legacy vers un MES moderne gérant Hadoop Espadon. Réalisation de tests de charge complets pour valider les performances du système avec la nouvelle stack technologique et le mode NRT (Near Real-Time).",
-        "skills": ["Hadoop", "Espadon API", "Windows Server", "SQL Server", "PowerShell", "HP ALM", "eDNA", "Aspentech"]
+        "skills": [
+          "Hadoop",
+          "Espadon API",
+          "Windows Server",
+          "SQL Server",
+          "PowerShell",
+          "HP ALM",
+          "eDNA",
+          "Aspentech"
+        ]
       },
       {
         "period": "Nov 2019 — Mai 2020",
         "company": "Capgemini (EDF / Rio Tinto)",
         "title": "Développeur Logiciel",
         "description": "Contribution au développement de preuves de concept pour l'équipe Manufacturing Execution Systems (MES) travaillant sur les projets EDF et Rio Tinto. Refonte de l'interface Rio Tinto en utilisant Angular 6 et Ionic 3 pour le développement mobile. Acquisition d'expérience pratique dans la gestion du MES Rio Tinto. Mise en œuvre de pipelines d'automatisation de tests CI/CD (GitLab, Jenkins, Selenium) sur des environnements hybrides Linux/Windows Server. Première expérience professionnelle en conseil d'entreprise et développement multi-plateforme.",
-        "skills": ["Angular 6", "Ionic 3", "Linux", "Windows Server", "GitLab", "Jenkins", "Selenium", "Gestion MES"]
+        "skills": [
+          "Angular 6",
+          "Ionic 3",
+          "Linux",
+          "Windows Server",
+          "GitLab",
+          "Jenkins",
+          "Selenium",
+          "Gestion MES"
+        ]
       },
       {
         "period": "Avr 2019 — Sep 2019",
         "company": "Cerberis",
         "title": "Développeur Logiciel Stagiaire",
         "description": "Développement d'un service daemon SaaS pour l'intégration Microsoft Exchange comme première expérience professionnelle de développement logiciel. Construction d'applications .NET interfaçant avec les API Office 365 et déployées sur l'infrastructure cloud Azure. Apprentissage des pratiques modernes d'ingénierie logicielle et d'architecture cloud.",
-        "skills": [".NET Framework", "Entity Framework", "Office 365 API", "OpenID Connect", "OAuth 2.0", "Azure", "Cosmos DB", "Exchange"]
+        "skills": [
+          ".NET Framework",
+          "Entity Framework",
+          "Office 365 API",
+          "OpenID Connect",
+          "OAuth 2.0",
+          "Azure",
+          "Cosmos DB",
+          "Exchange"
+        ]
       },
       {
         "period": "2005 — 2018",
