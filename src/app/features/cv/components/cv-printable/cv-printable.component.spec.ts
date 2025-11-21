@@ -81,22 +81,27 @@ describe('CvPrintableComponent', () => {
       expect(header).toBeTruthy();
     });
 
-    it('should display photo placeholder when no photoUrl provided', () => {
-      const placeholder = compiled.query(By.css('.cv-photo-placeholder'));
-      expect(placeholder).toBeTruthy();
-    });
-
-    it('should display photo when photoUrl is provided', () => {
-      component.photoUrl = 'https://example.com/photo.jpg';
-      fixture.detectChanges();
-
+    it('should display default photo when no photoUrl provided', () => {
       const photo = compiled.query(By.css('.cv-photo'));
       expect(photo).toBeTruthy();
+      // Should use default photo URL
+      expect(photo.nativeElement.src).toContain('assets/images/cv/photo-cv.png');
+    });
+
+    it('should display custom photo when photoUrl is provided', () => {
+      // Set photoUrl before creating fixture to ensure it's set during initialization
+      const newFixture = TestBed.createComponent(CvPrintableComponent);
+      const newComponent = newFixture.componentInstance;
+      newComponent.cvData = mockCvData;
+      newComponent.photoUrl = 'https://example.com/photo.jpg';
+      newFixture.detectChanges();
+
+      const newCompiled = newFixture.debugElement;
+      const photo = newCompiled.query(By.css('.cv-photo'));
+      expect(photo).toBeTruthy();
+      // Custom photo URL should be used
       expect(photo.nativeElement.src).toBe('https://example.com/photo.jpg');
       expect(photo.nativeElement.alt).toBe('Mafal Gai');
-
-      const placeholder = compiled.query(By.css('.cv-photo-placeholder'));
-      expect(placeholder).toBeFalsy();
     });
   });
 
@@ -148,7 +153,8 @@ describe('CvPrintableComponent', () => {
       expect(aboutSection).toBeTruthy();
 
       const sectionTitle = aboutSection.query(By.css('.cv-section-title'));
-      expect(sectionTitle.nativeElement.textContent).toBe('ABOUT ME');
+      // Section titles are hardcoded in French for now
+      expect(sectionTitle.nativeElement.textContent).toBe('À PROPOS DE MOI');
     });
 
     it('should render all about paragraphs', () => {
@@ -169,7 +175,8 @@ describe('CvPrintableComponent', () => {
       const sections = compiled.queryAll(By.css('.cv-section'));
       const expSection = sections.find(
         (section) =>
-          section.query(By.css('.cv-section-title'))?.nativeElement.textContent === 'EXPERIENCE',
+          section.query(By.css('.cv-section-title'))?.nativeElement.textContent ===
+          'EXPÉRIENCE PROFESSIONNELLE',
       );
       expect(expSection).toBeTruthy();
     });
@@ -216,7 +223,7 @@ describe('CvPrintableComponent', () => {
       const sections = compiled.queryAll(By.css('.cv-section'));
       const eduSection = sections.find(
         (section) =>
-          section.query(By.css('.cv-section-title'))?.nativeElement.textContent === 'EDUCATION',
+          section.query(By.css('.cv-section-title'))?.nativeElement.textContent === 'FORMATION',
       );
       expect(eduSection).toBeTruthy();
     });
@@ -259,8 +266,10 @@ describe('CvPrintableComponent', () => {
       component.photoUrl = undefined;
       fixture.detectChanges();
 
-      const placeholder = compiled.query(By.css('.cv-photo-placeholder'));
-      expect(placeholder).toBeTruthy();
+      // Should display default photo when photoUrl is undefined
+      const photo = compiled.query(By.css('.cv-photo'));
+      expect(photo).toBeTruthy();
+      expect(photo.nativeElement.src).toContain('assets/images/cv/photo-cv.png');
     });
   });
 
