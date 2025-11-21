@@ -1,0 +1,87 @@
+<div class="cv-container" [style.background]="backgroundPattern()">
+  <!-- Header with photo and personal info -->
+  <div class="cv-header">
+    <div class="cv-photo-section">
+      <img [src]="displayPhotoUrl" alt="{{ cvData.personal.name }}" class="cv-photo" />
+    </div>
+
+    <div class="cv-personal-info">
+      <h1 class="cv-name">{{ cvData.personal.name }}</h1>
+      <h2 class="cv-title">{{ cvData.personal.title }}</h2>
+
+      <div class="cv-contact">
+        <div class="cv-contact-item">
+          <span class="cv-label">{{ cvData.personal.birthDate }}</span>
+        </div>
+        <div class="cv-contact-item">
+          <span>{{ cvData.personal.address }}</span>
+        </div>
+        <div class="cv-contact-item">
+          <span>{{ cvData.personal.phone }}</span>
+        </div>
+        <div class="cv-contact-item">
+          <a [href]="'mailto:' + cvData.personal.email" class="cv-email">{{
+            cvData.personal.email
+          }}</a>
+        </div>
+        <div class="cv-contact-item">
+          <span class="cv-driver-license">{{ cvData.personal.driverLicense }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <div class="cv-section">
+    <h3 class="cv-section-title">À PROPOS DE MOI</h3>
+    <div class="cv-about">
+      @for (paragraph of cvData.about; track $index) {
+        <p class="cv-about-paragraph">{{ paragraph }}</p>
+      }
+    </div>
+  </div>
+
+  <!-- Experience Section -->
+  <div class="cv-section">
+    <h3 class="cv-section-title">EXPÉRIENCE PROFESSIONNELLE</h3>
+    <div class="cv-experiences">
+      @for (exp of cvData.experience; track $index) {
+        <div class="cv-experience-item">
+          <div class="cv-experience-header">
+            <div class="cv-experience-period">{{ exp.period }}</div>
+            <div class="cv-experience-company">{{ exp.company }}</div>
+          </div>
+          <h4 class="cv-experience-title">{{ exp.title }}</h4>
+          <p class="cv-experience-description">{{ exp.description }}</p>
+
+          @if (exp.skills && exp.skills.length > 0) {
+            <div class="cv-skills">
+              @for (skill of exp.skills; track $index) {
+                <span class="cv-skill-badge">{{ skill }}</span>
+              }
+            </div>
+          }
+        </div>
+      }
+    </div>
+  </div>
+
+  <!-- Education Section -->
+  <div class="cv-section">
+    <h3 class="cv-section-title">FORMATION</h3>
+    <div class="cv-education">
+      @for (edu of cvData.education; track $index) {
+        <div class="cv-education-item">
+          <div class="cv-education-year">{{ edu.year }}</div>
+          <div class="cv-education-content">
+            <h4 class="cv-education-title">{{ edu.title }}</h4>
+            <div class="cv-education-institution">{{ edu.institution }}</div>
+            @if (edu.description) {
+              <p class="cv-education-description">{{ edu.description }}</p>
+            }
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</div>
