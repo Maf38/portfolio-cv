@@ -115,4 +115,63 @@ describe('HeaderComponent', () => {
       expect(link.getAttribute('rel')).toBe('noopener noreferrer');
     });
   });
+
+  describe('Contact Card', () => {
+    it('should toggle contact card visibility', () => {
+      expect(component.showContactCard).toBe(false);
+
+      const event = new Event('click');
+      spyOn(event, 'preventDefault');
+      component.toggleContactCard(event);
+
+      expect(event.preventDefault).toHaveBeenCalled();
+      expect(component.showContactCard).toBe(true);
+
+      component.toggleContactCard(event);
+      expect(component.showContactCard).toBe(false);
+    });
+
+    it('should close contact card', () => {
+      component.showContactCard = true;
+      component.copiedItem = 'email';
+
+      component.closeContactCard();
+
+      expect(component.showContactCard).toBe(false);
+      expect(component.copiedItem).toBeNull();
+    });
+
+    it('should copy text to clipboard', async () => {
+      const mockClipboard = {
+        writeText: jasmine.createSpy('writeText').and.returnValue(Promise.resolve()),
+      };
+      Object.defineProperty(navigator, 'clipboard', {
+        value: mockClipboard,
+        writable: true,
+      });
+
+      await component.copyToClipboard('test@example.com', 'email');
+
+      expect(mockClipboard.writeText).toHaveBeenCalledWith('test@example.com');
+      expect(component.copiedItem).toBe('email');
+    });
+  });
+
+  describe('CV Download', () => {
+    it('should emit cvDownloadRequested event when downloadCv is called', () => {
+      spyOn(component.cvDownloadRequested, 'emit');
+
+      component.downloadCv('fr');
+
+      expect(component.cvDownloadRequested.emit).toHaveBeenCalledWith('fr');
+    });
+
+    it('should emit with "en" language', () => {
+      spyOn(component.cvDownloadRequested, 'emit');
+
+      component.downloadCv('en');
+
+      expect(component.cvDownloadRequested.emit).toHaveBeenCalledWith('en');
+    });
+  });
 });
