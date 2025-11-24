@@ -86,7 +86,7 @@ export class PdfExportService {
    */
   private async getPhotoAsBase64(): Promise<string> {
     try {
-      const response = await fetch('/assets/images/cv/photo-cv.png');
+      const response = await fetch('assets/images/cv/photo-cv.png');
 
       // Check if response is OK
       if (!response.ok) {
