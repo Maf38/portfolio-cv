@@ -71,3 +71,13 @@ docs/design-reference/
 
 # Refactoring plan (internal doc, not for commit)
 docs/REFACTORING-PLAN.md
+
+# Test files and debug artifacts
+test-*.pdf
+*-debug.png
+test-results/
+photo-cv/
+
+# Playwright test files (temporary/debug)
+e2e/*-debug.spec.ts
+e2e/*-test.spec.ts

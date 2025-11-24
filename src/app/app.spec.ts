@@ -1,5 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { App } from './app';
+import { PdfExportService } from './features/cv/services/pdf-export.service';
 
 describe('App', () => {
   beforeEach(async () => {
@@ -128,11 +129,102 @@ describe('App', () => {
     expect(logos.length).toBeGreaterThan(0); // Should have company logos
   });
 
-  it('should render "View Full Resume" link', () => {
-    const fixture = TestBed.createComponent(App);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    const resumeLink = compiled.querySelector('a[href="/assets/cv/resume.pdf"]');
-    expect(resumeLink).toBeTruthy();
+  describe('CV Download functionality', () => {
+    it('should initialize with English CV data', () => {
+      const fixture = TestBed.createComponent(App);
+      const app = fixture.componentInstance;
+      expect(app['cvPrintableData']()).toBeDefined();
+      expect(app['cvPrintableData']().personal.name).toBe('Mafal Gai');
+      expect(app['cvPrintableData']().personal.title).toBe('Software Developer');
+    });
+
+    it('should load both FR and EN CV data', () => {
+      const fixture = TestBed.createComponent(App);
+      const app = fixture.componentInstance;
+      expect(app['cvFullData'].en).toBeDefined();
+      expect(app['cvFullData'].fr).toBeDefined();
+      expect(app['cvFullData'].en.personal.name).toBe('Mafal Gai');
+      expect(app['cvFullData'].fr.personal.name).toBe('Mafal Gai');
+    });
+
+    it('should switch to French CV data when downloadCv is called with "fr"', async () => {
+      const fixture = TestBed.createComponent(App);
+      const app = fixture.componentInstance;
+
+      const pdfExportService = TestBed.inject(PdfExportService);
+      spyOn(pdfExportService, 'exportToPdf').and.returnValue(Promise.resolve());
+
+      await app.downloadCv('fr');
+
+      expect(app['cvPrintableData']().personal.title).toBe('Concepteur Développeur Informatique');
+      expect(pdfExportService.exportToPdf).toHaveBeenCalledWith(app['cvPrintableData'](), {
+        language: 'fr',
+      });
+    });
+
+    it('should switch to English CV data when downloadCv is called with "en"', async () => {
+      const fixture = TestBed.createComponent(App);
+      const app = fixture.componentInstance;
+
+      // First set to French
+      app['cvPrintableData'].set(app['cvFullData'].fr);
+
+      const pdfExportService = TestBed.inject(PdfExportService);
+      spyOn(pdfExportService, 'exportToPdf').and.returnValue(Promise.resolve());
+
+      await app.downloadCv('en');
+
+      expect(app['cvPrintableData']().personal.title).toBe('Software Developer');
+      expect(pdfExportService.exportToPdf).toHaveBeenCalledWith(app['cvPrintableData'](), {
+        language: 'en',
+      });
+    });
+
+    it('should call pdfExportService.exportToPdf when downloadCv is called', async () => {
+      const fixture = TestBed.createComponent(App);
+      const app = fixture.componentInstance;
+
+      const pdfExportService = TestBed.inject(PdfExportService);
+      spyOn(pdfExportService, 'exportToPdf').and.returnValue(Promise.resolve());
+
+      await app.downloadCv('en');
+
+      expect(pdfExportService.exportToPdf).toHaveBeenCalledTimes(1);
+      expect(pdfExportService.exportToPdf).toHaveBeenCalledWith(app['cvPrintableData'](), {
+        language: 'en',
+      });
+    });
+
+    it('should handle errors gracefully when download fails', async () => {
+      const fixture = TestBed.createComponent(App);
+      const app = fixture.componentInstance;
+
+      const pdfExportService = TestBed.inject(PdfExportService);
+      spyOn(pdfExportService, 'exportToPdf').and.returnValue(
+        Promise.reject(new Error('Test error')),
+      );
+      spyOn(console, 'error');
+
+      await app.downloadCv('en');
+
+      expect(console.error).toHaveBeenCalledWith('Error downloading CV:', jasmine.any(Error));
+    });
+
+    it('should render cv-printable component in the DOM', () => {
+      const fixture = TestBed.createComponent(App);
+      fixture.detectChanges();
+      const compiled = fixture.nativeElement as HTMLElement;
+      const cvPrintable = compiled.querySelector('#cv-printable');
+      expect(cvPrintable).toBeTruthy();
+    });
+
+    it('should hide cv-printable component off-screen', () => {
+      const fixture = TestBed.createComponent(App);
+      fixture.detectChanges();
+      const compiled = fixture.nativeElement as HTMLElement;
+      const cvPrintable = compiled.querySelector('#cv-printable') as HTMLElement;
+      expect(cvPrintable.style.position).toBe('absolute');
+      expect(cvPrintable.style.left).toBe('-9999px');
+    });
   });
 });

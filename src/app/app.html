@@ -8,7 +8,7 @@
   <!-- Two-column layout like brittanychiang.com -->
   <div class="layout-container">
     <!-- Left column: Fixed header and navigation -->
-    <app-header />
+    <app-header (cvDownloadRequested)="downloadCv($event)" />
 
     <!-- Right column: Scrollable content -->
     <main class="main-content">
@@ -248,11 +248,11 @@
         </div>
 
         <div class="resume-link-wrapper">
-          <a
-            href="/assets/cv/resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            type="button"
+            (click)="downloadCv('en')"
             class="resume-full-link"
+            aria-label="Download Full Résumé (EN)"
           >
             <span>View Full Résumé</span>
             <svg
@@ -268,7 +268,7 @@
                 clip-rule="evenodd"
               ></path>
             </svg>
-          </a>
+          </button>
         </div>
       </section>
 
@@ -800,7 +800,7 @@
                 <div class="experience-details">
                   <h3 class="experience-title">
                     <span class="experience-position">{{ edu.degree }}</span>
-                    <span class="experience-company">· {{ edu.school }}</span>
+                    <span class="experience-company">· {{ edu.school }}, {{ edu.location }}</span>
                   </h3>
                   <p class="experience-description">
                     {{ edu.description }}
@@ -810,31 +810,6 @@
             </div>
           }
         </div>
-      </section>
-
-      <!-- CV Section -->
-      <section id="cv" class="section">
-        <a
-          href="/assets/cv/resume.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="resume-link"
-        >
-          <span>View Full Résumé</span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-            class="resume-arrow"
-            aria-hidden="true"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-              clip-rule="evenodd"
-            ></path>
-          </svg>
-        </a>
       </section>
 
       <!-- Setup Section -->
@@ -898,5 +873,10 @@
         </div>
       </section>
     </main>
+  </div>
+
+  <!-- Hidden CV printable component for PDF export -->
+  <div id="cv-printable" style="position: absolute; left: -9999px; top: 0">
+    <app-cv-printable [cvData]="cvPrintableData()"></app-cv-printable>
   </div>
 </div>
