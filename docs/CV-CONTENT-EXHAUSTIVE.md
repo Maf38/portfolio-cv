@@ -428,7 +428,7 @@ Technicien de maintenance dans l'industrie des semi-conducteurs.
 ---
 
 ### 6. Baccalauréat Scientifique
-**École** : Lycée Saint Marie
+**École** : Lycée Sainte Marie, La Roche-sur-Foron
 **Année** : 1996
 **Mention** : Bien
 **Série** : Bac S (Scientifique)

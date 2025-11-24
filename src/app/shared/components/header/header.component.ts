@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { CvLanguage } from '../../../features/cv/models/cv-data.types';
 
 @Component({
   selector: 'app-header',
@@ -9,6 +10,8 @@ import { CommonModule } from '@angular/common';
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
+  @Output() cvDownloadRequested = new EventEmitter<CvLanguage>();
+
   showContactCard = false;
   copiedItem: 'email' | 'phone' | null = null;
   private copyTimeout?: ReturnType<typeof setTimeout>;
@@ -41,5 +44,12 @@ export class HeaderComponent {
     } catch (err) {
       console.error('Failed to copy:', err);
     }
+  }
+
+  /**
+   * Download CV in specified language
+   */
+  downloadCv(language: CvLanguage): void {
+    this.cvDownloadRequested.emit(language);
   }
 }
