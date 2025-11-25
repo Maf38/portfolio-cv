@@ -56,8 +56,8 @@ export class CvPrintableComponent {
   // Background pattern signal - generated with hero-patterns
   protected backgroundPattern = signal<string>(this.generateRandomPattern());
 
-  // Default photo URL
-  protected readonly defaultPhotoUrl = '/assets/images/cv/photo-cv.png';
+  // Default photo URL (relative path for GitHub Pages compatibility)
+  protected readonly defaultPhotoUrl = 'assets/images/cv/photo-cv.png';
 
   /**
    * Generate a random professional background pattern using hero-patterns

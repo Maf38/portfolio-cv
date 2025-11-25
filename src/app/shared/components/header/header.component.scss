@@ -124,7 +124,8 @@
 .nav-indicator {
   display: block;
   width: 2rem;
-  height: 1px;
+  height: 2px; // Increased from 1px to ensure visibility across all browsers and zoom levels
+  min-height: 2px; // Prevent subpixel rendering issues
   background-color: rgb(148, 163, 184); // slate-400
   transition: all 0.3s ease;
 }
