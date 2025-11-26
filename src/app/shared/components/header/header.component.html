@@ -276,35 +276,8 @@
             </svg>
             <div class="contact-info">
               <span class="contact-label">Phone</span>
-              <a href="tel:+33670160517" class="contact-value">+33 6 70 16 05 17</a>
+              <span class="contact-value-masked">Ask me by email with a brief introduction</span>
             </div>
-            <button
-              class="copy-button"
-              (click)="copyToClipboard('+33670160517', 'phone')"
-              [attr.aria-label]="copiedItem === 'phone' ? 'Copied!' : 'Copy phone'"
-              [title]="copiedItem === 'phone' ? 'Copied!' : 'Copy phone'"
-            >
-              <svg
-                *ngIf="copiedItem !== 'phone'"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                class="copy-icon"
-              >
-                <path
-                  d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"
-                />
-              </svg>
-              <svg
-                *ngIf="copiedItem === 'phone'"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                class="copy-icon"
-              >
-                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
-              </svg>
-            </button>
           </div>
         </div>
       </div>

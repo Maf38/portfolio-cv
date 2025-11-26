@@ -260,3 +260,146 @@
   letter-spacing: 0.05em;
   transition: background-color 0.3s ease;
 }
+
+// Contact Card Modal
+.contact-card-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(15, 23, 42, 0.8); // slate-900 with opacity
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+}
+
+.contact-card {
+  background-color: #1e293b; // slate-800
+  border: 1px solid #334155; // slate-700
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  min-width: 320px;
+  max-width: 90vw;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.contact-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+
+  h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #e2e8f0; // slate-200
+  }
+}
+
+.contact-card-close {
+  background: none;
+  border: none;
+  padding: 0.25rem;
+  cursor: pointer;
+  color: #94a3b8; // slate-400
+  transition: color 0.2s ease;
+  border-radius: 0.25rem;
+
+  &:hover {
+    color: #e2e8f0; // slate-200
+  }
+
+  &:focus-visible {
+    outline: 2px solid #5eead4;
+    outline-offset: 2px;
+  }
+}
+
+.close-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.contact-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background-color: rgba(51, 65, 85, 0.5); // slate-700 with opacity
+  border-radius: 0.5rem;
+}
+
+.contact-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #5eead4; // teal-300
+  flex-shrink: 0;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  min-width: 0;
+}
+
+.contact-label {
+  font-size: 0.75rem;
+  color: #94a3b8; // slate-400
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.contact-value {
+  color: #e2e8f0; // slate-200
+  text-decoration: none;
+  font-size: 0.9375rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  &:hover {
+    color: #5eead4; // teal-300
+  }
+}
+
+// Masked phone number with hint
+.contact-value-masked {
+  color: #64748b; // slate-500
+  font-size: 0.9375rem;
+  font-style: italic;
+}
+
+.copy-button {
+  background: none;
+  border: none;
+  padding: 0.375rem;
+  cursor: pointer;
+  color: #94a3b8; // slate-400
+  transition: color 0.2s ease;
+  border-radius: 0.25rem;
+  flex-shrink: 0;
+
+  &:hover {
+    color: #5eead4; // teal-300
+  }
+
+  &:focus-visible {
+    outline: 2px solid #5eead4;
+    outline-offset: 2px;
+  }
+}
+
+.copy-icon {
+  width: 1rem;
+  height: 1rem;
+}
