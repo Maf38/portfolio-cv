@@ -54,17 +54,12 @@ html {
   background: #64ffda;
 }
 
-/* Critical header styles - must be in global styles for proper SSR/production rendering */
-/* These colors are used throughout the app and must be available immediately */
-.header-name a:hover,
-.nav-link:hover,
-.nav-link:hover .nav-indicator,
-.nav-link:hover .nav-text,
-.header-social a:hover,
-.cv-download-link:hover {
-  color: rgb(94, 234, 212); // teal-300 - vivid cyan color
+/* CRITICAL: Header hover colors - MUST be in global styles for production */
+/* Using !important to override Angular's component scoping in production builds */
+.header-social a:hover {
+  color: #5eead4 !important; /* teal-300 */
 }
 
-.nav-link:hover .nav-indicator {
-  background-color: rgb(94, 234, 212);
+.cv-download-link:hover {
+  color: #5eead4 !important; /* teal-300 */
 }

@@ -11,6 +11,26 @@
     justify-content: space-between;
     padding-top: 6rem;
     padding-bottom: 6rem;
+    overflow-y: auto;
+
+    // Hide scrollbar but keep functionality (cleaner look)
+    scrollbar-width: none; // Firefox
+    -ms-overflow-style: none; // IE/Edge
+
+    &::-webkit-scrollbar {
+      display: none; // Chrome/Safari
+    }
+  }
+
+  // Reduced padding on shorter screens (laptops)
+  @media (min-width: 1024px) and (max-height: 800px) {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  @media (min-width: 1024px) and (max-height: 650px) {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
   }
 
   // On mobile: normal flow at top
@@ -28,6 +48,15 @@
     height: 100%;
     justify-content: space-between;
   }
+
+  // Reduce gap on shorter screens
+  @media (min-width: 1024px) and (max-height: 800px) {
+    gap: 2rem;
+  }
+
+  @media (min-width: 1024px) and (max-height: 650px) {
+    gap: 1rem;
+  }
 }
 
 // Intro section
@@ -43,17 +72,14 @@
   a {
     font-size: 3rem;
     font-weight: 700;
-    color: rgb(226, 232, 240); // slate-200
     text-decoration: none;
-    transition: color 0.3s ease;
+    color: #e2e8f0; // slate-200
 
     @media (max-width: 1023px) {
       font-size: 2.5rem;
     }
 
-    &:hover {
-      color: rgb(94, 234, 212); // teal-300
-    }
+    // Pas de changement de couleur au hover - reste blanc
   }
 }
 
@@ -61,7 +87,7 @@
   margin: 0;
   font-size: 1.25rem;
   font-weight: 500;
-  color: rgb(226, 232, 240); // slate-200
+  color: #e2e8f0; // slate-200
 
   @media (max-width: 1023px) {
     font-size: 1.125rem;
@@ -72,8 +98,8 @@
   margin: 0;
   font-size: 1rem;
   line-height: 1.75;
-  color: rgb(148, 163, 184); // slate-400
   max-width: 300px;
+  color: #94a3b8; // slate-400
 }
 
 // Navigation links
@@ -100,7 +126,6 @@
   gap: 1rem;
   padding: 0.75rem 0;
   text-decoration: none;
-  color: rgb(148, 163, 184); // slate-400
   font-size: 0.875rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -108,15 +133,13 @@
   transition: all 0.3s ease;
 
   &:hover {
-    color: rgb(226, 232, 240); // slate-200
-
     .nav-indicator {
-      width: 4rem;
-      background-color: rgb(226, 232, 240); // slate-200
+      width: 4rem; // Bar gets longer on hover
+      background-color: #e2e8f0; // slate-200 (white) - bar stays white
     }
 
     .nav-text {
-      color: rgb(226, 232, 240); // slate-200
+      color: #e2e8f0; // slate-200 (white) - text becomes white on hover
     }
   }
 }
@@ -124,15 +147,14 @@
 .nav-indicator {
   display: block;
   width: 2rem;
-  height: 2px; // Increased from 1px to ensure visibility across all browsers and zoom levels
-  min-height: 2px; // Prevent subpixel rendering issues
-  background-color: rgb(148, 163, 184); // slate-400
+  height: 1px;
   transition: all 0.3s ease;
+  background-color: #94a3b8; // slate-400
 }
 
 .nav-text {
-  color: rgb(148, 163, 184); // slate-400
   transition: color 0.3s ease;
+  color: #94a3b8; // slate-400 (gray) - default state
 }
 
 // Social links container
@@ -162,11 +184,11 @@
   a {
     display: flex;
     align-items: center;
-    color: rgb(148, 163, 184); // slate-400
     transition: color 0.3s ease;
+    color: #94a3b8; // slate-400
 
     &:hover {
-      color: rgb(226, 232, 240); // slate-200
+      color: #5eead4; // teal-300
     }
   }
 }
@@ -205,11 +227,11 @@
   border: none;
   padding: 0;
   cursor: pointer;
-  color: rgb(148, 163, 184); // slate-400
   transition: color 0.3s ease;
+  color: #94a3b8; // slate-400
 
   &:hover {
-    color: rgb(226, 232, 240); // slate-200
+    color: #5eead4; // teal-300
 
     .cv-lang-badge {
       background-color: rgba(226, 232, 240, 0.2);
