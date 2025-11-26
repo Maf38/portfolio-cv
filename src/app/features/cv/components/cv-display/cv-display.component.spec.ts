@@ -213,4 +213,162 @@ describe('CvDisplayComponent', () => {
     expect(footer?.textContent).toContain('2025-01-01');
     expect(footer?.textContent).toContain('1.0.0');
   });
+
+  describe('getSkillsForCategory', () => {
+    it('should return skills for backend category', () => {
+      const skills = component.getSkillsForCategory('backend');
+      expect(skills.length).toBe(1);
+      expect(skills[0].name).toBe('Node.js');
+    });
+
+    it('should return skills for frontend category', () => {
+      const skills = component.getSkillsForCategory('frontend');
+      expect(skills.length).toBe(1);
+      expect(skills[0].name).toBe('Angular');
+    });
+
+    it('should return empty array for category with no skills', () => {
+      const skills = component.getSkillsForCategory('devops');
+      expect(skills.length).toBe(0);
+    });
+  });
+
+  describe('formatCategoryName', () => {
+    it('should return French name for testing category', () => {
+      component.language = 'fr';
+      expect(component.formatCategoryName('testing')).toBe('Tests');
+    });
+
+    it('should return English name for testing category', () => {
+      component.language = 'en';
+      expect(component.formatCategoryName('testing')).toBe('Testing');
+    });
+
+    it('should return category name if not found in translations', () => {
+      expect(component.formatCategoryName('unknown')).toBe('unknown');
+    });
+
+    it('should handle all known categories in French', () => {
+      component.language = 'fr';
+      expect(component.formatCategoryName('backend')).toBe('Backend');
+      expect(component.formatCategoryName('frontend')).toBe('Frontend');
+      expect(component.formatCategoryName('devops')).toBe('DevOps');
+      expect(component.formatCategoryName('cloud')).toBe('Cloud');
+      expect(component.formatCategoryName('tools')).toBe('Outils');
+      expect(component.formatCategoryName('methodologies')).toBe('Méthodologies');
+    });
+
+    it('should handle all known categories in English', () => {
+      component.language = 'en';
+      expect(component.formatCategoryName('backend')).toBe('Backend');
+      expect(component.formatCategoryName('frontend')).toBe('Frontend');
+      expect(component.formatCategoryName('devops')).toBe('DevOps');
+      expect(component.formatCategoryName('cloud')).toBe('Cloud');
+      expect(component.formatCategoryName('tools')).toBe('Tools');
+      expect(component.formatCategoryName('methodologies')).toBe('Methodologies');
+    });
+  });
+
+  describe('getLabel', () => {
+    it('should return all French labels', () => {
+      component.language = 'fr';
+      expect(component.getLabel('profile')).toBe('Profil');
+      expect(component.getLabel('experience')).toBe('Expérience');
+      expect(component.getLabel('education')).toBe('Formation');
+      expect(component.getLabel('skills')).toBe('Compétences');
+      expect(component.getLabel('projects')).toBe('Projets');
+      expect(component.getLabel('contact')).toBe('Contact');
+      expect(component.getLabel('present')).toBe('Présent');
+      expect(component.getLabel('languages')).toBe('Langues');
+      expect(component.getLabel('softSkills')).toBe('Soft Skills');
+    });
+
+    it('should return all English labels', () => {
+      component.language = 'en';
+      expect(component.getLabel('profile')).toBe('Profile');
+      expect(component.getLabel('experience')).toBe('Experience');
+      expect(component.getLabel('education')).toBe('Education');
+      expect(component.getLabel('skills')).toBe('Skills');
+      expect(component.getLabel('projects')).toBe('Projects');
+      expect(component.getLabel('contact')).toBe('Contact');
+      expect(component.getLabel('present')).toBe('Present');
+      expect(component.getLabel('languages')).toBe('Languages');
+      expect(component.getLabel('softSkills')).toBe('Soft Skills');
+    });
+
+    it('should return key if label not found', () => {
+      expect(component.getLabel('unknownKey')).toBe('unknownKey');
+    });
+  });
+
+  describe('formatDateRange', () => {
+    it('should format date range with end date in French', () => {
+      component.language = 'fr';
+      const result = component.formatDateRange('2020-01', '2024-06');
+      expect(result).toBe('Jan 2020 — Jun 2024');
+    });
+
+    it('should format date range with end date in English', () => {
+      component.language = 'en';
+      const result = component.formatDateRange('2020-01', '2024-06');
+      expect(result).toBe('Jan 2020 — Jun 2024');
+    });
+
+    it('should show Present in French when no end date', () => {
+      component.language = 'fr';
+      const result = component.formatDateRange('2020-01', null);
+      expect(result).toBe('Jan 2020 — Présent');
+    });
+
+    it('should show Present in English when no end date', () => {
+      component.language = 'en';
+      const result = component.formatDateRange('2020-01', null);
+      expect(result).toBe('Jan 2020 — Present');
+    });
+
+    it('should format all months correctly in French', () => {
+      component.language = 'fr';
+      expect(component.formatDateRange('2024-01', '2024-01')).toContain('Jan');
+      expect(component.formatDateRange('2024-02', '2024-02')).toContain('Fév');
+      expect(component.formatDateRange('2024-03', '2024-03')).toContain('Mar');
+      expect(component.formatDateRange('2024-04', '2024-04')).toContain('Avr');
+      expect(component.formatDateRange('2024-05', '2024-05')).toContain('Mai');
+      expect(component.formatDateRange('2024-06', '2024-06')).toContain('Jun');
+      expect(component.formatDateRange('2024-07', '2024-07')).toContain('Jul');
+      expect(component.formatDateRange('2024-08', '2024-08')).toContain('Aoû');
+      expect(component.formatDateRange('2024-09', '2024-09')).toContain('Sep');
+      expect(component.formatDateRange('2024-10', '2024-10')).toContain('Oct');
+      expect(component.formatDateRange('2024-11', '2024-11')).toContain('Nov');
+      expect(component.formatDateRange('2024-12', '2024-12')).toContain('Déc');
+    });
+
+    it('should format all months correctly in English', () => {
+      component.language = 'en';
+      expect(component.formatDateRange('2024-01', '2024-01')).toContain('Jan');
+      expect(component.formatDateRange('2024-02', '2024-02')).toContain('Feb');
+      expect(component.formatDateRange('2024-03', '2024-03')).toContain('Mar');
+      expect(component.formatDateRange('2024-04', '2024-04')).toContain('Apr');
+      expect(component.formatDateRange('2024-05', '2024-05')).toContain('May');
+      expect(component.formatDateRange('2024-06', '2024-06')).toContain('Jun');
+      expect(component.formatDateRange('2024-07', '2024-07')).toContain('Jul');
+      expect(component.formatDateRange('2024-08', '2024-08')).toContain('Aug');
+      expect(component.formatDateRange('2024-09', '2024-09')).toContain('Sep');
+      expect(component.formatDateRange('2024-10', '2024-10')).toContain('Oct');
+      expect(component.formatDateRange('2024-11', '2024-11')).toContain('Nov');
+      expect(component.formatDateRange('2024-12', '2024-12')).toContain('Dec');
+    });
+  });
+
+  describe('language input', () => {
+    it('should default to French', () => {
+      const newFixture = TestBed.createComponent(CvDisplayComponent);
+      const newComponent = newFixture.componentInstance;
+      expect(newComponent.language).toBe('fr');
+    });
+
+    it('should accept English language input', () => {
+      component.language = 'en';
+      expect(component.language).toBe('en');
+    });
+  });
 });
