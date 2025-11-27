@@ -58,7 +58,7 @@ describe('PdfExportService', () => {
         Promise.resolve({
           ok: true,
           blob: () => Promise.resolve(new Blob(['test'], { type: 'image/png' })),
-        } as Response)
+        } as Response),
       );
 
       // Mock FileReader
@@ -94,7 +94,7 @@ describe('PdfExportService', () => {
         Promise.resolve({
           ok: false,
           status: 404,
-        } as Response)
+        } as Response),
       );
 
       await service.exportToPdf(mockCvData, {
@@ -125,12 +125,12 @@ describe('PdfExportService', () => {
         Promise.resolve({
           ok: false,
           status: 404,
-        } as Response)
+        } as Response),
       );
 
-      await expectAsync(
-        service.exportToPdf(mockCvData, { language: 'fr' })
-      ).toBeRejectedWithError('Failed to export PDF');
+      await expectAsync(service.exportToPdf(mockCvData, { language: 'fr' })).toBeRejectedWithError(
+        'Failed to export PDF',
+      );
 
       expect(console.error).toHaveBeenCalled();
     });
@@ -139,7 +139,7 @@ describe('PdfExportService', () => {
   describe('exportCv (deprecated)', () => {
     it('should throw error indicating method is deprecated', async () => {
       await expectAsync(service.exportCv('fr')).toBeRejectedWithError(
-        'exportCv is deprecated. Use exportToPdf with cvData instead.'
+        'exportCv is deprecated. Use exportToPdf with cvData instead.',
       );
     });
   });
@@ -160,7 +160,7 @@ describe('PdfExportService', () => {
         Promise.resolve({
           ok: false,
           status: 404,
-        } as Response)
+        } as Response),
       );
 
       await service.exportToPdf(mockCvData, { language: 'fr' });
@@ -180,7 +180,7 @@ describe('PdfExportService', () => {
         Promise.resolve({
           ok: false,
           status: 404,
-        } as Response)
+        } as Response),
       );
 
       await service.exportToPdf(mockCvData, { language: 'en' });
@@ -209,7 +209,7 @@ describe('PdfExportService', () => {
         Promise.resolve({
           ok: false,
           status: 404,
-        } as Response)
+        } as Response),
       );
 
       await service.exportToPdf(cvDataWithoutSkills, { language: 'en' });
@@ -239,7 +239,7 @@ describe('PdfExportService', () => {
         Promise.resolve({
           ok: false,
           status: 404,
-        } as Response)
+        } as Response),
       );
 
       await service.exportToPdf(cvDataWithEmptyDesc, { language: 'en' });
@@ -267,7 +267,7 @@ describe('PdfExportService', () => {
         Promise.resolve({
           ok: false,
           status: 404,
-        } as Response)
+        } as Response),
       );
 
       await service.exportToPdf(cvDataWithDesc, { language: 'en' });

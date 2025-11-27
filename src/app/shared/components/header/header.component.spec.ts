@@ -177,7 +177,9 @@ describe('HeaderComponent', () => {
 
     it('should handle clipboard error gracefully', async () => {
       const mockClipboard = {
-        writeText: jasmine.createSpy('writeText').and.returnValue(Promise.reject(new Error('Clipboard error'))),
+        writeText: jasmine
+          .createSpy('writeText')
+          .and.returnValue(Promise.reject(new Error('Clipboard error'))),
       };
       Object.defineProperty(navigator, 'clipboard', {
         value: mockClipboard,
