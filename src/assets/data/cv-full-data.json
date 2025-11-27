@@ -19,7 +19,7 @@
         "period": "Apr 2023 — Present",
         "company": "Inetum - CEA",
         "title": ".NET Developer",
-        "description": "Managing a multi-application maintenance portfolio of 70+ applications, balancing build and run operations across a web-focused Microsoft ecosystem. Working in a modern development environment using CI/CD with Azure DevOps, SonarQube quality gates, and comprehensive unit testing. Working with both legacy (.NET 4.8, Razor, Kendo UI) and modern (.NET 8) stacks. Participating in the SI modernization (RabbitMQ, SeriLog/ELK).",
+        "description": "Managing a multi-application maintenance portfolio of 70+ applications, balancing build and run operations across a web-focused Microsoft ecosystem. Working in a modern development environment using CI/CD with Azure DevOps, SonarQube quality gates, and comprehensive unit testing. Working with both legacy (.NET 4.8, Razor, Kendo UI) and modern (.NET 8) stacks. Participating in the SI modernization: SQL Server migration from 2014 to 2019 Cluster, SeriLog/ELK.",
         "skills": [
           ".NET 4.8 / .NET 8",
           "C#",
@@ -185,15 +185,15 @@
     },
     "about": [
       "Actuellement Développeur .NET au sein d'une équipe de maintenance multi-applications gérant plus de 70 applications, je partage mon temps entre les opérations de build et de run sur un portefeuille applicatif orienté web. Mon environnement quotidien s'articule autour des technologies Microsoft : Windows Server, IIS, Azure DevOps pour les pipelines CI/CD, et SQL Server 2014/2019 pour la gestion des bases de données.",
-      "Je suis un développeur polyvalent qui a expérimenté diverses technologies tout au long de ma carrière. J'ai une réelle passion pour les technologies web et je suis ravi d'avoir effectué une transition professionnelle qui me permet de les pratiquer quotidiennement. Cependant, je reste fondamentalement un développeur orienté backend. Mon parcours industriel m'a naturellement exposé aux concepts Lean, et j'apprécie profondément l'organisation de travail Agile. Au fil du temps, je me suis également de plus en plus tourné vers les systèmes Linux, la conteneurisation et l'écosystème Node.js, car ces technologies s'alignent parfaitement avec les projets que je construis au quotidien. Mon objectif est naturellement d'évoluer professionnellement au sein de ces technologies pour développer davantage mes compétences.",
-      "Mon objectif est de construire des systèmes logiciels robustes, maintenables et automatisés, en anticipant l'évolution des pratiques de développement vers plus d'intelligence artificielle et d'automatisation. Je ne cherche pas seulement à écrire du code qui fonctionne, mais à créer des architectures professionnelles qui résisteront à l'épreuve du temps et aux changements d'équipes."
+      "Je suis un développeur polyvalent qui a expérimenté diverses technologies tout au long de ma carrière. J'ai une réelle passion pour les technologies web et je suis ravi d'avoir effectué une transition professionnelle qui me permet de les pratiquer quotidiennement. Cependant, je reste fondamentalement un développeur orienté backend. Mon parcours industriel m'a naturellement exposé aux concepts Lean, et j'apprécie profondément l'organisation de travail Agile. Au fil du temps, je me suis également de plus en plus tourné vers les systèmes Linux, la conteneurisation et l'écosystème Node.js, car ces technologies s'alignent parfaitement avec les projets que je construis au quotidien.",
+      "Je m'efforce de construire des systèmes logiciels robustes, maintenables et automatisés, en anticipant l'évolution des pratiques de développement vers plus d'intelligence artificielle et d'automatisation. Au-delà d'écrire du code qui fonctionne, je cherche à créer des architectures professionnelles qui résisteront à l'épreuve du temps et aux changements d'équipes — tout en continuant à progresser au sein de ces technologies qui me passionnent."
     ],
     "experience": [
       {
         "period": "Avr 2023 — Aujourd'hui",
         "company": "Inetum - CEA",
         "title": "Développeur .NET",
-        "description": "Gestion d'un portefeuille de maintenance multi-applications de plus de 70 applications, équilibrant les opérations de build et de run dans un écosystème Microsoft orienté web. Travail dans un environnement de développement moderne utilisant CI/CD avec Azure DevOps, quality gates SonarQube et tests unitaires complets. Travail avec des stacks legacy (.NET 4.8, Razor, Kendo UI) et modernes (.NET 8). Participation à la modernisation du SI (RabbitMQ, SeriLog/ELK).",
+        "description": "Gestion d'un portefeuille de maintenance multi-applications de plus de 70 applications, équilibrant les opérations de build et de run dans un écosystème Microsoft orienté web. Travail dans un environnement de développement moderne utilisant CI/CD avec Azure DevOps, quality gates SonarQube et tests unitaires complets. Travail avec des stacks legacy (.NET 4.8, Razor, Kendo UI) et modernes (.NET 8). Participation à la modernisation du SI : migration SQL Server de 2014 vers 2019 Cluster, SeriLog/ELK.",
         "skills": [
           ".NET 4.8 / .NET 8",
           "C#",

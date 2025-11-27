@@ -53,3 +53,13 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: #64ffda;
 }
+
+/* CRITICAL: Header hover colors - MUST be in global styles for production */
+/* Using !important to override Angular's component scoping in production builds */
+.header-social a:hover {
+  color: #e2e8f0 !important; /* slate-200 (white) */
+}
+
+.cv-download-link:hover {
+  color: #e2e8f0 !important; /* slate-200 (white) */
+}
