@@ -152,7 +152,8 @@ export class PdfExportService {
             ? {
                 image: photoBase64,
                 width: 100,
-                height: 100,
+                // Height calculated to maintain original photo proportions (411x510 -> ratio 1.24)
+                height: 124,
                 margin: [0, 0, 0, 0] as [number, number, number, number],
               }
             : { text: '', width: 140 },

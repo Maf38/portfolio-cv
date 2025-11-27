@@ -52,7 +52,7 @@
       "current": true,
       "duration": "Apr 2023 — Present",
       "type": "CDI via ESN",
-      "description": "Managing a multi-application maintenance portfolio of 70+ applications, balancing build and run operations across a web-focused Microsoft ecosystem. Working in a modern development environment using CI/CD with Azure DevOps, SonarQube quality gates, and comprehensive unit testing. Working with both legacy (.NET 4.8, Razor, Kendo UI) and modern (.NET 8) stacks. Participating in the SI modernization (RabbitMQ, SeriLog/ELK).",
+      "description": "Managing a multi-application maintenance portfolio of 70+ applications, balancing build and run operations across a web-focused Microsoft ecosystem. Working in a modern development environment using CI/CD with Azure DevOps, SonarQube quality gates, and comprehensive unit testing. Working with both legacy (.NET 4.8, Razor, Kendo UI) and modern (.NET 8) stacks. Participating in the SI modernization: SQL Server migration from 2014 to 2019 Cluster, SeriLog/ELK.",
       "technologies": [
         ".NET 4.8 / .NET 8",
         "C#",
