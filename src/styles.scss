@@ -57,9 +57,9 @@ html {
 /* CRITICAL: Header hover colors - MUST be in global styles for production */
 /* Using !important to override Angular's component scoping in production builds */
 .header-social a:hover {
-  color: #5eead4 !important; /* teal-300 */
+  color: #e2e8f0 !important; /* slate-200 (white) */
 }
 
 .cv-download-link:hover {
-  color: #5eead4 !important; /* teal-300 */
+  color: #e2e8f0 !important; /* slate-200 (white) */
 }
