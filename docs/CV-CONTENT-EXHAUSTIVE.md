@@ -24,10 +24,10 @@
 ### Contact
 ```json
 {
-  "phone": "06 70 16 05 17",
+  "phone": "06 XX XX XX X7",
   "email": "gaimafal@gmail.com",
   "address": {
-    "street": "53A rue Pierre Semard",
+    "street": "rue Pierre Semard",
     "city": "Grenoble",
     "postalCode": "38000",
     "country": "France"

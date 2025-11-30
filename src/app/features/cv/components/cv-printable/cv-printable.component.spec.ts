@@ -13,8 +13,8 @@ describe('CvPrintableComponent', () => {
       name: 'Mafal Gai',
       title: 'Software Developer',
       birthDate: 'March 11, 1978',
-      address: '53A rue Pierre Semard 38000 Grenoble',
-      phone: '06 70 16 05 17',
+      address: 'rue Pierre Semard 38000 Grenoble',
+      phone: '06 XX XX XX X7',
       email: 'gaimafal@gmail.com',
       driverLicense: 'Driving license B and vehicle',
     },
@@ -128,8 +128,8 @@ describe('CvPrintableComponent', () => {
       // Check that contact info contains expected values
       const contactText = contactItems.map((item) => item.nativeElement.textContent.trim());
       expect(contactText).toContain('March 11, 1978');
-      expect(contactText).toContain('53A rue Pierre Semard 38000 Grenoble');
-      expect(contactText).toContain('06 70 16 05 17');
+      expect(contactText).toContain('rue Pierre Semard 38000 Grenoble');
+      expect(contactText).toContain('06 XX XX XX X7');
       expect(contactText.some((text) => text.includes('gaimafal@gmail.com'))).toBe(true);
       expect(contactText).toContain('Driving license B and vehicle');
     });
