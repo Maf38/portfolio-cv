@@ -7,7 +7,7 @@
     "subtitle": "6 ans d'expérience",
     "birthDate": "1978-03-11",
     "email": "gaimafal@gmail.com",
-    "phone": "+33 6 70 16 05 17",
+    "phone": "+33 6 XX XX XX X7",
     "location": {
       "city": "Grenoble",
       "postalCode": "38000",
@@ -221,6 +221,21 @@
       "type": "Contract",
       "description": "Worked as a wiring assembler (monteur câbleur) for machines manufacturing glass syringes. Assembled and wired precision equipment components for pharmaceutical manufacturing industry.",
       "technologies": ["Wiring Assembly", "Manufacturing", "Medical Equipment"]
+    },
+    {
+      "id": "exp-9",
+      "company": "· 68ème Régiment d'Artillerie d'Afrique",
+      "companyUrl": null,
+      "via": null,
+      "position": "IT Support Specialist",
+      "location": "La Valbonne",
+      "startDate": "2001-01",
+      "endDate": "2001-12",
+      "current": false,
+      "duration": "2001",
+      "type": "Service Militaire",
+      "description": "Military service in the Command and Logistics Battery. Digitized vehicle maintenance logbooks and developed VBA macros to format these records according to military standards. Contributed to the modernization of administrative processes through office automation.",
+      "technologies": ["VBA", "Excel", "Office Automation", "Data Entry", "Military Service"]
     }
   ],
   "education": [

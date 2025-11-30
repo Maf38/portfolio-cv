@@ -5,7 +5,7 @@
       "title": "Software Developer",
       "birthDate": "March 11, 1978",
       "address": "53A rue Pierre Semard 38000 Grenoble",
-      "phone": "06 70 16 05 17",
+      "phone": "06 XX XX XX X7",
       "email": "gaimafal@gmail.com",
       "driverLicense": "Driving license B and vehicle"
     },
@@ -132,6 +132,13 @@
         "title": "Wiring Assembler",
         "description": "Worked as a wiring assembler (monteur câbleur) for machines manufacturing glass syringes. Assembled and wired precision equipment components for pharmaceutical manufacturing industry.",
         "skills": ["Wiring Assembly", "Manufacturing", "Medical Equipment"]
+      },
+      {
+        "period": "2001",
+        "company": "68ème Régiment d'Artillerie d'Afrique",
+        "title": "IT Support Specialist",
+        "description": "Military service in the Command and Logistics Battery. Digitized vehicle maintenance logbooks and developed VBA macros to format these records according to military standards. Contributed to the modernization of administrative processes through office automation.",
+        "skills": ["VBA", "Excel", "Office Automation", "Data Entry", "Military Service"]
       }
     ],
     "education": [
@@ -179,7 +186,7 @@
       "title": "Concepteur Développeur Informatique",
       "birthDate": "né le 11 mars 1978",
       "address": "53A rue Pierre Semard 38000 Grenoble",
-      "phone": "06 70 16 05 17",
+      "phone": "06 XX XX XX X7",
       "email": "gaimafal@gmail.com",
       "driverLicense": "Permis B et véhicule"
     },
@@ -306,6 +313,13 @@
         "title": "Monteur Câbleur",
         "description": "Travail comme monteur câbleur pour des machines de fabrication de seringues en verre. Assemblage et câblage de composants d'équipements de précision pour l'industrie pharmaceutique.",
         "skills": ["Montage Câblage", "Fabrication", "Équipement Médical"]
+      },
+      {
+        "period": "2001",
+        "company": "68ème Régiment d'Artillerie d'Afrique",
+        "title": "Assistant Informatique",
+        "description": "Service militaire au sein de la Batterie Commandement et Logistique. Numérisation des carnets de maintenance des véhicules et développement de macros VBA pour formater ces documents selon les standards militaires. Contribution à la modernisation des processus administratifs par l'automatisation bureautique.",
+        "skills": ["VBA", "Excel", "Bureautique", "Saisie de Données", "Service Militaire"]
       }
     ],
     "education": [
