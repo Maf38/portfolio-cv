@@ -1,9 +1,11 @@
 import { TestBed, ComponentFixture } from '@angular/core/testing';
 import { HeaderComponent } from './header.component';
+import { ContactModalService } from '../../services/contact-modal.service';
 
 describe('HeaderComponent', () => {
   let component: HeaderComponent;
   let fixture: ComponentFixture<HeaderComponent>;
+  let contactModalService: ContactModalService;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -117,113 +119,19 @@ describe('HeaderComponent', () => {
   });
 
   describe('Contact Card', () => {
-    it('should toggle contact card visibility', () => {
-      expect(component.showContactCard).toBe(false);
+    beforeEach(() => {
+      contactModalService = TestBed.inject(ContactModalService);
+    });
+
+    it('should call contactModalService.toggle when toggleContactCard is called', () => {
+      spyOn(contactModalService, 'toggle');
 
       const event = new Event('click');
       spyOn(event, 'preventDefault');
       component.toggleContactCard(event);
 
       expect(event.preventDefault).toHaveBeenCalled();
-      expect(component.showContactCard).toBe(true);
-
-      component.toggleContactCard(event);
-      expect(component.showContactCard).toBe(false);
-    });
-
-    it('should close contact card', () => {
-      component.showContactCard = true;
-      component.copiedItem = 'email';
-
-      component.closeContactCard();
-
-      expect(component.showContactCard).toBe(false);
-      expect(component.copiedItem).toBeNull();
-    });
-
-    it('should copy text to clipboard', async () => {
-      const mockClipboard = {
-        writeText: jasmine.createSpy('writeText').and.returnValue(Promise.resolve()),
-      };
-      Object.defineProperty(navigator, 'clipboard', {
-        value: mockClipboard,
-        writable: true,
-      });
-
-      await component.copyToClipboard('test@example.com', 'email');
-
-      expect(mockClipboard.writeText).toHaveBeenCalledWith('test@example.com');
-      expect(component.copiedItem).toBe('email');
-    });
-
-    it('should reset copiedItem after 2 seconds', (done) => {
-      const mockClipboard = {
-        writeText: jasmine.createSpy('writeText').and.returnValue(Promise.resolve()),
-      };
-      Object.defineProperty(navigator, 'clipboard', {
-        value: mockClipboard,
-        writable: true,
-      });
-
-      component.copyToClipboard('test@example.com', 'email').then(() => {
-        expect(component.copiedItem).toBe('email');
-
-        setTimeout(() => {
-          expect(component.copiedItem).toBeNull();
-          done();
-        }, 2100);
-      });
-    });
-
-    it('should handle clipboard error gracefully', async () => {
-      const mockClipboard = {
-        writeText: jasmine
-          .createSpy('writeText')
-          .and.returnValue(Promise.reject(new Error('Clipboard error'))),
-      };
-      Object.defineProperty(navigator, 'clipboard', {
-        value: mockClipboard,
-        writable: true,
-      });
-      spyOn(console, 'error');
-
-      await component.copyToClipboard('test@example.com', 'email');
-
-      expect(console.error).toHaveBeenCalledWith('Failed to copy:', jasmine.any(Error));
-      expect(component.copiedItem).not.toBe('email');
-    });
-
-    it('should clear previous timeout when copying again', async () => {
-      const mockClipboard = {
-        writeText: jasmine.createSpy('writeText').and.returnValue(Promise.resolve()),
-      };
-      Object.defineProperty(navigator, 'clipboard', {
-        value: mockClipboard,
-        writable: true,
-      });
-
-      await component.copyToClipboard('test@example.com', 'email');
-      expect(component.copiedItem).toBe('email');
-
-      // Copy phone immediately after
-      await component.copyToClipboard('+33612345678', 'phone');
-      expect(component.copiedItem).toBe('phone');
-    });
-
-    it('should clear timeout when closing contact card', async () => {
-      const mockClipboard = {
-        writeText: jasmine.createSpy('writeText').and.returnValue(Promise.resolve()),
-      };
-      Object.defineProperty(navigator, 'clipboard', {
-        value: mockClipboard,
-        writable: true,
-      });
-
-      await component.copyToClipboard('test@example.com', 'email');
-      expect(component.copiedItem).toBe('email');
-
-      component.closeContactCard();
-      expect(component.copiedItem).toBeNull();
+      expect(contactModalService.toggle).toHaveBeenCalled();
     });
   });
 
