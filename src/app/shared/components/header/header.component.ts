@@ -1,6 +1,7 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CvLanguage } from '../../../features/cv/models/cv-data.types';
+import { ContactModalService } from '../../services/contact-modal.service';
 
 @Component({
   selector: 'app-header',
@@ -12,38 +13,11 @@ import { CvLanguage } from '../../../features/cv/models/cv-data.types';
 export class HeaderComponent {
   @Output() cvDownloadRequested = new EventEmitter<CvLanguage>();
 
-  showContactCard = false;
-  copiedItem: 'email' | 'phone' | null = null;
-  private copyTimeout?: ReturnType<typeof setTimeout>;
+  private readonly contactModalService = inject(ContactModalService);
 
   toggleContactCard(event: Event): void {
     event.preventDefault();
-    this.showContactCard = !this.showContactCard;
-  }
-
-  closeContactCard(): void {
-    this.showContactCard = false;
-    this.copiedItem = null;
-    if (this.copyTimeout) {
-      clearTimeout(this.copyTimeout);
-    }
-  }
-
-  async copyToClipboard(text: string, item: 'email' | 'phone'): Promise<void> {
-    try {
-      await navigator.clipboard.writeText(text);
-      this.copiedItem = item;
-
-      // Reset after 2 seconds
-      if (this.copyTimeout) {
-        clearTimeout(this.copyTimeout);
-      }
-      this.copyTimeout = setTimeout(() => {
-        this.copiedItem = null;
-      }, 2000);
-    } catch (err) {
-      console.error('Failed to copy:', err);
-    }
+    this.contactModalService.toggle();
   }
 
   /**

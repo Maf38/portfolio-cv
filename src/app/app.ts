@@ -1,6 +1,7 @@
 import { Component, signal, HostListener, PLATFORM_ID, inject } from '@angular/core';
 import { isPlatformBrowser, CommonModule } from '@angular/common';
 import { HeaderComponent } from './shared/components/header/header.component';
+import { ContactModalComponent } from './shared/components/contact-modal/contact-modal.component';
 import { PdfExportService } from './features/cv/services/pdf-export.service';
 import {
   CvPrintableComponent,
@@ -11,7 +12,7 @@ import cvFullData from '../assets/data/cv-full-data.json';
 
 @Component({
   selector: 'app-root',
-  imports: [HeaderComponent, CommonModule, CvPrintableComponent],
+  imports: [HeaderComponent, CommonModule, CvPrintableComponent, ContactModalComponent],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
