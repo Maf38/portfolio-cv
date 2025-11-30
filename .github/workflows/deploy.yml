@@ -52,8 +52,10 @@ jobs:
 
       - name: Summary
         run: |
+          VERSION=$(node -p "require('./package.json').version")
           echo "### ✅ Dev Environment Deployment Successful" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Version**: v${VERSION}" >> $GITHUB_STEP_SUMMARY
           echo "**Dev URL**: ${{ steps.deployment.outputs.page_url }}" >> $GITHUB_STEP_SUMMARY
           echo "**Production URL**: https://mafalgai.com (deploy from main)" >> $GITHUB_STEP_SUMMARY
           echo "**Branch**: ${{ github.ref_name }}" >> $GITHUB_STEP_SUMMARY
