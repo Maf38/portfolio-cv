@@ -152,4 +152,23 @@ describe('HeaderComponent', () => {
       expect(component.cvDownloadRequested.emit).toHaveBeenCalledWith('en');
     });
   });
+
+  describe('Version Info', () => {
+    it('should have version property', () => {
+      expect(component.version).toBeDefined();
+      expect(typeof component.version).toBe('string');
+    });
+
+    it('should have buildDate property', () => {
+      expect(component.buildDate).toBeDefined();
+      expect(component.buildDate instanceof Date).toBe(true);
+    });
+
+    it('should render version info in template', () => {
+      const compiled = fixture.nativeElement as HTMLElement;
+      const versionInfo = compiled.querySelector('.version-info');
+      expect(versionInfo).toBeTruthy();
+      expect(versionInfo?.textContent).toContain('v');
+    });
+  });
 });
