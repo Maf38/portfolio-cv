@@ -27,11 +27,11 @@
 ```json
 {
   "email": "gaimafal@gmail.com",
-  "phone": "+33 6 70 16 05 17",
+  "phone": "06 XX XX XX X7",
   "github": "https://github.com/[username]",
   "linkedin": "https://linkedin.com/in/[username]",
   "website": "https://[username].github.io/portfolio-cv",
-  "address": "53A rue Pierre Semard, 38000 Grenoble, France",
+  "address": "rue Pierre Semard, 38000 Grenoble, France",
   "location": "Grenoble, France"
 }
 ```
