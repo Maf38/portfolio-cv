@@ -354,6 +354,15 @@ html {
       height: 0.75rem;
     }
   }
+
+  // Medium logos (25% larger than base - for logos with more detail)
+  &.medium {
+    height: 2.5rem; // 25% larger than base 2rem
+
+    @media (max-width: 640px) {
+      height: 2.2rem;
+    }
+  }
 }
 
 .experience-details {
