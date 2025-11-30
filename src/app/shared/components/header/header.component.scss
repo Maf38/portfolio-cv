@@ -260,3 +260,11 @@
   letter-spacing: 0.05em;
   transition: background-color 0.3s ease;
 }
+
+// Version info
+.version-info {
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  color: #64748b; // slate-500
+  letter-spacing: 0.025em;
+}
