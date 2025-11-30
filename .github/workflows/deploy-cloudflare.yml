@@ -40,8 +40,10 @@ jobs:
 
       - name: Summary
         run: |
+          VERSION=$(node -p "require('./package.json').version")
           echo "### ✅ Cloudflare Deployment Successful" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Version**: v${VERSION}" >> $GITHUB_STEP_SUMMARY
           echo "**Production URL**: https://mafalgai.com" >> $GITHUB_STEP_SUMMARY
           echo "**Pages URL**: https://portfolio-cv-dx0.pages.dev" >> $GITHUB_STEP_SUMMARY
           echo "**Branch**: ${{ github.ref_name }}" >> $GITHUB_STEP_SUMMARY
