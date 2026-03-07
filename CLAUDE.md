@@ -54,6 +54,21 @@ Push → Lint → Tests → SonarQube → Build → Deploy GitHub Pages
     Blocked si Quality Gate fail
 ```
 
+### Conversion de logos (JPG/PNG → SVG monochrome)
+
+**Outil** : `potrace` + `ImageMagick`
+**Commande** :
+```bash
+# 1. Convertir en bitmap noir/blanc, trimmer les bords
+convert input.jpg -colorspace Gray -threshold 50% -trim +repage output.pbm
+
+# 2. Tracer en SVG vectoriel
+potrace output.pbm -s -o logo.svg --flat --turdsize 10
+
+# 3. Changer le fill color en slate-400 (#94a3b8) dans le SVG
+```
+**Convention** : Tous les logos d'entreprise sont en monochrome `fill="#94a3b8"` (Tailwind slate-400), nommés `*-mono.svg` dans `public/assets/images/logos/`.
+
 ## Contenu du Portfolio
 
 ### Parcours Professionnel (6 ans)

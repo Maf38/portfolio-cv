@@ -114,3 +114,7 @@ Lint ──► Test + Coverage ──► SonarQube Quality Gate ──► Build
 - **Prettier**: Enforced via pre-commit hooks (Husky)
 - **Conventional Commits**: Enforced via CommitLint
 - **Coverage thresholds**: 50% statements, 35% branches, 30% functions, 50% lines
+
+## Tools
+
+- **Logo SVG conversion**: Company logos are converted from JPG/PNG to monochrome SVG using [potrace](http://potrace.sourceforge.net/) + ImageMagick (`convert img.jpg -colorspace Gray -threshold 50% -trim +repage out.pbm && potrace out.pbm -s -o logo.svg --flat`), then fill color is changed to `#94a3b8` (Tailwind slate-400)
