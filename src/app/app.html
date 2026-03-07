@@ -62,8 +62,27 @@
                 <div class="experience-period-container">
                   <span class="experience-period">{{ exp.duration }}</span>
 
+                  <!-- ANR: Single logo -->
+                  @if (exp.company === 'ANR') {
+                    <div class="company-logos">
+                      <a
+                        href="https://anr.fr"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="ANR"
+                        title="ANR - Agence Nationale de la Recherche"
+                      >
+                        <img
+                          src="assets/images/logos/anr-logo-mono.svg"
+                          alt="ANR"
+                          class="company-logo large"
+                        />
+                      </a>
+                    </div>
+                  }
+
                   <!-- Inetum - CEA: Two logos side by side -->
-                  @if (exp.company === 'Inetum - CEA') {
+                  @else if (exp.company === 'Inetum - CEA') {
                     <div class="company-logos">
                       <a
                         href="https://inetum.com"
