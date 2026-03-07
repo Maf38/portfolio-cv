@@ -62,8 +62,40 @@
                 <div class="experience-period-container">
                   <span class="experience-period">{{ exp.duration }}</span>
 
+                  <!-- Inetum - ANR: Two logos side by side -->
+                  @if (exp.company === 'Inetum - ANR') {
+                    <div class="company-logos">
+                      <a
+                        href="https://inetum.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Inetum"
+                        title="Inetum"
+                      >
+                        <img
+                          src="assets/images/logos/inetum-logo-mono.svg"
+                          alt="Inetum"
+                          class="company-logo large"
+                        />
+                      </a>
+                      <a
+                        href="https://anr.fr"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Agence Nationale de la Recherche"
+                        title="Agence Nationale de la Recherche"
+                      >
+                        <img
+                          src="assets/images/logos/anr-logo-mono.svg"
+                          alt="ANR"
+                          class="company-logo small"
+                        />
+                      </a>
+                    </div>
+                  }
+
                   <!-- Inetum - CEA: Two logos side by side -->
-                  @if (exp.company === 'Inetum - CEA') {
+                  @else if (exp.company === 'Inetum - CEA') {
                     <div class="company-logos">
                       <a
                         href="https://inetum.com"
@@ -803,6 +835,162 @@
                     <li class="project-tech-item">OxyPlot</li>
                     <li class="project-tech-item">Binance.Net</li>
                     <li class="project-tech-item">MVVM</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ivey Poker Bot -->
+          <div class="project-card">
+            <div class="project-content">
+              <div class="project-header">
+                <div class="project-links-left">
+                  <a
+                    href="https://github.com/MafLabs38/ivey-poker-bot"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub (Private)"
+                    title="Private Repository"
+                  >
+                    <img
+                      src="assets/images/logos/github-private-mono.svg"
+                      alt="GitHub Private"
+                      class="project-icon"
+                    />
+                  </a>
+                </div>
+                <div class="project-info">
+                  <h3 class="project-title">
+                    <a
+                      href="https://github.com/MafLabs38/ivey-poker-bot"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="project-link"
+                    >
+                      Ivey Poker Bot
+                    </a>
+                    <span class="project-status-badge">In Progress</span>
+                  </h3>
+                  <p class="project-description">
+                    AI-powered autonomous poker bot with universal vision (OCR/YOLO). Captures the
+                    screen, detects cards via YOLOv8, calculates probabilities and recommends (or
+                    executes) optimal actions. Three modes: observer (HUD), semi-auto, and fully
+                    autonomous. Built-in player tracker with VPIP/PFR/AF/3Bet stats.
+                  </p>
+                  <ul class="project-tech-list">
+                    <li class="project-tech-item">Python</li>
+                    <li class="project-tech-item">YOLOv8</li>
+                    <li class="project-tech-item">Tesseract OCR</li>
+                    <li class="project-tech-item">FastAPI</li>
+                    <li class="project-tech-item">SQLite</li>
+                    <li class="project-tech-item">Docker</li>
+                    <li class="project-tech-item">Tkinter HUD</li>
+                    <li class="project-tech-item">uv</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Oter IPTV -->
+          <div class="project-card">
+            <div class="project-content">
+              <div class="project-header">
+                <div class="project-links-left">
+                  <a
+                    href="https://github.com/MafLabs38/oter-iptv"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub (Private)"
+                    title="Private Repository"
+                  >
+                    <img
+                      src="assets/images/logos/github-private-mono.svg"
+                      alt="GitHub Private"
+                      class="project-icon"
+                    />
+                  </a>
+                </div>
+                <div class="project-info">
+                  <h3 class="project-title">
+                    <a
+                      href="https://github.com/MafLabs38/oter-iptv"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="project-link"
+                    >
+                      Oter IPTV
+                    </a>
+                    <span class="project-status-badge">In Progress</span>
+                  </h3>
+                  <p class="project-description">
+                    Modern IPTV player for Windows with Fluent Design. Supports M3U and Xtream Codes
+                    API, automatic metadata enrichment via TMDb, smart playback resume, offline
+                    downloads, and adaptive buffering for optimal streaming performance.
+                  </p>
+                  <ul class="project-tech-list">
+                    <li class="project-tech-item">C# 12</li>
+                    <li class="project-tech-item">WinUI 3</li>
+                    <li class="project-tech-item">.NET 9</li>
+                    <li class="project-tech-item">MVVM</li>
+                    <li class="project-tech-item">SQLite</li>
+                    <li class="project-tech-item">EF Core</li>
+                    <li class="project-tech-item">LibVLCSharp</li>
+                    <li class="project-tech-item">TMDb API</li>
+                    <li class="project-tech-item">MSIX</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Claude Visual Code -->
+          <div class="project-card">
+            <div class="project-content">
+              <div class="project-header">
+                <div class="project-links-left">
+                  <a
+                    href="https://github.com/MafLabs38/claude-visual-code"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub (Private)"
+                    title="Private Repository"
+                  >
+                    <img
+                      src="assets/images/logos/github-private-mono.svg"
+                      alt="GitHub Private"
+                      class="project-icon"
+                    />
+                  </a>
+                </div>
+                <div class="project-info">
+                  <h3 class="project-title">
+                    <a
+                      href="https://github.com/MafLabs38/claude-visual-code"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="project-link"
+                    >
+                      Claude Visual Code
+                    </a>
+                    <span class="project-status-badge">In Progress</span>
+                  </h3>
+                  <p class="project-description">
+                    Voice-first mobile client for Claude Code. Dictate your intent from your Android
+                    phone, watch Claude work in real-time, browse files, and use the terminal.
+                    Includes a companion VS Code extension (CVC Voice Injector) for bridging voice
+                    input to Claude Code in code-server.
+                  </p>
+                  <ul class="project-tech-list">
+                    <li class="project-tech-item">Flutter</li>
+                    <li class="project-tech-item">Dart</li>
+                    <li class="project-tech-item">code-server</li>
+                    <li class="project-tech-item">WebView</li>
+                    <li class="project-tech-item">STT</li>
+                    <li class="project-tech-item">VS Code API</li>
+                    <li class="project-tech-item">JavaScript</li>
+                    <li class="project-tech-item">SSH</li>
                   </ul>
                 </div>
               </div>

@@ -82,3 +82,4 @@ photo-cv/
 # Playwright test files (temporary/debug)
 e2e/*-debug.spec.ts
 e2e/*-test.spec.ts
+import-image/

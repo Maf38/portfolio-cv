@@ -41,6 +41,30 @@
   },
   "experience": [
     {
+      "id": "exp-0",
+      "company": "Inetum - ANR",
+      "companyUrl": "https://anr.fr",
+      "via": "Inetum",
+      "position": ".NET Developer",
+      "location": "Lille",
+      "startDate": "2026-01",
+      "endDate": null,
+      "current": true,
+      "duration": "Jan 2026 — Present",
+      "type": "Mission",
+      "description": "Application maintenance (TMA) on the SIM platform, a tool for managing calls for proposals (appels à projets). Performing evolution and corrective maintenance on a legacy ASP.NET WebForms application within the Microsoft ecosystem.",
+      "technologies": [
+        "ASP.NET WebForms",
+        ".NET Framework",
+        "SharePoint",
+        "JavaScript",
+        "SQL Server",
+        "Dapper",
+        "GitHub Copilot",
+        "Jira"
+      ]
+    },
+    {
       "id": "exp-1",
       "company": "Inetum - CEA",
       "companyUrl": "https://www.cea.fr",
@@ -48,9 +72,9 @@
       "position": ".NET Developer",
       "location": "Grenoble",
       "startDate": "2023-04",
-      "endDate": null,
-      "current": true,
-      "duration": "Apr 2023 — Present",
+      "endDate": "2025-12",
+      "current": false,
+      "duration": "Apr 2023 — Dec 2025",
       "type": "CDI via ESN",
       "description": "Managing a multi-application maintenance portfolio of 70+ applications, balancing build and run operations across a web-focused Microsoft ecosystem. Working in a modern development environment using CI/CD with Azure DevOps, SonarQube quality gates, and comprehensive unit testing. Working with both legacy (.NET 4.8, Razor, Kendo UI) and modern (.NET 8) stacks. Participating in the SI modernization: SQL Server migration from 2014 to 2019 Cluster, SeriLog/ELK.",
       "technologies": [
@@ -615,6 +639,131 @@
       "tags": ["Blockchain", "Solana", "Angular", "NestJS", "DevOps", "Microservices"]
     },
     {
+      "id": "project-ivey-poker-bot",
+      "name": "Ivey Poker Bot",
+      "type": "Projet personnel",
+      "status": "En développement",
+      "startDate": "2025-12",
+      "endDate": null,
+      "description": "Bot de poker autonome piloté par IA avec vision universelle (OCR/YOLO). Fonctionne sur n'importe quelle table de poker visible à l'écran : capture d'écran, détection des cartes via YOLOv8, calcul des probabilités et recommandation (ou exécution) des actions optimales. Trois modes : observateur (HUD), semi-automatique et autonome.",
+      "role": "Architecte & Développeur",
+      "team": "Solo",
+      "achievements": [
+        "Vision universelle via YOLOv8 (GPU) + Tesseract OCR pour les montants",
+        "Tracker de joueurs avec statistiques VPIP/PFR/AF/3Bet en SQLite",
+        "HUD overlay transparent avec recommandations en temps réel",
+        "Architecture Docker complète avec Xvfb + Chromium + VNC",
+        "Calcul d'équité Monte Carlo via eval7 (Cython)"
+      ],
+      "challenges": [
+        "Détection fiable des cartes sur n'importe quelle interface poker",
+        "Latence minimale pour les décisions en temps réel",
+        "Sécurité et intégration GPU distant (Unraid RTX 2070)",
+        "Override manuel instantané via F12 pour garder le contrôle"
+      ],
+      "technologies": [
+        "Python 3.11+",
+        "YOLOv8 (ultralytics)",
+        "Tesseract 5 (pytesseract)",
+        "FastAPI",
+        "eval7 (Monte Carlo)",
+        "SQLite3",
+        "Tkinter",
+        "Docker",
+        "Xvfb",
+        "uv"
+      ],
+      "metrics": null,
+      "links": {
+        "github": "https://github.com/MafLabs38/ivey-poker-bot",
+        "demo": null
+      },
+      "images": [],
+      "featured": true,
+      "tags": ["IA", "Vision", "YOLOv8", "OCR", "Python", "Docker", "Poker"]
+    },
+    {
+      "id": "project-oter-iptv",
+      "name": "Oter IPTV",
+      "type": "Projet personnel",
+      "status": "En développement",
+      "startDate": "2026-02",
+      "endDate": null,
+      "description": "Modern IPTV player for Windows (Microsoft Store). Supports M3U and Xtream Codes API, automatic metadata enrichment via TMDb, smart playback resume, offline downloads, and adaptive buffering for optimal streaming performance with limited bandwidth providers.",
+      "role": "Développeur",
+      "team": "Solo",
+      "achievements": [
+        "Modern Fluent Design interface with WinUI 3",
+        "M3U and Xtream Codes API support",
+        "Automatic metadata enrichment via TMDb API",
+        "Adaptive buffering for optimal streaming"
+      ],
+      "challenges": [
+        "Video playback performance optimization with LibVLCSharp",
+        "MVVM architecture with CommunityToolkit.Mvvm",
+        "Microsoft Store packaging with MSIX"
+      ],
+      "technologies": [
+        "C# 12",
+        "WinUI 3",
+        ".NET 9",
+        "MVVM",
+        "SQLite",
+        "EF Core",
+        "LibVLCSharp",
+        "TMDb API",
+        "MSIX"
+      ],
+      "metrics": null,
+      "links": {
+        "github": "https://github.com/MafLabs38/oter-iptv",
+        "demo": null
+      },
+      "images": [],
+      "featured": false,
+      "tags": ["WinUI 3", ".NET 9", "IPTV", "MVVM", "Desktop"]
+    },
+    {
+      "id": "project-claude-visual-code",
+      "name": "Claude Visual Code",
+      "type": "Projet personnel",
+      "status": "En développement",
+      "startDate": "2026-02",
+      "endDate": null,
+      "description": "Voice-first mobile client for Claude Code. Talk to Claude Code from your phone: dictate your intent, watch Claude work in real-time, browse files, and use the terminal — all from your Android device. Includes a companion VS Code extension (CVC Voice Injector) for bridging voice input to Claude Code.",
+      "role": "Développeur",
+      "team": "Solo",
+      "achievements": [
+        "WebView integration with CSS/JS injection for mobile-optimized code-server",
+        "Voice input with STT transcription sent to Claude Code",
+        "Real-time notifications when Claude finishes tasks",
+        "Companion VS Code extension for voice injection bridge"
+      ],
+      "challenges": [
+        "Mobile-optimized interface for code-server via WebView injection",
+        "Voice-to-code pipeline with STT integration",
+        "Multi-device simultaneous connection support"
+      ],
+      "technologies": [
+        "Flutter",
+        "Dart",
+        "code-server",
+        "JavaScript",
+        "WebView",
+        "STT",
+        "SSH",
+        "VS Code API"
+      ],
+      "metrics": null,
+      "links": {
+        "github": "https://github.com/MafLabs38/claude-visual-code",
+        "demo": null
+      },
+      "images": [],
+      "featured": false,
+      "tags": ["Flutter", "Mobile", "AI", "Voice", "VS Code"]
+    },
+    {
       "id": "project-portfolio",
       "name": "Portfolio CV Angular",
       "type": "Projet personnel",
@@ -718,7 +867,7 @@
   ],
   "meta": {
     "version": "2.0.0",
-    "lastUpdated": "2025-11-14",
+    "lastUpdated": "2026-03-07",
     "source": "Extraction exacte de app.html",
     "totalExperience": {
       "industry": 13,
