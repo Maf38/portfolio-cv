@@ -42,10 +42,10 @@
   "experience": [
     {
       "id": "exp-0",
-      "company": "ANR",
-      "companyUrl": null,
-      "via": null,
-      "position": ".NET Developer (TMA)",
+      "company": "Inetum - ANR",
+      "companyUrl": "https://anr.fr",
+      "via": "Inetum",
+      "position": ".NET Developer",
       "location": "Lille",
       "startDate": "2026-01",
       "endDate": null,
@@ -59,6 +59,7 @@
         "SharePoint",
         "JavaScript",
         "SQL Server",
+        "Dapper",
         "GitHub Copilot",
         "Jira"
       ]

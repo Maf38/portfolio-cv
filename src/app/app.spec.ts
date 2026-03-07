@@ -105,12 +105,12 @@ describe('App', () => {
     expect(educationItems.length).toBeGreaterThan(0); // Should have education entries
   });
 
-  it('should display .NET Developer (TMA) position for current role', () => {
+  it('should display .NET Developer position for current role', () => {
     const fixture = TestBed.createComponent(App);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
     const position = compiled.querySelector('.experience-position');
-    expect(position?.textContent).toBe('.NET Developer (TMA)');
+    expect(position?.textContent).toBe('.NET Developer');
   });
 
   it('should display technology pills in experience section', () => {

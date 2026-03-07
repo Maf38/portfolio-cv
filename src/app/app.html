@@ -62,8 +62,40 @@
                 <div class="experience-period-container">
                   <span class="experience-period">{{ exp.duration }}</span>
 
+                  <!-- Inetum - ANR: Two logos side by side -->
+                  @if (exp.company === 'Inetum - ANR') {
+                    <div class="company-logos">
+                      <a
+                        href="https://inetum.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Inetum"
+                        title="Inetum"
+                      >
+                        <img
+                          src="assets/images/logos/inetum-logo-mono.svg"
+                          alt="Inetum"
+                          class="company-logo large"
+                        />
+                      </a>
+                      <a
+                        href="https://anr.fr"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Agence Nationale de la Recherche"
+                        title="Agence Nationale de la Recherche"
+                      >
+                        <img
+                          src="assets/images/logos/anr-logo-mono.svg"
+                          alt="ANR"
+                          class="company-logo small"
+                        />
+                      </a>
+                    </div>
+                  }
+
                   <!-- Inetum - CEA: Two logos side by side -->
-                  @if (exp.company === 'Inetum - CEA') {
+                  @else if (exp.company === 'Inetum - CEA') {
                     <div class="company-logos">
                       <a
                         href="https://inetum.com"
