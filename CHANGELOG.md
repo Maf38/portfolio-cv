@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/Maf38/portfolio-cv/compare/v1.1.0...v1.2.0) (2026-09-13)
+
+
+### Features
+
+* add company logo for anr and rewrite readme ([a96b20a](https://github.com/Maf38/portfolio-cv/commit/a96b20ac3571ca3c0a31942b4c65dd7aae10c4dd))
+* update anr mission narrative, ai-augmented positioning, and new projects ([b6c3e33](https://github.com/Maf38/portfolio-cv/commit/b6c3e33772655c6f2b118efb648ab62ed1b7ac44))
+
+
+### Bug Fixes
+
+* format knowsAbout array for Prettier compliance ([a44cf34](https://github.com/Maf38/portfolio-cv/commit/a44cf3472ae4bed64d65ede75f7186665f98fa19))
+* improve anr experience, logo, and cv data ([41f4c9d](https://github.com/Maf38/portfolio-cv/commit/41f4c9dcfbe5248ef2ad2a46fb807be593c1e980))
+* update test expectation for ANR current role position ([143f9a4](https://github.com/Maf38/portfolio-cv/commit/143f9a42e39bf5751f6e29606b03b1a92dcaa8af))
+
 ## 1.1.0 (2026-03-07)
 
 

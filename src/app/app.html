@@ -20,30 +20,30 @@
 
         <div class="about-content">
           <p class="about-paragraph">
-            Currently working as a .NET Developer on a multi-application maintenance team managing
-            70+ applications, I split my time between build and run operations across a web-focused
-            application portfolio. My daily environment revolves around Microsoft technologies:
-            Windows Server, IIS, Azure DevOps for CI/CD pipelines, and SQL Server 2014/2019 for
-            database management.
+            Currently working as a .NET Developer at Inetum, on a maintenance mission for the ANR
+            (Agence Nationale de la Recherche) on the SIM platform — a legacy ASP.NET WebForms
+            application used to manage national research grant calls (appels à projets). The stack
+            itself is intentionally conservative, but the way I work on it isn't: GitHub Copilot and
+            AI coding assistants are now part of my daily workflow, and that's reshaping the job
+            itself.
           </p>
 
           <p class="about-paragraph">
-            I'm a versatile developer who has experimented with various technologies throughout my
-            career. I have a real passion for web technologies and I'm thrilled to have made a
-            professional shift that allows me to practice them daily. However, I remain
-            fundamentally a backend-oriented developer. My industrial background naturally exposed
-            me to Lean concepts, and I deeply appreciate Agile work organization. Over time, I've
-            also been increasingly drawn to Linux systems, containerization, and Node.js ecosystem,
-            as these perfectly align with the projects I build on a daily basis. My goal is
-            naturally to evolve professionally within these technologies to further enhance my
-            skills.
+            I'm increasingly acting as an orchestrator rather than a line-by-line coder: framing the
+            problem, reviewing and steering AI-generated code, enforcing architecture and quality
+            standards, and making the calls that still require judgment and business context. I
+            explore the same agentic approach in my personal projects with Claude Code, which keeps
+            this practice sharp outside of legacy-stack constraints.
           </p>
 
           <p class="about-paragraph">
-            My objective is to build robust, maintainable, and automated software systems,
-            anticipating the evolution of development practices toward more artificial intelligence
-            and automation. I don't just aim to write code that works, but to create professional
-            architectures that will stand the test of time and team changes.
+            To broaden this profile, I started an Expert DevOps training (OpenClassrooms, RNCP Level
+            7) at the end of June 2026, covering Docker, Kubernetes, CI/CD, and
+            Infrastructure-as-Code (Terraform, Ansible) — building on my exposure to the Azure
+            DevOps and SonarQube tooling used during my previous mission at CEA. My industrial
+            background (13 years at ST Microelectronics) keeps me grounded in Lean and quality
+            discipline, and I'm currently open to new opportunities where this AI-augmented,
+            DevOps-oriented profile can add value.
           </p>
         </div>
       </section>
@@ -330,6 +330,416 @@
         </div>
 
         <div class="projects-list">
+          <!-- Dictée universelle (voice-to-text-dev) -->
+          <div class="project-card">
+            <div class="project-content">
+              <div class="project-header">
+                <div class="project-links-left">
+                  <a
+                    href="https://github.com/MafLabs38/voice-to-text-dev"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub"
+                  >
+                    <img
+                      src="assets/images/logos/github-mono.svg"
+                      alt="GitHub"
+                      class="project-icon"
+                    />
+                  </a>
+                </div>
+                <div class="project-info">
+                  <h3 class="project-title">
+                    <a
+                      href="https://github.com/MafLabs38/voice-to-text-dev"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="project-link"
+                    >
+                      Dictée universelle
+                    </a>
+                  </h3>
+                  <p class="project-description">
+                    System-wide voice dictation for Windows: a global hotkey or mouse button starts
+                    recording from any application, transcribes via the OpenAI API, and auto-pastes
+                    the text into the focused field. Encrypted API key storage (DPAPI), floating
+                    overlay, MIT licensed with signed GitHub releases.
+                  </p>
+                  <ul class="project-tech-list">
+                    <li class="project-tech-item">.NET 10</li>
+                    <li class="project-tech-item">WPF</li>
+                    <li class="project-tech-item">NAudio</li>
+                    <li class="project-tech-item">OpenAI API</li>
+                    <li class="project-tech-item">Inno Setup</li>
+                    <li class="project-tech-item">GitHub Actions</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- BioRoutine -->
+          <div class="project-card">
+            <div class="project-content">
+              <div class="project-header">
+                <div class="project-links-left">
+                  <a
+                    href="https://github.com/MafLabs38/bio-routine"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub (Private)"
+                    title="Private Repository"
+                  >
+                    <img
+                      src="assets/images/logos/github-private-mono.svg"
+                      alt="GitHub Private"
+                      class="project-icon"
+                    />
+                  </a>
+                </div>
+                <div class="project-info">
+                  <h3 class="project-title">
+                    <a
+                      href="https://github.com/MafLabs38/bio-routine"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="project-link"
+                    >
+                      BioRoutine
+                    </a>
+                  </h3>
+                  <p class="project-description">
+                    Personal health and wellness tracker used daily, centralizing Huawei Health and
+                    Strava data with manual nutrition logging into a unified dashboard, augmented by
+                    a voice-driven AI assistant (Claude) for managing routines and a calendar.
+                    Includes a companion Android app (HC Webhook, published on Google Play) bridging
+                    Health Connect sources to the backend via webhooks, and n8n workflows for OAuth2
+                    token refresh and automated syncs.
+                  </p>
+                  <ul class="project-tech-list">
+                    <li class="project-tech-item">React Native</li>
+                    <li class="project-tech-item">Next.js</li>
+                    <li class="project-tech-item">Fastify</li>
+                    <li class="project-tech-item">Kotlin / Jetpack Compose</li>
+                    <li class="project-tech-item">n8n</li>
+                    <li class="project-tech-item">Claude API</li>
+                    <li class="project-tech-item">OAuth2</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Claude Visual Code -->
+          <div class="project-card">
+            <div class="project-content">
+              <div class="project-header">
+                <div class="project-links-left">
+                  <a
+                    href="https://github.com/MafLabs38/claude-visual-code"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub (Private)"
+                    title="Private Repository"
+                  >
+                    <img
+                      src="assets/images/logos/github-private-mono.svg"
+                      alt="GitHub Private"
+                      class="project-icon"
+                    />
+                  </a>
+                </div>
+                <div class="project-info">
+                  <h3 class="project-title">
+                    <a
+                      href="https://github.com/MafLabs38/claude-visual-code"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="project-link"
+                    >
+                      Claude Visual Code
+                    </a>
+                  </h3>
+                  <p class="project-description">
+                    Voice-first mobile client for Claude Code. Dictate your intent from your Android
+                    phone, watch Claude work in real-time, browse files, and use the terminal.
+                    Includes a companion VS Code extension (CVC Voice Injector) for bridging voice
+                    input to Claude Code in code-server.
+                  </p>
+                  <ul class="project-tech-list">
+                    <li class="project-tech-item">Flutter</li>
+                    <li class="project-tech-item">Dart</li>
+                    <li class="project-tech-item">code-server</li>
+                    <li class="project-tech-item">WebView</li>
+                    <li class="project-tech-item">STT</li>
+                    <li class="project-tech-item">VS Code API</li>
+                    <li class="project-tech-item">JavaScript</li>
+                    <li class="project-tech-item">SSH</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Oter IPTV -->
+          <div class="project-card">
+            <div class="project-content">
+              <div class="project-header">
+                <div class="project-links-left">
+                  <a
+                    href="https://github.com/MafLabs38/oter-iptv"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub (Private)"
+                    title="Private Repository"
+                  >
+                    <img
+                      src="assets/images/logos/github-private-mono.svg"
+                      alt="GitHub Private"
+                      class="project-icon"
+                    />
+                  </a>
+                </div>
+                <div class="project-info">
+                  <h3 class="project-title">
+                    <a
+                      href="https://github.com/MafLabs38/oter-iptv"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="project-link"
+                    >
+                      Oter IPTV
+                    </a>
+                  </h3>
+                  <p class="project-description">
+                    Modern IPTV player for Windows with Fluent Design. Supports M3U and Xtream Codes
+                    API, automatic metadata enrichment via TMDb, smart playback resume, offline
+                    downloads, and adaptive buffering for optimal streaming performance.
+                  </p>
+                  <ul class="project-tech-list">
+                    <li class="project-tech-item">C# 12</li>
+                    <li class="project-tech-item">WinUI 3</li>
+                    <li class="project-tech-item">.NET 9</li>
+                    <li class="project-tech-item">MVVM</li>
+                    <li class="project-tech-item">SQLite</li>
+                    <li class="project-tech-item">EF Core</li>
+                    <li class="project-tech-item">LibVLCSharp</li>
+                    <li class="project-tech-item">TMDb API</li>
+                    <li class="project-tech-item">MSIX</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ivey Poker Bot -->
+          <div class="project-card">
+            <div class="project-content">
+              <div class="project-header">
+                <div class="project-links-left">
+                  <a
+                    href="https://github.com/MafLabs38/ivey-poker-bot"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub (Private)"
+                    title="Private Repository"
+                  >
+                    <img
+                      src="assets/images/logos/github-private-mono.svg"
+                      alt="GitHub Private"
+                      class="project-icon"
+                    />
+                  </a>
+                </div>
+                <div class="project-info">
+                  <h3 class="project-title">
+                    <a
+                      href="https://github.com/MafLabs38/ivey-poker-bot"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="project-link"
+                    >
+                      Ivey Poker Bot
+                    </a>
+                    <span class="project-status-badge">Paused</span>
+                  </h3>
+                  <p class="project-description">
+                    AI-powered autonomous poker bot with universal vision (OCR/YOLO). Captures the
+                    screen, detects cards via YOLOv8, calculates probabilities and recommends (or
+                    executes) optimal actions. Three modes: observer (HUD), semi-auto, and fully
+                    autonomous. Built-in player tracker with VPIP/PFR/AF/3Bet stats.
+                  </p>
+                  <ul class="project-tech-list">
+                    <li class="project-tech-item">Python</li>
+                    <li class="project-tech-item">YOLOv8</li>
+                    <li class="project-tech-item">Tesseract OCR</li>
+                    <li class="project-tech-item">FastAPI</li>
+                    <li class="project-tech-item">SQLite</li>
+                    <li class="project-tech-item">Docker</li>
+                    <li class="project-tech-item">Tkinter HUD</li>
+                    <li class="project-tech-item">uv</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Portfolio CV -->
+          <div class="project-card">
+            <div class="project-content">
+              <div class="project-header">
+                <div class="project-links-left">
+                  <a
+                    href="https://github.com/Maf38/portfolio-cv"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub"
+                  >
+                    <img
+                      src="assets/images/logos/github-mono.svg"
+                      alt="GitHub"
+                      class="project-icon"
+                    />
+                  </a>
+                </div>
+                <div class="project-info">
+                  <h3 class="project-title">
+                    <a
+                      href="https://github.com/Maf38/portfolio-cv"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="project-link"
+                    >
+                      Portfolio CV
+                    </a>
+                  </h3>
+                  <p class="project-description">
+                    This portfolio website built with Angular 17 standalone components and Tailwind
+                    CSS. Design inspired by
+                    <a
+                      href="https://brittanychiang.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="project-link"
+                      >brittanychiang.com</a
+                    >
+                    (MIT License) — a good exercise in respecting design principles while adding my
+                    personal touch.
+                  </p>
+                  <ul class="project-tech-list">
+                    <li class="project-tech-item">Angular 17</li>
+                    <li class="project-tech-item">Tailwind CSS</li>
+                    <li class="project-tech-item">TypeScript</li>
+                    <li class="project-tech-item">GitHub Pages</li>
+                    <li class="project-tech-item">GitHub Actions</li>
+                    <li class="project-tech-item">SonarQube</li>
+                    <li class="project-tech-item">Jira</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Voice in Terminal -->
+          <div class="project-card">
+            <div class="project-content">
+              <div class="project-header">
+                <div class="project-links-left">
+                  <a
+                    href="https://github.com/Maf38/voice-in-terminal"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub"
+                  >
+                    <img
+                      src="assets/images/logos/github-mono.svg"
+                      alt="GitHub"
+                      class="project-icon"
+                    />
+                  </a>
+                </div>
+                <div class="project-info">
+                  <h3 class="project-title">
+                    <a
+                      href="https://github.com/Maf38/voice-in-terminal"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="project-link"
+                    >
+                      Voice in Terminal
+                    </a>
+                  </h3>
+                  <p class="project-description">
+                    VSCode extension for voice commands using local Whisper.cpp or OpenAI API.
+                    Cross-platform support with SoX integration.
+                  </p>
+                  <ul class="project-tech-list">
+                    <li class="project-tech-item">TypeScript</li>
+                    <li class="project-tech-item">VSCode API</li>
+                    <li class="project-tech-item">Whisper.cpp</li>
+                    <li class="project-tech-item">Node.js</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Wednesday Memecoin -->
+          <div class="project-card">
+            <div class="project-content">
+              <div class="project-header">
+                <div class="project-links-left">
+                  <a
+                    href="https://github.com/Maf38/wednesday-app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub"
+                  >
+                    <img
+                      src="assets/images/logos/github-mono.svg"
+                      alt="GitHub"
+                      class="project-icon"
+                    />
+                  </a>
+                  <a
+                    href="https://wednesdaysolana.art/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Live Site"
+                  >
+                    <img
+                      src="assets/images/logos/www-mono.svg"
+                      alt="Website"
+                      class="project-icon"
+                    />
+                  </a>
+                </div>
+                <div class="project-info">
+                  <h3 class="project-title">
+                    <a
+                      href="https://wednesdaysolana.art/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="project-link"
+                    >
+                      Wednesday Memecoin
+                    </a>
+                  </h3>
+                  <p class="project-description">
+                    Memecoin website 100% AI-assisted POC. Gothic horror theme with GSAP animations,
+                    EmulatorJS game integration, and Docker deployment.
+                  </p>
+                  <ul class="project-tech-list">
+                    <li class="project-tech-item">Angular 19</li>
+                    <li class="project-tech-item">GSAP</li>
+                    <li class="project-tech-item">Docker</li>
+                    <li class="project-tech-item">Solana</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <!-- IFTTT Trading Platform (Featured with Tree Structure) -->
           <div class="project-card">
             <div class="project-content">
@@ -591,162 +1001,6 @@
             </div>
           </div>
 
-          <!-- Portfolio CV -->
-          <div class="project-card">
-            <div class="project-content">
-              <div class="project-header">
-                <div class="project-links-left">
-                  <a
-                    href="https://github.com/Maf38/portfolio-cv"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="GitHub"
-                  >
-                    <img
-                      src="assets/images/logos/github-mono.svg"
-                      alt="GitHub"
-                      class="project-icon"
-                    />
-                  </a>
-                </div>
-                <div class="project-info">
-                  <h3 class="project-title">
-                    <a
-                      href="https://github.com/Maf38/portfolio-cv"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="project-link"
-                    >
-                      Portfolio CV
-                    </a>
-                  </h3>
-                  <p class="project-description">
-                    This portfolio website built with Angular 17 standalone components and Tailwind
-                    CSS. Design inspired by
-                    <a
-                      href="https://brittanychiang.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="project-link"
-                      >brittanychiang.com</a
-                    >
-                    (MIT License) — a good exercise in respecting design principles while adding my
-                    personal touch.
-                  </p>
-                  <ul class="project-tech-list">
-                    <li class="project-tech-item">Angular 17</li>
-                    <li class="project-tech-item">Tailwind CSS</li>
-                    <li class="project-tech-item">TypeScript</li>
-                    <li class="project-tech-item">GitHub Pages</li>
-                    <li class="project-tech-item">GitHub Actions</li>
-                    <li class="project-tech-item">SonarQube</li>
-                    <li class="project-tech-item">Jira</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Voice in Terminal -->
-          <div class="project-card">
-            <div class="project-content">
-              <div class="project-header">
-                <div class="project-links-left">
-                  <a
-                    href="https://github.com/Maf38/voice-in-terminal"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="GitHub"
-                  >
-                    <img
-                      src="assets/images/logos/github-mono.svg"
-                      alt="GitHub"
-                      class="project-icon"
-                    />
-                  </a>
-                </div>
-                <div class="project-info">
-                  <h3 class="project-title">
-                    <a
-                      href="https://github.com/Maf38/voice-in-terminal"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="project-link"
-                    >
-                      Voice in Terminal
-                    </a>
-                  </h3>
-                  <p class="project-description">
-                    VSCode extension for voice commands using local Whisper.cpp or OpenAI API.
-                    Cross-platform support with SoX integration.
-                  </p>
-                  <ul class="project-tech-list">
-                    <li class="project-tech-item">TypeScript</li>
-                    <li class="project-tech-item">VSCode API</li>
-                    <li class="project-tech-item">Whisper.cpp</li>
-                    <li class="project-tech-item">Node.js</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Wednesday Memecoin -->
-          <div class="project-card">
-            <div class="project-content">
-              <div class="project-header">
-                <div class="project-links-left">
-                  <a
-                    href="https://github.com/Maf38/wednesday-app"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="GitHub"
-                  >
-                    <img
-                      src="assets/images/logos/github-mono.svg"
-                      alt="GitHub"
-                      class="project-icon"
-                    />
-                  </a>
-                  <a
-                    href="https://wednesdaysolana.art/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Live Site"
-                  >
-                    <img
-                      src="assets/images/logos/www-mono.svg"
-                      alt="Website"
-                      class="project-icon"
-                    />
-                  </a>
-                </div>
-                <div class="project-info">
-                  <h3 class="project-title">
-                    <a
-                      href="https://wednesdaysolana.art/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="project-link"
-                    >
-                      Wednesday Memecoin
-                    </a>
-                  </h3>
-                  <p class="project-description">
-                    Memecoin website 100% AI-assisted POC. Gothic horror theme with GSAP animations,
-                    EmulatorJS game integration, and Docker deployment.
-                  </p>
-                  <ul class="project-tech-list">
-                    <li class="project-tech-item">Angular 19</li>
-                    <li class="project-tech-item">GSAP</li>
-                    <li class="project-tech-item">Docker</li>
-                    <li class="project-tech-item">Solana</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
           <!-- MiaWallaceBot -->
           <div class="project-card">
             <div class="project-content">
@@ -835,162 +1089,6 @@
                     <li class="project-tech-item">OxyPlot</li>
                     <li class="project-tech-item">Binance.Net</li>
                     <li class="project-tech-item">MVVM</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Ivey Poker Bot -->
-          <div class="project-card">
-            <div class="project-content">
-              <div class="project-header">
-                <div class="project-links-left">
-                  <a
-                    href="https://github.com/MafLabs38/ivey-poker-bot"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="GitHub (Private)"
-                    title="Private Repository"
-                  >
-                    <img
-                      src="assets/images/logos/github-private-mono.svg"
-                      alt="GitHub Private"
-                      class="project-icon"
-                    />
-                  </a>
-                </div>
-                <div class="project-info">
-                  <h3 class="project-title">
-                    <a
-                      href="https://github.com/MafLabs38/ivey-poker-bot"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="project-link"
-                    >
-                      Ivey Poker Bot
-                    </a>
-                    <span class="project-status-badge">In Progress</span>
-                  </h3>
-                  <p class="project-description">
-                    AI-powered autonomous poker bot with universal vision (OCR/YOLO). Captures the
-                    screen, detects cards via YOLOv8, calculates probabilities and recommends (or
-                    executes) optimal actions. Three modes: observer (HUD), semi-auto, and fully
-                    autonomous. Built-in player tracker with VPIP/PFR/AF/3Bet stats.
-                  </p>
-                  <ul class="project-tech-list">
-                    <li class="project-tech-item">Python</li>
-                    <li class="project-tech-item">YOLOv8</li>
-                    <li class="project-tech-item">Tesseract OCR</li>
-                    <li class="project-tech-item">FastAPI</li>
-                    <li class="project-tech-item">SQLite</li>
-                    <li class="project-tech-item">Docker</li>
-                    <li class="project-tech-item">Tkinter HUD</li>
-                    <li class="project-tech-item">uv</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Oter IPTV -->
-          <div class="project-card">
-            <div class="project-content">
-              <div class="project-header">
-                <div class="project-links-left">
-                  <a
-                    href="https://github.com/MafLabs38/oter-iptv"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="GitHub (Private)"
-                    title="Private Repository"
-                  >
-                    <img
-                      src="assets/images/logos/github-private-mono.svg"
-                      alt="GitHub Private"
-                      class="project-icon"
-                    />
-                  </a>
-                </div>
-                <div class="project-info">
-                  <h3 class="project-title">
-                    <a
-                      href="https://github.com/MafLabs38/oter-iptv"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="project-link"
-                    >
-                      Oter IPTV
-                    </a>
-                    <span class="project-status-badge">In Progress</span>
-                  </h3>
-                  <p class="project-description">
-                    Modern IPTV player for Windows with Fluent Design. Supports M3U and Xtream Codes
-                    API, automatic metadata enrichment via TMDb, smart playback resume, offline
-                    downloads, and adaptive buffering for optimal streaming performance.
-                  </p>
-                  <ul class="project-tech-list">
-                    <li class="project-tech-item">C# 12</li>
-                    <li class="project-tech-item">WinUI 3</li>
-                    <li class="project-tech-item">.NET 9</li>
-                    <li class="project-tech-item">MVVM</li>
-                    <li class="project-tech-item">SQLite</li>
-                    <li class="project-tech-item">EF Core</li>
-                    <li class="project-tech-item">LibVLCSharp</li>
-                    <li class="project-tech-item">TMDb API</li>
-                    <li class="project-tech-item">MSIX</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Claude Visual Code -->
-          <div class="project-card">
-            <div class="project-content">
-              <div class="project-header">
-                <div class="project-links-left">
-                  <a
-                    href="https://github.com/MafLabs38/claude-visual-code"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="GitHub (Private)"
-                    title="Private Repository"
-                  >
-                    <img
-                      src="assets/images/logos/github-private-mono.svg"
-                      alt="GitHub Private"
-                      class="project-icon"
-                    />
-                  </a>
-                </div>
-                <div class="project-info">
-                  <h3 class="project-title">
-                    <a
-                      href="https://github.com/MafLabs38/claude-visual-code"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="project-link"
-                    >
-                      Claude Visual Code
-                    </a>
-                    <span class="project-status-badge">In Progress</span>
-                  </h3>
-                  <p class="project-description">
-                    Voice-first mobile client for Claude Code. Dictate your intent from your Android
-                    phone, watch Claude work in real-time, browse files, and use the terminal.
-                    Includes a companion VS Code extension (CVC Voice Injector) for bridging voice
-                    input to Claude Code in code-server.
-                  </p>
-                  <ul class="project-tech-list">
-                    <li class="project-tech-item">Flutter</li>
-                    <li class="project-tech-item">Dart</li>
-                    <li class="project-tech-item">code-server</li>
-                    <li class="project-tech-item">WebView</li>
-                    <li class="project-tech-item">STT</li>
-                    <li class="project-tech-item">VS Code API</li>
-                    <li class="project-tech-item">JavaScript</li>
-                    <li class="project-tech-item">SSH</li>
                   </ul>
                 </div>
               </div>

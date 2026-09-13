@@ -27,10 +27,10 @@ describe('HeaderComponent', () => {
     expect(name?.textContent).toBe('Mafal Gai');
   });
 
-  it('should render title "Senior Software Engineer"', () => {
+  it('should render title "AI-Augmented .NET Developer"', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     const title = compiled.querySelector('.header-title');
-    expect(title?.textContent).toBe('Senior Software Engineer');
+    expect(title?.textContent).toBe('AI-Augmented .NET Developer');
   });
 
   it('should render description', () => {
