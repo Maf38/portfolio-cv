@@ -58,7 +58,7 @@
     "@angular-eslint/schematics": "20.6.0",
     "@angular-eslint/template-parser": "20.6.0",
     "@angular/build": "^20.3.9",
-    "@angular/cli": "^20.3.9",
+    "@angular/cli": "^20.3.43",
     "@angular/compiler-cli": "^20.3.0",
     "@commitlint/cli": "^20.1.0",
     "@commitlint/config-conventional": "^20.0.0",
