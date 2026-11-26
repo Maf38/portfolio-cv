@@ -43,7 +43,7 @@
     "@angular/core": "^20.3.0",
     "@angular/forms": "^20.3.0",
     "@angular/platform-browser": "^20.3.0",
-    "@angular/router": "^20.3.0",
+    "@angular/router": "^20.3.33",
     "hero-patterns": "^2.1.0",
     "html2pdf.js": "^0.12.1",
     "pdfmake": "^0.2.20",
